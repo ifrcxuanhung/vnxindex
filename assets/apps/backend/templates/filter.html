@@ -1,0 +1,43 @@
+<form class="form">
+<ul class="blocks-list">
+    <%
+    _.each(filter, function(dataFilter, column){
+    %>
+    <li>
+        <a class="float-left" href="#"><img width="16" height="16" src="<%=$template_url %>images/icons/fugue/status.png"><%=trans(column)%></a>
+        <ul style="width: 30%" class="float-right">
+            <li>
+                <select class="slt-filter full-width" action ="<%=column%>">
+                    <option value="all">All</option>
+                    <%
+                    _.each(dataFilter, function(e){
+                    %>
+                    <option value="<%=e%>"><%=e%></option>
+                    <%
+                    });
+                    %>
+                </select>
+            </li>
+        </ul>
+    </li>
+    <%
+     });
+    %>
+    <li>
+        <a class="float-left" href="#"><img width="16" height="16" src="<%=$template_url %>images/icons/fugue/status.png"><%=trans("From")%></a>
+        <ul style="width: 30%" class="float-right">
+            <li>
+                <input class="full-width txt-date" action="from-date" type="text" name="from" />
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="float-left" href="#"><img width="16" height="16" src="<%=$template_url %>images/icons/fugue/status.png"><%=trans("To")%></a>
+        <ul style="width: 30%" class="float-right">
+            <li>
+                <input class="full-width txt-date" action="to-date" type="text" name="to" />
+            </li>
+        </ul>
+    </li>
+</ul>
+</form>

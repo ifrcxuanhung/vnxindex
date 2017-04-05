@@ -1,0 +1,4 @@
+ticker	name	market	date_upd	date_ann	date_ex	date_rec	date_pay	pay_met	pay_yr	pay_per	per	dividend	yield	status	price_ex
+AAA	An Phat Plastic And Green Environment Jsc	HNX		2012/08/03	2012/08/13	2012/08/15	2012/08/30	Cash	2011	 EOY		1096	6.05524861878453		18100
+AAA	An Phat Plastic And Green Environment Jsc	HNX		2011/09/07	2011/09/13	2011/09/15	2011/10/05	Cash	2010	 1		914	5.163841807909605		17700
+AAA	An Phat Plastic And Green Environment Jsc	HNX	2013/05/31	2013/05/31	2013/06/13	2013/06/17	2013/07/26	Cash	2012			1000	10		

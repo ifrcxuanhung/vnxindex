@@ -1,0 +1,82 @@
+#style_switcher {
+	display:none;
+	position:fixed;
+	left:0;
+	top:80px;
+	width:126px;
+	background:#141618;
+	color:#fff;
+	padding:10px;
+	z-index: 100;
+	-webkit-border-bottom-right-radius: 8px;
+	-moz-border-radius-bottomright: 8px;
+	border-bottom-right-radius: 8px;
+}
+#style_switcher ul {
+	list-style:none;
+	margin:0
+}
+#style_switcher ul li {
+	border-bottom:1px dotted #3a3b3d
+}
+#style_switcher ul li.selected {
+	border:1px solid #3a3b3d;
+	background:#212325;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+#style_switcher ul li.selected a {
+	color:#fff
+}
+#style_switcher ul li.last {
+	border-bottom:0
+}
+#style_switcher ul li a {
+	line-height:30px;
+	padding:0 10px;
+	color:#b9baba;
+	display:block
+}
+#style_switcher .style_switcher_patterns {
+	padding:4px
+}
+#style_switcher .style_switcher_bgs {
+	padding:4px
+}
+#style_switcher .style_switcher_custom span {
+	padding:0 10px;
+	display:block
+}
+#style_switcher #btn_switch {
+	background:url(../images/switcher-button.png) no-repeat;
+	width:35px;
+	height:36px;
+	display:block;
+	position:absolute;
+	top:0;
+	right:-35px
+}
+#style_switcher .pattern {
+	margin:4px;
+	display:block;
+	width:21px;
+	height:21px;
+	padding:0;
+	line-height:16px;
+	float:left;
+	background-color:#3f4041
+}
+#style_switcher .patterns_title {
+	border-bottom:1px solid #3a3b3d;
+	line-height: 30px
+}
+#style_switcher #colorpicker {
+	display:block;
+	border:1px solid #3a3b3d;
+	border-width:1px 0
+}
+#style_switcher #colorpicker img {
+	vertical-align: middle;
+	margin-left:30px
+}

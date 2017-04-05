@@ -1,0 +1,2 @@
+title	authors	journal	reference	date
+A brief history of market efficiency	Elroy Dimson and Massoud Mussavian	European Financial Management	Volume 4, Number 1, March 1998	1998

@@ -1,0 +1,80 @@
+/*header logo*/
+#header .logo {
+	margin:12px 0px 12px 0px;
+	float:left;
+}
+.sologant_com {
+	float:left; 
+	width:450px;}
+.sologant_com h1 {
+	color:#00A0DE !important;
+	font-size:30px;
+	padding-left:20px;
+	padding-top:70px;
+	float:left;}
+/*header search and site navigation area*/
+#header .site-navigation {
+	float:right !important;
+	margin:10px 0;
+}
+.site-navigation {
+	float:right !important;
+	position:relative;
+}
+.lang_top {
+	position:absolute;
+	top:5px;
+	right:100px;}
+#header .site-navigation ul {
+	list-style:none;
+	padding:0;
+	margin:0
+}
+#header .site-navigation li {
+	float:left;
+	display:inline;
+}
+#header .site-navigation .icon-home {
+	background:url(../images/site-nav-icons.png) no-repeat;
+	width:29px;
+	height:28px;
+	text-indent:-9999px;
+	display:block
+}
+#header .site-navigation .icon-sitemap {
+	background:url(../images/site-nav-icons.png) no-repeat -60px 0;
+	width:29px;
+	height:28px;
+	text-indent:-9999px;
+	display:block
+}
+#header .site-navigation .icon-search {
+	background:url(../images/site-nav-icons.png) no-repeat -29px 0;
+	width:31px;
+	height:42px;
+	text-indent:-9999px;
+	display:block
+}
+#header .site-navigation form {
+	background:url(../images/site-nav-bg.png);
+	padding:5px
+}
+#header .site-navigation input {
+	width:200px;
+	float:left;
+	border:1px solid #333;
+	background:none;
+	color:#747575;
+	padding:7px 10px;
+	font-size:11px;
+	margin-right:5px
+}
+#header .site-navigation button {
+	background:url(../images/site-nav-button.png) repeat-x;
+	border:1px solid #333;
+	color:#747575;
+	padding:7px 10px;
+	font-size:11px;
+	cursor:pointer
+}
+

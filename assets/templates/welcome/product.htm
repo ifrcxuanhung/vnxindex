@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale = 1.0" />
+<meta name="author" content="FamousThemes" />
+<meta name="description" content="Get in the spotlight" />
+<meta name="keywords" content="premium css templates, premium wordpress themes, famous themes, themeforest" />
+<title>My mobile page V2</title>
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+    var $ = jQuery.noConflict();
+	$(function() {
+		$('#activator').click(function(){
+				$('#box').animate({'top':'65px'},500);
+		});
+		$('#boxclose').click(function(){
+				$('#box').animate({'top':'-400px'},500);
+		});
+		$('#activator_share').click(function(){
+				$('#box_share').animate({'top':'65px'},500);
+		});
+		$('#boxclose_share').click(function(){
+				$('#box_share').animate({'top':'-400px'},500);
+		});
+
+	});
+	$(document).ready(function(){
+	$(".toggle_container").hide(); 
+	$(".trigger").click(function(){
+		$(this).toggleClass("active").next().slideToggle("slow");
+		return false;
+	});
+	
+	});
+</script>
+	<!-- bookmark-->
+	<script type="text/javascript" src="js/bookmarkscroll.js" ></script>
+    <!-- end bookmark-->
+<!-- Hide Mobiles Browser Navigation Bar -->
+<script type="text/javascript">
+	window.addEventListener("load",function() {
+	// Set a timeout...
+	setTimeout(function(){
+	// Hide the address bar!
+	window.scrollTo(0, 1);
+	}, 0);
+	});
+</script>
+</head>
+
+<body>
+<div id="main_container">
+	<div class="header">
+    <a href="index.htm" class="left_bt">Home</a>
+    <span>Services</span>
+    <a href="#" class="right_bt" id="activator"><img src="images/search.png" alt="" title="" border="0" /></a>
+    </div>
+    
+        <div class="box" id="box">
+        	<div class="box_content">
+            
+            	<div class="box_content_tab">
+                Search
+                </div>
+                
+                <div class="box_content_center">
+                <div class="form_content">
+                <form>
+                <input type="text" class="form_input_box" />
+                <a class="boxclose" id="boxclose">Close</a>
+                <input type="submit" class="form_submit" value="Submit" />
+                </form>
+                </div> 
+                
+                <div class="clear"></div>
+                </div>
+            
+           </div>
+        </div>
+
+        <div class="box" id="box_share">
+        	<div class="box_content">
+            	<div class="box_content_tab">
+                Social Share
+                </div>
+                <div class="box_content_center">
+                
+                        <div class="social_share">
+                        <ul>
+                        <li><a href="#"><img src="images/social/rss.png" alt="" title="" border="0" /></a></li>
+                        <li><a href="#"><img src="images/social/google.png" alt="" title="" border="0" /></a></li>
+                        <li><a href="#"><img src="images/social/twitter.png" alt="" title="" border="0" /></a></li>
+                        <li><a href="#"><img src="images/social/delicious.png" alt="" title="" border="0" /></a></li>
+                        <li><a href="#"><img src="images/social/digg.png" alt="" title="" border="0" /></a></li>
+                        <li><a href="#"><img src="images/social/linkedin.png" alt="" title="" border="0" /></a></li>
+                        <li><a href="#"><img src="images/social/facebook.png" alt="" title="" border="0" /></a></li>
+                        <li><a href="#"><img src="images/social/reddit.png" alt="" title="" border="0" /></a></li>
+                        <li><a href="#"><img src="images/social/myspace.png" alt="" title="" border="0" /></a></li>
+                        <li><a href="#"><img src="images/social/technorati.png" alt="" title="" border="0" /></a></li>
+                        <li><a href="#"><img src="images/social/stumbleupon.png" alt="" title="" border="0" /></a></li>
+                        <li><a href="#"><img src="images/social/flickr.png" alt="" title="" border="0" /></a></li>
+                        </ul>
+                        </div>
+            
+                <a class="boxclose_right" id="boxclose_share">close</a>
+                <div class="clear"></div>
+                
+                </div>
+           </div>
+        </div>
+        
+	<div class="content">
+    	
+    	<div class="corner_wrap">
+
+            
+            <div class="entry">
+            <h2>Our products</h2> 
+            <h3>Innovation, Specialization &amp; Competitiveness</h3>
+            <ul>
+              <li> <a href="#IFRC-indexes"> IFRC indexes </a> </li>
+              <li> <a href="#Indexes-Observatory"> Indexes Observatory </a> </li>
+              <li> <a href="#Options-Futures"> Options & Futures </a> </li>
+              <li> <a href="#Options-Strategies"> Options Strategies </a> </li>
+              <li> <a href="#CAC40-Index-France-"> CAC40 Index (France) </a> </li>
+              <li> <a href="#Euro-Stoxx-50-Index"> Euro Stoxx 50 Index </a> </li>
+              <li> <a href="#VNI-Index-Vietnam-"> VNI Index (Vietnam) </a> </li>
+            </ul>
+            <div class="services_content">
+            	<a id="IFRC-indexes" name="IFRC-indexes"></a>
+                <h4>IFRC indexes</h4>
+                <h5>Family</h5>
+                <img src="images/images_01.jpg" />
+                <p>IFRC offers a complete family of about 100 indexes:</p>
+				<ul>
+                	<li>Global and national indexes</li>
+                    <li>Benchmark and Tradable indexes</li>
+                    <li>Size (Large, Mid and Small Caps) indexes</li>
+                    <li>Sector indexes</li>
+                    <li>Strategy indexes</li>
+                </ul>
+            </div>
+            <div class="services_content">
+            	<a id="Indexes-Observatory" name="Indexes-Observatory"></a>
+                <h4>Indexes Observatory</h4>
+                <h5>World Wide Indexes</h5>
+                <img src="images/images_02.jpg" />
+                <p><strong>IFRC </strong>gathers informations and figures of major international indexes:</p>
+				<ul>
+                    <li>Indexes specifications</li>
+                    <li>By category to facilitate comparison</li>
+                    <li>Latest innovations</li>
+                    <li>Latest index products</li>
+                </ul>
+            </div>
+            <div class="services_content">
+            	<a id="Options-Futures" name="Options-Futures"></a>
+                <h4>Options & Futures</h4>
+                <h5>Pricers</h5>
+                <img src="images/images_02.jpg" />
+                <p>IFRC propose des modèles d&#039évaluation des contrats d&#039options et à terme  (futures):</p>
+				<ul>
+                  <li>Options and Futures pricing</li>
+                  <li>On stocks and on indexes</li>
+                  <li>Continuous or discret models</li>
+                  <li>Different dividend distribution models</li>
+                </ul>	
+            </div>
+            <div class="services_content">
+            	<a id="Options-Strategies" name="Options-Strategies"></a>
+                <h4>Options Strategies</h4>
+                <h5>Simulator</h5>
+                <img src="images/images_03.jpg" />
+                <p>IFRC proposes numerous options strategies (simple and combined):</p>
+				<ul>
+                  <li>A complete strategies simulator of option the most known</li>
+                  <li>Choice of anticipation of rising, reducing or stability on  price or on volatility</li>
+                  <li>Strategies Debtor or Creditor</li>
+                  <li>Strategies from simple to complex</li>
+                </ul>
+            </div>
+            <div class="services_content">
+            	<a id="CAC40-Index-France-" name="CAC40-Index-France-"></a>
+                <h4>CAC40 Index (France)</h4>
+                <h5>All in One</h5>
+                 <img src="images/images_04.jpg" />
+                <p>IFRC&nbsp;summarises all information you need to know about the index:</p>
+				<ul>
+                  <li>All to know on the CAC40 index</li>
+                  <li>The methodology, the constituents selection, ...</li>
+                  <li>Performance, Volatility, and other statistics ...</li>
+                  <li>Its constituents and their statistics</li>
+                  <li>Derivatives products, Structured products and ETF, and their  activity and liquidity ...</li>
+                </ul>	
+            </div>
+            <div class="services_content">
+            	<a id="Euro-Stoxx-50-Index" name="Euro-Stoxx-50-Index"></a>
+                <h4>Euro Stoxx 50 Index</h4>
+                <h5>All in One</h5>
+                <img src="images/images_05.jpg" />
+                <ul>
+                  <li>All to know on the EURO STOXX 50 index</li>
+                  <li>The methodology, the constituents selection, ...</li>
+                  <li>Performance, Volatility, and other statistics ...</li>
+                  <li>Its constituents and their statistics</li>
+                  <li>Derivatives products, Structured products and ETF, and their  activity and liquidity ...</li>
+                </ul>	
+            </div>
+            <div class="services_content">
+            	<a id="VNI-Index-Vietnam-" name="VNI-Index-Vietnam-"></a>
+                <h4>VNI Index (Vietnam)</h4>
+                <h5>All in One</h5>
+                <img src="images/images_05.jpg" />
+                <ul>
+                  <li>All to know on the VNI index</li>
+                  <li>The methodology, the constituents selection, ...</li>
+                  <li>Performance, Volatility, and other statistics ...</li>
+                  <li>Its constituents and their statistics</li>
+                  <li>Derivatives products, Structured products and ETF, and their  activity and liquidity ...</li>
+                </ul>	
+            </div>
+                
+            </div>         
+
+      
+        </div>
+        <div class="shadow_wrap"></div>
+   		<div class="clear_left"></div>
+
+    </div>
+
+
+</div>
+<div id="footer">
+<a href="#" class="left_bt" id="activator_share">share</a>
+<span>My mobile page</span>
+<a onclick="jQuery('html, body').animate( { scrollTop: 0 }, 'slow' );"  href="javascript:void(0);" title="Go on top" class="right_bt"><img src="images/top.png" alt="" title="" border="0" /></a>
+</div>
+</body>
+</html>

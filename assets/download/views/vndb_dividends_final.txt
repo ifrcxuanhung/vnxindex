@@ -1,0 +1,2 @@
+ticker	name	market	date_upd	date_ann	date_ex	date_rec	date_pay	pay_met	pay_yr	pay_per	per	dividend	yield	status	price_ex
+S55	Song Da 5.05 Jsc	HNX	2013/09/11	2013/09/10	2013/09/16	2013/09/18	2013/09/30	Cash	2012			2000	20		

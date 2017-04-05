@@ -1,0 +1,7 @@
+SEC_CODE	SEC_NAME	SEC_NAME_VN
+VNXBM	VN Basic Materials	VN VẬT LIỆU CƠ BẢN
+VNXCS	VN Consumer Services	VN DỊCH VỤ TIÊU DÙNG
+VNXFI	VN Financials	VN DỊCH VỤ TÀI CHÍNH
+VNXIN	VN Industrials	VN CÔNG NGHIỆP
+VNXOG	VN Oil & Gas	VN DẦU KHÍ
+VNXUT	VN Utilities	VN TIỆN ÍCH

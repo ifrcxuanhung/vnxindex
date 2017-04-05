@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+.img li {
+display:inline;
+margin:0;
+padding:.5em;
+zoom: 1;
+
+}
+
+.mainimage {
+  max-width: 250px;
+  max-height: 120px;
+  width: expression(this.width > 250 ? "250px" : true);
+  height: expression(this.height > 120 ? "120px" : true);
+}
+.center {text-align:center;}

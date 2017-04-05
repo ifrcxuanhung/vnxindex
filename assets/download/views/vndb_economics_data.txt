@@ -1,0 +1,942 @@
+name	code_ctr	indcode	year	value	last_upd
+Fertilizer consumption (% of fertilizer production) - Arab World	ARB	AG.CON.FERT.PT.ZS	2002	31.6985234702123	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Arab World	ARB	AG.CON.FERT.PT.ZS	2003	36.4118311486037	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Arab World	ARB	AG.CON.FERT.PT.ZS	2004	34.4480499390778	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Arab World	ARB	AG.CON.FERT.PT.ZS	2005	35.0486529458036	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Arab World	ARB	AG.CON.FERT.PT.ZS	2006	28.1779121031462	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Arab World	ARB	AG.CON.FERT.PT.ZS	2007	27.0724369215567	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Arab World	ARB	AG.CON.FERT.PT.ZS	2008	28.3958444760637	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Arab World	ARB	AG.CON.FERT.PT.ZS	2009	25.7925964487659	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Arab World	ARB	AG.CON.FERT.PT.ZS	2010	21.8812221197854	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Caribbean small states	CSS	AG.CON.FERT.PT.ZS	2002	26.607029536164	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Caribbean small states	CSS	AG.CON.FERT.PT.ZS	2003	21.9415826594291	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Caribbean small states	CSS	AG.CON.FERT.PT.ZS	2004	22.1596852911812	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Caribbean small states	CSS	AG.CON.FERT.PT.ZS	2005	12.067102710364	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Caribbean small states	CSS	AG.CON.FERT.PT.ZS	2006	19.9372125928546	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Caribbean small states	CSS	AG.CON.FERT.PT.ZS	2007	10.2309174502128	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Caribbean small states	CSS	AG.CON.FERT.PT.ZS	2008	28.2874669673852	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Caribbean small states	CSS	AG.CON.FERT.PT.ZS	2009	13.1544633275935	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Caribbean small states	CSS	AG.CON.FERT.PT.ZS	2010	34.963960371745	2013/06/24
+Fertilizer consumption (% of fertilizer production) - East Asia & Pacific (all income levels)	EAS	AG.CON.FERT.PT.ZS	2002	134.867933704428	2013/06/24
+Fertilizer consumption (% of fertilizer production) - East Asia & Pacific (all income levels)	EAS	AG.CON.FERT.PT.ZS	2003	128.999335162506	2013/06/24
+Fertilizer consumption (% of fertilizer production) - East Asia & Pacific (all income levels)	EAS	AG.CON.FERT.PT.ZS	2004	117.558726591451	2013/06/24
+Fertilizer consumption (% of fertilizer production) - East Asia & Pacific (all income levels)	EAS	AG.CON.FERT.PT.ZS	2005	128.632277585341	2013/06/24
+Fertilizer consumption (% of fertilizer production) - East Asia & Pacific (all income levels)	EAS	AG.CON.FERT.PT.ZS	2006	123.634523940925	2013/06/24
+Fertilizer consumption (% of fertilizer production) - East Asia & Pacific (all income levels)	EAS	AG.CON.FERT.PT.ZS	2007	116.387969607672	2013/06/24
+Fertilizer consumption (% of fertilizer production) - East Asia & Pacific (all income levels)	EAS	AG.CON.FERT.PT.ZS	2008	111.874892639258	2013/06/24
+Fertilizer consumption (% of fertilizer production) - East Asia & Pacific (all income levels)	EAS	AG.CON.FERT.PT.ZS	2009	106.11988539774	2013/06/24
+Fertilizer consumption (% of fertilizer production) - East Asia & Pacific (all income levels)	EAS	AG.CON.FERT.PT.ZS	2010	263.369964298402	2013/06/24
+Fertilizer consumption (% of fertilizer production) - East Asia & Pacific (developing only)	EAP	AG.CON.FERT.PT.ZS	2002	131.950998525413	2013/06/24
+Fertilizer consumption (% of fertilizer production) - East Asia & Pacific (developing only)	EAP	AG.CON.FERT.PT.ZS	2003	124.422125694546	2013/06/24
+Fertilizer consumption (% of fertilizer production) - East Asia & Pacific (developing only)	EAP	AG.CON.FERT.PT.ZS	2004	113.030640423373	2013/06/24
+Fertilizer consumption (% of fertilizer production) - East Asia & Pacific (developing only)	EAP	AG.CON.FERT.PT.ZS	2005	123.855298253181	2013/06/24
+Fertilizer consumption (% of fertilizer production) - East Asia & Pacific (developing only)	EAP	AG.CON.FERT.PT.ZS	2006	120.041835567618	2013/06/24
+Fertilizer consumption (% of fertilizer production) - East Asia & Pacific (developing only)	EAP	AG.CON.FERT.PT.ZS	2007	113.460570601105	2013/06/24
+Fertilizer consumption (% of fertilizer production) - East Asia & Pacific (developing only)	EAP	AG.CON.FERT.PT.ZS	2008	108.821515464657	2013/06/24
+Fertilizer consumption (% of fertilizer production) - East Asia & Pacific (developing only)	EAP	AG.CON.FERT.PT.ZS	2009	105.051080616515	2013/06/24
+Fertilizer consumption (% of fertilizer production) - East Asia & Pacific (developing only)	EAP	AG.CON.FERT.PT.ZS	2010	277.959416689658	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Euro area	EMU	AG.CON.FERT.PT.ZS	2002	119.481863195414	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Euro area	EMU	AG.CON.FERT.PT.ZS	2003	117.749333348721	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Euro area	EMU	AG.CON.FERT.PT.ZS	2004	97.6347087410005	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Euro area	EMU	AG.CON.FERT.PT.ZS	2005	85.5651841512086	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Euro area	EMU	AG.CON.FERT.PT.ZS	2006	92.1878919595057	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Euro area	EMU	AG.CON.FERT.PT.ZS	2007	113.430762656096	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Euro area	EMU	AG.CON.FERT.PT.ZS	2008	94.7111207014648	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Euro area	EMU	AG.CON.FERT.PT.ZS	2009	107.004554323232	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Euro area	EMU	AG.CON.FERT.PT.ZS	2010	104.334440993766	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Europe & Central Asia (all income levels)	ECS	AG.CON.FERT.PT.ZS	2002	60.5120187032663	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Europe & Central Asia (all income levels)	ECS	AG.CON.FERT.PT.ZS	2003	58.123152762085	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Europe & Central Asia (all income levels)	ECS	AG.CON.FERT.PT.ZS	2004	51.6338125925694	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Europe & Central Asia (all income levels)	ECS	AG.CON.FERT.PT.ZS	2005	47.5593085852973	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Europe & Central Asia (all income levels)	ECS	AG.CON.FERT.PT.ZS	2006	51.8087732598171	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Europe & Central Asia (all income levels)	ECS	AG.CON.FERT.PT.ZS	2007	55.1721676147565	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Europe & Central Asia (all income levels)	ECS	AG.CON.FERT.PT.ZS	2008	50.6137899456955	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Europe & Central Asia (all income levels)	ECS	AG.CON.FERT.PT.ZS	2009	61.2656570627272	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Europe & Central Asia (all income levels)	ECS	AG.CON.FERT.PT.ZS	2010	53.8113897787011	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Europe & Central Asia (developing only)	ECA	AG.CON.FERT.PT.ZS	2002	24.781720407302	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Europe & Central Asia (developing only)	ECA	AG.CON.FERT.PT.ZS	2003	23.2669573955806	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Europe & Central Asia (developing only)	ECA	AG.CON.FERT.PT.ZS	2004	22.2532877792363	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Europe & Central Asia (developing only)	ECA	AG.CON.FERT.PT.ZS	2005	21.322310524555	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Europe & Central Asia (developing only)	ECA	AG.CON.FERT.PT.ZS	2006	26.5740446224878	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Europe & Central Asia (developing only)	ECA	AG.CON.FERT.PT.ZS	2007	26.7901688370434	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Europe & Central Asia (developing only)	ECA	AG.CON.FERT.PT.ZS	2008	27.6796659969483	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Europe & Central Asia (developing only)	ECA	AG.CON.FERT.PT.ZS	2009	37.1744674098031	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Europe & Central Asia (developing only)	ECA	AG.CON.FERT.PT.ZS	2010	28.9752856134331	2013/06/24
+Fertilizer consumption (% of fertilizer production) - European Union	EUU	AG.CON.FERT.PT.ZS	2002	109.457033434615	2013/06/24
+Fertilizer consumption (% of fertilizer production) - European Union	EUU	AG.CON.FERT.PT.ZS	2003	107.698418522219	2013/06/24
+Fertilizer consumption (% of fertilizer production) - European Union	EUU	AG.CON.FERT.PT.ZS	2004	92.1334523481316	2013/06/24
+Fertilizer consumption (% of fertilizer production) - European Union	EUU	AG.CON.FERT.PT.ZS	2005	82.9632890045152	2013/06/24
+Fertilizer consumption (% of fertilizer production) - European Union	EUU	AG.CON.FERT.PT.ZS	2006	91.0066603789137	2013/06/24
+Fertilizer consumption (% of fertilizer production) - European Union	EUU	AG.CON.FERT.PT.ZS	2007	105.942416780832	2013/06/24
+Fertilizer consumption (% of fertilizer production) - European Union	EUU	AG.CON.FERT.PT.ZS	2008	92.1876327356289	2013/06/24
+Fertilizer consumption (% of fertilizer production) - European Union	EUU	AG.CON.FERT.PT.ZS	2009	105.507021698332	2013/06/24
+Fertilizer consumption (% of fertilizer production) - European Union	EUU	AG.CON.FERT.PT.ZS	2010	106.004803154587	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Heavily indebted poor countries (HIPC)	HPC	AG.CON.FERT.PT.ZS	2002	1228.93012789472	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Heavily indebted poor countries (HIPC)	HPC	AG.CON.FERT.PT.ZS	2003	790.817603863783	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Heavily indebted poor countries (HIPC)	HPC	AG.CON.FERT.PT.ZS	2004	752.312528318986	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Heavily indebted poor countries (HIPC)	HPC	AG.CON.FERT.PT.ZS	2005	1230.91918568785	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Heavily indebted poor countries (HIPC)	HPC	AG.CON.FERT.PT.ZS	2006	2304.70883986193	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Heavily indebted poor countries (HIPC)	HPC	AG.CON.FERT.PT.ZS	2007	775.329791645653	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Heavily indebted poor countries (HIPC)	HPC	AG.CON.FERT.PT.ZS	2008	1397.75273231812	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Heavily indebted poor countries (HIPC)	HPC	AG.CON.FERT.PT.ZS	2009	2830.79796264856	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Heavily indebted poor countries (HIPC)	HPC	AG.CON.FERT.PT.ZS	2010	2685.58167950967	2013/06/24
+Fertilizer consumption (% of fertilizer production) - High income	HIC	AG.CON.FERT.PT.ZS	2002	81.062807451986	2013/06/24
+Fertilizer consumption (% of fertilizer production) - High income	HIC	AG.CON.FERT.PT.ZS	2003	82.8909113649767	2013/06/24
+Fertilizer consumption (% of fertilizer production) - High income	HIC	AG.CON.FERT.PT.ZS	2004	75.5750253862121	2013/06/24
+Fertilizer consumption (% of fertilizer production) - High income	HIC	AG.CON.FERT.PT.ZS	2005	73.96786175801	2013/06/24
+Fertilizer consumption (% of fertilizer production) - High income	HIC	AG.CON.FERT.PT.ZS	2006	73.8238771768189	2013/06/24
+Fertilizer consumption (% of fertilizer production) - High income	HIC	AG.CON.FERT.PT.ZS	2007	74.9718161569689	2013/06/24
+Fertilizer consumption (% of fertilizer production) - High income	HIC	AG.CON.FERT.PT.ZS	2008	73.2060039463433	2013/06/24
+Fertilizer consumption (% of fertilizer production) - High income	HIC	AG.CON.FERT.PT.ZS	2009	76.0947472037464	2013/06/24
+Fertilizer consumption (% of fertilizer production) - High income	HIC	AG.CON.FERT.PT.ZS	2010	74.7972086786131	2013/06/24
+Fertilizer consumption (% of fertilizer production) - High income: OECD	OEC	AG.CON.FERT.PT.ZS	2002	85.6223338505633	2013/06/24
+Fertilizer consumption (% of fertilizer production) - High income: OECD	OEC	AG.CON.FERT.PT.ZS	2003	87.353711863129	2013/06/24
+Fertilizer consumption (% of fertilizer production) - High income: OECD	OEC	AG.CON.FERT.PT.ZS	2004	79.365531302537	2013/06/24
+Fertilizer consumption (% of fertilizer production) - High income: OECD	OEC	AG.CON.FERT.PT.ZS	2005	79.2486426228535	2013/06/24
+Fertilizer consumption (% of fertilizer production) - High income: OECD	OEC	AG.CON.FERT.PT.ZS	2006	79.7849902614224	2013/06/24
+Fertilizer consumption (% of fertilizer production) - High income: OECD	OEC	AG.CON.FERT.PT.ZS	2007	81.466081017884	2013/06/24
+Fertilizer consumption (% of fertilizer production) - High income: OECD	OEC	AG.CON.FERT.PT.ZS	2008	80.66397732924	2013/06/24
+Fertilizer consumption (% of fertilizer production) - High income: OECD	OEC	AG.CON.FERT.PT.ZS	2009	84.2934092158666	2013/06/24
+Fertilizer consumption (% of fertilizer production) - High income: OECD	OEC	AG.CON.FERT.PT.ZS	2010	81.936261496396	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Latin America & Caribbean (all income levels)	LCN	AG.CON.FERT.PT.ZS	2002	244.203585688764	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Latin America & Caribbean (all income levels)	LCN	AG.CON.FERT.PT.ZS	2003	284.439100941311	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Latin America & Caribbean (all income levels)	LCN	AG.CON.FERT.PT.ZS	2004	283.784296116289	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Latin America & Caribbean (all income levels)	LCN	AG.CON.FERT.PT.ZS	2005	245.505131952833	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Latin America & Caribbean (all income levels)	LCN	AG.CON.FERT.PT.ZS	2006	253.498320757214	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Latin America & Caribbean (all income levels)	LCN	AG.CON.FERT.PT.ZS	2007	289.67979430806	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Latin America & Caribbean (all income levels)	LCN	AG.CON.FERT.PT.ZS	2008	256.196984864915	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Latin America & Caribbean (all income levels)	LCN	AG.CON.FERT.PT.ZS	2009	206.460978913839	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Latin America & Caribbean (all income levels)	LCN	AG.CON.FERT.PT.ZS	2010	265.402393099545	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Latin America & Caribbean (developing only)	LAC	AG.CON.FERT.PT.ZS	2002	259.042333364958	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Latin America & Caribbean (developing only)	LAC	AG.CON.FERT.PT.ZS	2003	300.304464906841	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Latin America & Caribbean (developing only)	LAC	AG.CON.FERT.PT.ZS	2004	295.999569607013	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Latin America & Caribbean (developing only)	LAC	AG.CON.FERT.PT.ZS	2005	259.888662065923	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Latin America & Caribbean (developing only)	LAC	AG.CON.FERT.PT.ZS	2006	266.649684128168	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Latin America & Caribbean (developing only)	LAC	AG.CON.FERT.PT.ZS	2007	304.754055131702	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Latin America & Caribbean (developing only)	LAC	AG.CON.FERT.PT.ZS	2008	267.914308510912	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Latin America & Caribbean (developing only)	LAC	AG.CON.FERT.PT.ZS	2009	216.988356198235	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Latin America & Caribbean (developing only)	LAC	AG.CON.FERT.PT.ZS	2010	278.021856329563	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Least developed countries: UN classification	LDC	AG.CON.FERT.PT.ZS	2002	164.394783463708	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Least developed countries: UN classification	LDC	AG.CON.FERT.PT.ZS	2003	171.088007521068	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Least developed countries: UN classification	LDC	AG.CON.FERT.PT.ZS	2004	211.4466432034	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Least developed countries: UN classification	LDC	AG.CON.FERT.PT.ZS	2005	221.097982175004	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Least developed countries: UN classification	LDC	AG.CON.FERT.PT.ZS	2006	244.332127413731	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Least developed countries: UN classification	LDC	AG.CON.FERT.PT.ZS	2007	225.348288260394	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Least developed countries: UN classification	LDC	AG.CON.FERT.PT.ZS	2008	320.575166489775	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Least developed countries: UN classification	LDC	AG.CON.FERT.PT.ZS	2009	501.097027209019	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Least developed countries: UN classification	LDC	AG.CON.FERT.PT.ZS	2010	356.44112244083	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Low & middle income	LMY	AG.CON.FERT.PT.ZS	2002	103.808602410976	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Low & middle income	LMY	AG.CON.FERT.PT.ZS	2003	103.384684286153	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Low & middle income	LMY	AG.CON.FERT.PT.ZS	2004	98.9279750864105	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Low & middle income	LMY	AG.CON.FERT.PT.ZS	2005	102.578023663957	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Low & middle income	LMY	AG.CON.FERT.PT.ZS	2006	105.818761917002	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Low & middle income	LMY	AG.CON.FERT.PT.ZS	2007	105.387167695057	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Low & middle income	LMY	AG.CON.FERT.PT.ZS	2008	103.997708985215	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Low & middle income	LMY	AG.CON.FERT.PT.ZS	2009	106.004566842634	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Low & middle income	LMY	AG.CON.FERT.PT.ZS	2010	147.051159046857	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Low income	LIC	AG.CON.FERT.PT.ZS	2002	165.372572259559	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Low income	LIC	AG.CON.FERT.PT.ZS	2003	186.093063860216	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Low income	LIC	AG.CON.FERT.PT.ZS	2004	214.463010475122	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Low income	LIC	AG.CON.FERT.PT.ZS	2005	231.464410798582	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Low income	LIC	AG.CON.FERT.PT.ZS	2006	250.797760096983	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Low income	LIC	AG.CON.FERT.PT.ZS	2007	231.126567162182	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Low income	LIC	AG.CON.FERT.PT.ZS	2008	323.147684754892	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Low income	LIC	AG.CON.FERT.PT.ZS	2009	469.255055004262	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Low income	LIC	AG.CON.FERT.PT.ZS	2010	356.802027326987	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Lower middle income	LMC	AG.CON.FERT.PT.ZS	2002	112.639984413727	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Lower middle income	LMC	AG.CON.FERT.PT.ZS	2003	119.814258932834	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Lower middle income	LMC	AG.CON.FERT.PT.ZS	2004	120.548977058801	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Lower middle income	LMC	AG.CON.FERT.PT.ZS	2005	123.042210317049	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Lower middle income	LMC	AG.CON.FERT.PT.ZS	2006	127.416619048464	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Lower middle income	LMC	AG.CON.FERT.PT.ZS	2007	136.57498789548	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Lower middle income	LMC	AG.CON.FERT.PT.ZS	2008	143.723074893369	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Lower middle income	LMC	AG.CON.FERT.PT.ZS	2009	145.575698027806	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Lower middle income	LMC	AG.CON.FERT.PT.ZS	2010	140.333690034601	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Middle East & North Africa (all income levels)	MEA	AG.CON.FERT.PT.ZS	2002	33.8489881687406	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Middle East & North Africa (all income levels)	MEA	AG.CON.FERT.PT.ZS	2003	37.3212293263614	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Middle East & North Africa (all income levels)	MEA	AG.CON.FERT.PT.ZS	2004	38.2245002202794	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Middle East & North Africa (all income levels)	MEA	AG.CON.FERT.PT.ZS	2005	37.4750521224235	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Middle East & North Africa (all income levels)	MEA	AG.CON.FERT.PT.ZS	2006	34.4289022815191	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Middle East & North Africa (all income levels)	MEA	AG.CON.FERT.PT.ZS	2007	30.6825745193971	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Middle East & North Africa (all income levels)	MEA	AG.CON.FERT.PT.ZS	2008	31.1504786441308	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Middle East & North Africa (all income levels)	MEA	AG.CON.FERT.PT.ZS	2009	27.3037381931231	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Middle East & North Africa (all income levels)	MEA	AG.CON.FERT.PT.ZS	2010	23.1184678751371	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Middle East & North Africa (developing only)	MNA	AG.CON.FERT.PT.ZS	2002	52.0444585078864	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Middle East & North Africa (developing only)	MNA	AG.CON.FERT.PT.ZS	2003	56.7310400658864	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Middle East & North Africa (developing only)	MNA	AG.CON.FERT.PT.ZS	2004	58.9012938231685	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Middle East & North Africa (developing only)	MNA	AG.CON.FERT.PT.ZS	2005	64.3610658247946	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Middle East & North Africa (developing only)	MNA	AG.CON.FERT.PT.ZS	2006	59.9674104188226	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Middle East & North Africa (developing only)	MNA	AG.CON.FERT.PT.ZS	2007	51.5438430505505	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Middle East & North Africa (developing only)	MNA	AG.CON.FERT.PT.ZS	2008	54.9815661964608	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Middle East & North Africa (developing only)	MNA	AG.CON.FERT.PT.ZS	2009	46.7333584061354	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Middle East & North Africa (developing only)	MNA	AG.CON.FERT.PT.ZS	2010	36.4208057865026	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Middle income	MIC	AG.CON.FERT.PT.ZS	2002	102.865801753164	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Middle income	MIC	AG.CON.FERT.PT.ZS	2003	102.424070393104	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Middle income	MIC	AG.CON.FERT.PT.ZS	2004	97.5913812196786	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Middle income	MIC	AG.CON.FERT.PT.ZS	2005	101.2605129728	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Middle income	MIC	AG.CON.FERT.PT.ZS	2006	104.439148725099	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Middle income	MIC	AG.CON.FERT.PT.ZS	2007	104.107963181704	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Middle income	MIC	AG.CON.FERT.PT.ZS	2008	102.580084297705	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Middle income	MIC	AG.CON.FERT.PT.ZS	2009	103.888881080688	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Middle income	MIC	AG.CON.FERT.PT.ZS	2010	145.188307435706	2013/06/24
+Fertilizer consumption (% of fertilizer production) - North America	NAC	AG.CON.FERT.PT.ZS	2002	68.809070551345	2013/06/24
+Fertilizer consumption (% of fertilizer production) - North America	NAC	AG.CON.FERT.PT.ZS	2003	71.3381429021215	2013/06/24
+Fertilizer consumption (% of fertilizer production) - North America	NAC	AG.CON.FERT.PT.ZS	2004	67.1764049396164	2013/06/24
+Fertilizer consumption (% of fertilizer production) - North America	NAC	AG.CON.FERT.PT.ZS	2005	69.041435592839	2013/06/24
+Fertilizer consumption (% of fertilizer production) - North America	NAC	AG.CON.FERT.PT.ZS	2006	68.6649305061493	2013/06/24
+Fertilizer consumption (% of fertilizer production) - North America	NAC	AG.CON.FERT.PT.ZS	2007	66.0208534824622	2013/06/24
+Fertilizer consumption (% of fertilizer production) - North America	NAC	AG.CON.FERT.PT.ZS	2008	70.7834410333364	2013/06/24
+Fertilizer consumption (% of fertilizer production) - North America	NAC	AG.CON.FERT.PT.ZS	2009	74.4234061100056	2013/06/24
+Fertilizer consumption (% of fertilizer production) - North America	NAC	AG.CON.FERT.PT.ZS	2010	69.6421884350046	2013/06/24
+Fertilizer consumption (% of fertilizer production) - OECD members	OED	AG.CON.FERT.PT.ZS	2002	89.5891465216931	2013/06/24
+Fertilizer consumption (% of fertilizer production) - OECD members	OED	AG.CON.FERT.PT.ZS	2003	91.2260520849357	2013/06/24
+Fertilizer consumption (% of fertilizer production) - OECD members	OED	AG.CON.FERT.PT.ZS	2004	83.7661949469011	2013/06/24
+Fertilizer consumption (% of fertilizer production) - OECD members	OED	AG.CON.FERT.PT.ZS	2005	83.795700231232	2013/06/24
+Fertilizer consumption (% of fertilizer production) - OECD members	OED	AG.CON.FERT.PT.ZS	2006	84.7359398742577	2013/06/24
+Fertilizer consumption (% of fertilizer production) - OECD members	OED	AG.CON.FERT.PT.ZS	2007	86.181100424899	2013/06/24
+Fertilizer consumption (% of fertilizer production) - OECD members	OED	AG.CON.FERT.PT.ZS	2008	84.3116729681563	2013/06/24
+Fertilizer consumption (% of fertilizer production) - OECD members	OED	AG.CON.FERT.PT.ZS	2009	88.3484001288578	2013/06/24
+Fertilizer consumption (% of fertilizer production) - OECD members	OED	AG.CON.FERT.PT.ZS	2010	84.963443070086	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Small states	SST	AG.CON.FERT.PT.ZS	2002	39.7224106860528	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Small states	SST	AG.CON.FERT.PT.ZS	2003	34.5286958791478	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Small states	SST	AG.CON.FERT.PT.ZS	2004	39.2442638698604	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Small states	SST	AG.CON.FERT.PT.ZS	2005	25.6828188714755	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Small states	SST	AG.CON.FERT.PT.ZS	2006	32.3929961089495	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Small states	SST	AG.CON.FERT.PT.ZS	2007	22.1127696679228	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Small states	SST	AG.CON.FERT.PT.ZS	2008	40.0131111458327	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Small states	SST	AG.CON.FERT.PT.ZS	2009	25.2199221382047	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Small states	SST	AG.CON.FERT.PT.ZS	2010	43.7186761954422	2013/06/24
+Fertilizer consumption (% of fertilizer production) - South Asia	SAS	AG.CON.FERT.PT.ZS	2002	118.141425692104	2013/06/24
+Fertilizer consumption (% of fertilizer production) - South Asia	SAS	AG.CON.FERT.PT.ZS	2003	123.53651896791	2013/06/24
+Fertilizer consumption (% of fertilizer production) - South Asia	SAS	AG.CON.FERT.PT.ZS	2004	125.241110057276	2013/06/24
+Fertilizer consumption (% of fertilizer production) - South Asia	SAS	AG.CON.FERT.PT.ZS	2005	136.234893523589	2013/06/24
+Fertilizer consumption (% of fertilizer production) - South Asia	SAS	AG.CON.FERT.PT.ZS	2006	152.860780859919	2013/06/24
+Fertilizer consumption (% of fertilizer production) - South Asia	SAS	AG.CON.FERT.PT.ZS	2007	166.238922492112	2013/06/24
+Fertilizer consumption (% of fertilizer production) - South Asia	SAS	AG.CON.FERT.PT.ZS	2008	178.734263384086	2013/06/24
+Fertilizer consumption (% of fertilizer production) - South Asia	SAS	AG.CON.FERT.PT.ZS	2009	184.074977716989	2013/06/24
+Fertilizer consumption (% of fertilizer production) - South Asia	SAS	AG.CON.FERT.PT.ZS	2010	175.897414402471	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sub-Saharan Africa (all income levels)	SSF	AG.CON.FERT.PT.ZS	2002	272.742853281071	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sub-Saharan Africa (all income levels)	SSF	AG.CON.FERT.PT.ZS	2003	228.746888591286	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sub-Saharan Africa (all income levels)	SSF	AG.CON.FERT.PT.ZS	2004	279.377904810764	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sub-Saharan Africa (all income levels)	SSF	AG.CON.FERT.PT.ZS	2005	274.446778046899	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sub-Saharan Africa (all income levels)	SSF	AG.CON.FERT.PT.ZS	2006	604.251376522002	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sub-Saharan Africa (all income levels)	SSF	AG.CON.FERT.PT.ZS	2007	431.662980344952	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sub-Saharan Africa (all income levels)	SSF	AG.CON.FERT.PT.ZS	2008	570.185999488411	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sub-Saharan Africa (all income levels)	SSF	AG.CON.FERT.PT.ZS	2009	420.862594795453	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sub-Saharan Africa (all income levels)	SSF	AG.CON.FERT.PT.ZS	2010	573.087319853567	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sub-Saharan Africa (developing only)	SSA	AG.CON.FERT.PT.ZS	2002	272.742853281071	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sub-Saharan Africa (developing only)	SSA	AG.CON.FERT.PT.ZS	2003	228.746888591286	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sub-Saharan Africa (developing only)	SSA	AG.CON.FERT.PT.ZS	2004	279.377904810764	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sub-Saharan Africa (developing only)	SSA	AG.CON.FERT.PT.ZS	2005	274.446778046899	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sub-Saharan Africa (developing only)	SSA	AG.CON.FERT.PT.ZS	2006	604.251376522002	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sub-Saharan Africa (developing only)	SSA	AG.CON.FERT.PT.ZS	2007	431.662980344952	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sub-Saharan Africa (developing only)	SSA	AG.CON.FERT.PT.ZS	2008	570.185999488411	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sub-Saharan Africa (developing only)	SSA	AG.CON.FERT.PT.ZS	2009	420.862594795453	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sub-Saharan Africa (developing only)	SSA	AG.CON.FERT.PT.ZS	2010	573.087319853567	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Upper middle income	UMC	AG.CON.FERT.PT.ZS	2002	99.2341414883505	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Upper middle income	UMC	AG.CON.FERT.PT.ZS	2003	96.2495958268007	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Upper middle income	UMC	AG.CON.FERT.PT.ZS	2004	89.3713381143718	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Upper middle income	UMC	AG.CON.FERT.PT.ZS	2005	93.4169909296104	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Upper middle income	UMC	AG.CON.FERT.PT.ZS	2006	96.2568326467208	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Upper middle income	UMC	AG.CON.FERT.PT.ZS	2007	93.7577981045298	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Upper middle income	UMC	AG.CON.FERT.PT.ZS	2008	89.397593274435	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Upper middle income	UMC	AG.CON.FERT.PT.ZS	2009	89.8693874898522	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Upper middle income	UMC	AG.CON.FERT.PT.ZS	2010	147.827613382451	2013/06/24
+Fertilizer consumption (% of fertilizer production) - World	WLD	AG.CON.FERT.PT.ZS	2002	95.3270162336628	2013/06/24
+Fertilizer consumption (% of fertilizer production) - World	WLD	AG.CON.FERT.PT.ZS	2003	95.8771906593226	2013/06/24
+Fertilizer consumption (% of fertilizer production) - World	WLD	AG.CON.FERT.PT.ZS	2004	90.3060005994043	2013/06/24
+Fertilizer consumption (% of fertilizer production) - World	WLD	AG.CON.FERT.PT.ZS	2005	92.2449456915704	2013/06/24
+Fertilizer consumption (% of fertilizer production) - World	WLD	AG.CON.FERT.PT.ZS	2006	94.6092028462897	2013/06/24
+Fertilizer consumption (% of fertilizer production) - World	WLD	AG.CON.FERT.PT.ZS	2007	94.9458852583346	2013/06/24
+Fertilizer consumption (% of fertilizer production) - World	WLD	AG.CON.FERT.PT.ZS	2008	94.3314620401154	2013/06/24
+Fertilizer consumption (% of fertilizer production) - World	WLD	AG.CON.FERT.PT.ZS	2009	97.2135794183092	2013/06/24
+Fertilizer consumption (% of fertilizer production) - World	WLD	AG.CON.FERT.PT.ZS	2010	119.292922569935	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Afghanistan	AFG	AG.CON.FERT.PT.ZS	2002	111.604168446229	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Afghanistan	AFG	AG.CON.FERT.PT.ZS	2003	157.065284462545	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Afghanistan	AFG	AG.CON.FERT.PT.ZS	2004	182.187275156748	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Afghanistan	AFG	AG.CON.FERT.PT.ZS	2005	211.733094491715	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Afghanistan	AFG	AG.CON.FERT.PT.ZS	2006	278.022227262418	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Afghanistan	AFG	AG.CON.FERT.PT.ZS	2007	166.17569080304	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Afghanistan	AFG	AG.CON.FERT.PT.ZS	2008	152.133787144914	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Afghanistan	AFG	AG.CON.FERT.PT.ZS	2009	259.0016908035	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Afghanistan	AFG	AG.CON.FERT.PT.ZS	2010	275.819331226086	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Algeria	DZA	AG.CON.FERT.PT.ZS	2002	76.1140167364018	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Algeria	DZA	AG.CON.FERT.PT.ZS	2003	42.6268458917078	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Algeria	DZA	AG.CON.FERT.PT.ZS	2004	90.6906530336647	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Algeria	DZA	AG.CON.FERT.PT.ZS	2005	53.9032164589975	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Algeria	DZA	AG.CON.FERT.PT.ZS	2006	191.44347826087	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Algeria	DZA	AG.CON.FERT.PT.ZS	2007	61.9480015521925	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Algeria	DZA	AG.CON.FERT.PT.ZS	2008	283.9566755084	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Algeria	DZA	AG.CON.FERT.PT.ZS	2009	487.85240464345	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Algeria	DZA	AG.CON.FERT.PT.ZS	2010	297.953051643193	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Argentina	ARG	AG.CON.FERT.PT.ZS	2002	160.851250716059	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Argentina	ARG	AG.CON.FERT.PT.ZS	2003	197.584494939851	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Argentina	ARG	AG.CON.FERT.PT.ZS	2004	222.144902046064	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Argentina	ARG	AG.CON.FERT.PT.ZS	2005	208.362549391813	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Argentina	ARG	AG.CON.FERT.PT.ZS	2006	218.98272683826	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Argentina	ARG	AG.CON.FERT.PT.ZS	2007	382.688116552722	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Argentina	ARG	AG.CON.FERT.PT.ZS	2008	305.880309793373	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Argentina	ARG	AG.CON.FERT.PT.ZS	2009	153.278635922547	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Argentina	ARG	AG.CON.FERT.PT.ZS	2010	347.340301491759	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Armenia	ARM	AG.CON.FERT.PT.ZS	2002	523.600000000001	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Australia	AUS	AG.CON.FERT.PT.ZS	2002	229.215064692027	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Australia	AUS	AG.CON.FERT.PT.ZS	2003	239.342955107248	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Australia	AUS	AG.CON.FERT.PT.ZS	2004	251.277033526086	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Australia	AUS	AG.CON.FERT.PT.ZS	2005	236.818922420982	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Australia	AUS	AG.CON.FERT.PT.ZS	2006	222.986588087448	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Australia	AUS	AG.CON.FERT.PT.ZS	2007	178.676614961712	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Australia	AUS	AG.CON.FERT.PT.ZS	2008	216.571336474031	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Australia	AUS	AG.CON.FERT.PT.ZS	2009	153.035510587091	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Australia	AUS	AG.CON.FERT.PT.ZS	2010	222.116574074074	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Bahrain	BHR	AG.CON.FERT.PT.ZS	2002	6.17687590436162	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Bahrain	BHR	AG.CON.FERT.PT.ZS	2003	0.067479487769343	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Bahrain	BHR	AG.CON.FERT.PT.ZS	2005	1.68935936083321	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Bahrain	BHR	AG.CON.FERT.PT.ZS	2006	4.76173904570338	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Bahrain	BHR	AG.CON.FERT.PT.ZS	2007	0.415628833785643	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Bahrain	BHR	AG.CON.FERT.PT.ZS	2008	0.786686838124056	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Bahrain	BHR	AG.CON.FERT.PT.ZS	2009	0.42846695918096	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Bahrain	BHR	AG.CON.FERT.PT.ZS	2010	0.91829681343748	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Bangladesh	BGD	AG.CON.FERT.PT.ZS	2002	121.21157149108	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Bangladesh	BGD	AG.CON.FERT.PT.ZS	2003	130.44109617226	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Bangladesh	BGD	AG.CON.FERT.PT.ZS	2004	140.642912079016	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Bangladesh	BGD	AG.CON.FERT.PT.ZS	2005	164.730200448999	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Bangladesh	BGD	AG.CON.FERT.PT.ZS	2006	172.070811424231	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Bangladesh	BGD	AG.CON.FERT.PT.ZS	2007	156.549104708778	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Bangladesh	BGD	AG.CON.FERT.PT.ZS	2008	220.067048186651	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Bangladesh	BGD	AG.CON.FERT.PT.ZS	2009	377.190065100482	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Bangladesh	BGD	AG.CON.FERT.PT.ZS	2010	218.9147438633	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Belarus	BLR	AG.CON.FERT.PT.ZS	2002	16.8577223245954	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Belarus	BLR	AG.CON.FERT.PT.ZS	2003	15.1108929071233	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Belarus	BLR	AG.CON.FERT.PT.ZS	2004	14.8431120748744	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Belarus	BLR	AG.CON.FERT.PT.ZS	2005	16.2913269280524	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Belarus	BLR	AG.CON.FERT.PT.ZS	2006	23.6863573143494	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Belarus	BLR	AG.CON.FERT.PT.ZS	2007	20.0858134754458	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Belarus	BLR	AG.CON.FERT.PT.ZS	2008	21.9454537502411	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Belarus	BLR	AG.CON.FERT.PT.ZS	2009	46.665798326499	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Belarus	BLR	AG.CON.FERT.PT.ZS	2010	24.3286661406561	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Brazil	BRA	AG.CON.FERT.PT.ZS	2002	264.490172269973	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Brazil	BRA	AG.CON.FERT.PT.ZS	2003	315.684800619306	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Brazil	BRA	AG.CON.FERT.PT.ZS	2004	322.15815720138	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Brazil	BRA	AG.CON.FERT.PT.ZS	2005	269.93768128895	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Brazil	BRA	AG.CON.FERT.PT.ZS	2006	261.737007494087	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Brazil	BRA	AG.CON.FERT.PT.ZS	2007	326.585848270782	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Brazil	BRA	AG.CON.FERT.PT.ZS	2008	312.894655476279	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Brazil	BRA	AG.CON.FERT.PT.ZS	2009	244.651532584014	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Brazil	BRA	AG.CON.FERT.PT.ZS	2010	341.062158552708	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Bulgaria	BGR	AG.CON.FERT.PT.ZS	2002	97.7101562060016	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Bulgaria	BGR	AG.CON.FERT.PT.ZS	2003	107.715951595159	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Bulgaria	BGR	AG.CON.FERT.PT.ZS	2004	54.9122591225913	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Bulgaria	BGR	AG.CON.FERT.PT.ZS	2005	45.1395170563435	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Bulgaria	BGR	AG.CON.FERT.PT.ZS	2006	58.089891586272	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Bulgaria	BGR	AG.CON.FERT.PT.ZS	2007	67.7700419714751	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Bulgaria	BGR	AG.CON.FERT.PT.ZS	2008	75.2591209932371	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Bulgaria	BGR	AG.CON.FERT.PT.ZS	2009	116.620591456736	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Bulgaria	BGR	AG.CON.FERT.PT.ZS	2010	84.9953997809421	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Canada	CAN	AG.CON.FERT.PT.ZS	2002	22.887106906413	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Canada	CAN	AG.CON.FERT.PT.ZS	2003	21.0031867968832	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Canada	CAN	AG.CON.FERT.PT.ZS	2004	18.1161448134542	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Canada	CAN	AG.CON.FERT.PT.ZS	2005	24.4185950120797	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Canada	CAN	AG.CON.FERT.PT.ZS	2006	16.8207164234052	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Canada	CAN	AG.CON.FERT.PT.ZS	2007	21.4486205929047	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Canada	CAN	AG.CON.FERT.PT.ZS	2008	27.6486497837955	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Canada	CAN	AG.CON.FERT.PT.ZS	2009	26.1733336149362	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Canada	CAN	AG.CON.FERT.PT.ZS	2010	21.0293467616836	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Chile	CHL	AG.CON.FERT.PT.ZS	2002	96.9133587786262	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Chile	CHL	AG.CON.FERT.PT.ZS	2003	88.6592105757854	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Chile	CHL	AG.CON.FERT.PT.ZS	2004	108.482337356491	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Chile	CHL	AG.CON.FERT.PT.ZS	2005	95.6215207729763	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Chile	CHL	AG.CON.FERT.PT.ZS	2006	103.919284673115	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Chile	CHL	AG.CON.FERT.PT.ZS	2007	101.055480176013	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Chile	CHL	AG.CON.FERT.PT.ZS	2008	102.020013441864	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Chile	CHL	AG.CON.FERT.PT.ZS	2009	59.9425126001568	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Chile	CHL	AG.CON.FERT.PT.ZS	2010	53.4970588235295	2013/06/24
+Fertilizer consumption (% of fertilizer production) - China	CHN	AG.CON.FERT.PT.ZS	2002	122.730272137189	2013/06/24
+Fertilizer consumption (% of fertilizer production) - China	CHN	AG.CON.FERT.PT.ZS	2003	111.942480048418	2013/06/24
+Fertilizer consumption (% of fertilizer production) - China	CHN	AG.CON.FERT.PT.ZS	2004	99.6022898586488	2013/06/24
+Fertilizer consumption (% of fertilizer production) - China	CHN	AG.CON.FERT.PT.ZS	2005	116.524891420964	2013/06/24
+Fertilizer consumption (% of fertilizer production) - China	CHN	AG.CON.FERT.PT.ZS	2006	111.76996299081	2013/06/24
+Fertilizer consumption (% of fertilizer production) - China	CHN	AG.CON.FERT.PT.ZS	2007	103.762566899206	2013/06/24
+Fertilizer consumption (% of fertilizer production) - China	CHN	AG.CON.FERT.PT.ZS	2008	99.0739729438587	2013/06/24
+Fertilizer consumption (% of fertilizer production) - China	CHN	AG.CON.FERT.PT.ZS	2009	96.7828256508661	2013/06/24
+Fertilizer consumption (% of fertilizer production) - China	CHN	AG.CON.FERT.PT.ZS	2010	298.620273766379	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Colombia	COL	AG.CON.FERT.PT.ZS	2002	762.504464285716	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Colombia	COL	AG.CON.FERT.PT.ZS	2003	727.367952522257	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Colombia	COL	AG.CON.FERT.PT.ZS	2004	931.666666666668	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Colombia	COL	AG.CON.FERT.PT.ZS	2005	315.959485546318	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Colombia	COL	AG.CON.FERT.PT.ZS	2006	252.069374554014	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Colombia	COL	AG.CON.FERT.PT.ZS	2007	236.310023077023	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Colombia	COL	AG.CON.FERT.PT.ZS	2008	275.666148041066	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Colombia	COL	AG.CON.FERT.PT.ZS	2009	227.938760134431	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Colombia	COL	AG.CON.FERT.PT.ZS	2010	245.965359619391	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Croatia	HRV	AG.CON.FERT.PT.ZS	2002	70.6717948717951	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Croatia	HRV	AG.CON.FERT.PT.ZS	2003	71.0475099207187	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Croatia	HRV	AG.CON.FERT.PT.ZS	2004	65.3742067705377	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Croatia	HRV	AG.CON.FERT.PT.ZS	2005	59.1097194250559	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Croatia	HRV	AG.CON.FERT.PT.ZS	2006	63.5793695015219	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Croatia	HRV	AG.CON.FERT.PT.ZS	2007	62.9490226319839	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Croatia	HRV	AG.CON.FERT.PT.ZS	2008	75.6720050703297	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Croatia	HRV	AG.CON.FERT.PT.ZS	2009	49.17925923234	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Croatia	HRV	AG.CON.FERT.PT.ZS	2010	56.6928979280483	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Cuba	CUB	AG.CON.FERT.PT.ZS	2002	754.900631161652	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Cuba	CUB	AG.CON.FERT.PT.ZS	2003	333.125302630871	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Cuba	CUB	AG.CON.FERT.PT.ZS	2004	250.77782646801	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Cuba	CUB	AG.CON.FERT.PT.ZS	2005	358.770627783114	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Cuba	CUB	AG.CON.FERT.PT.ZS	2006	436.98101905582	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Cuba	CUB	AG.CON.FERT.PT.ZS	2007	584.114118239686	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Cuba	CUB	AG.CON.FERT.PT.ZS	2008	598.169085716523	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Cuba	CUB	AG.CON.FERT.PT.ZS	2009	444.42628591089	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Cuba	CUB	AG.CON.FERT.PT.ZS	2010	571.451138468244	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Czech Republic	CZE	AG.CON.FERT.PT.ZS	2002	92.261677796707	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Czech Republic	CZE	AG.CON.FERT.PT.ZS	2003	96.2217955029294	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Czech Republic	CZE	AG.CON.FERT.PT.ZS	2004	85.2679918211378	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Czech Republic	CZE	AG.CON.FERT.PT.ZS	2005	87.4916277993596	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Czech Republic	CZE	AG.CON.FERT.PT.ZS	2006	86.5932300631098	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Czech Republic	CZE	AG.CON.FERT.PT.ZS	2007	91.7025787965618	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Czech Republic	CZE	AG.CON.FERT.PT.ZS	2008	79.7128939828082	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Czech Republic	CZE	AG.CON.FERT.PT.ZS	2009	118.931708615539	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Czech Republic	CZE	AG.CON.FERT.PT.ZS	2010	150.757383966245	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Denmark	DNK	AG.CON.FERT.PT.ZS	2002	169.285251400907	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Denmark	DNK	AG.CON.FERT.PT.ZS	2003	189.089007029286	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Denmark	DNK	AG.CON.FERT.PT.ZS	2004	327.575857289579	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Egypt, Arab Rep.	EGY	AG.CON.FERT.PT.ZS	2002	72.7959566336696	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Egypt, Arab Rep.	EGY	AG.CON.FERT.PT.ZS	2003	103.719120096882	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Egypt, Arab Rep.	EGY	AG.CON.FERT.PT.ZS	2004	87.298869996832	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Egypt, Arab Rep.	EGY	AG.CON.FERT.PT.ZS	2005	95.5343798574575	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Egypt, Arab Rep.	EGY	AG.CON.FERT.PT.ZS	2006	64.653779427488	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Egypt, Arab Rep.	EGY	AG.CON.FERT.PT.ZS	2007	52.7297951880121	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Egypt, Arab Rep.	EGY	AG.CON.FERT.PT.ZS	2008	62.7991354706799	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Egypt, Arab Rep.	EGY	AG.CON.FERT.PT.ZS	2009	48.5228151067896	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Egypt, Arab Rep.	EGY	AG.CON.FERT.PT.ZS	2010	55.12748549139	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Estonia	EST	AG.CON.FERT.PT.ZS	2002	111.304813715793	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Estonia	EST	AG.CON.FERT.PT.ZS	2003	114.85	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Estonia	EST	AG.CON.FERT.PT.ZS	2004	65.7377516854103	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Estonia	EST	AG.CON.FERT.PT.ZS	2005	35.7191662128039	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Estonia	EST	AG.CON.FERT.PT.ZS	2006	42.5747357825869	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Estonia	EST	AG.CON.FERT.PT.ZS	2007	47.1656034438048	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Estonia	EST	AG.CON.FERT.PT.ZS	2008	65.3918256130792	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Estonia	EST	AG.CON.FERT.PT.ZS	2009	5280.35714285715	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Estonia	EST	AG.CON.FERT.PT.ZS	2010	6118.03051317615	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Finland	FIN	AG.CON.FERT.PT.ZS	2002	81.1372972972975	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Finland	FIN	AG.CON.FERT.PT.ZS	2003	73.7310737133503	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Finland	FIN	AG.CON.FERT.PT.ZS	2004	82.93187943442	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Finland	FIN	AG.CON.FERT.PT.ZS	2005	82.3045391607147	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Finland	FIN	AG.CON.FERT.PT.ZS	2006	93.6909090909093	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Finland	FIN	AG.CON.FERT.PT.ZS	2007	81.4229121993119	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Finland	FIN	AG.CON.FERT.PT.ZS	2008	86.5199615199617	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Finland	FIN	AG.CON.FERT.PT.ZS	2009	75.8195701920209	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Finland	FIN	AG.CON.FERT.PT.ZS	2010	90.8587536494515	2013/06/24
+Fertilizer consumption (% of fertilizer production) - France	FRA	AG.CON.FERT.PT.ZS	2002	301.528695175277	2013/06/24
+Fertilizer consumption (% of fertilizer production) - France	FRA	AG.CON.FERT.PT.ZS	2003	296.564744688701	2013/06/24
+Fertilizer consumption (% of fertilizer production) - France	FRA	AG.CON.FERT.PT.ZS	2004	130.459911370305	2013/06/24
+Fertilizer consumption (% of fertilizer production) - France	FRA	AG.CON.FERT.PT.ZS	2005	97.7107992395301	2013/06/24
+Fertilizer consumption (% of fertilizer production) - France	FRA	AG.CON.FERT.PT.ZS	2006	121.171503217889	2013/06/24
+Fertilizer consumption (% of fertilizer production) - France	FRA	AG.CON.FERT.PT.ZS	2007	267.459075896753	2013/06/24
+Fertilizer consumption (% of fertilizer production) - France	FRA	AG.CON.FERT.PT.ZS	2008	163.271671163233	2013/06/24
+Fertilizer consumption (% of fertilizer production) - France	FRA	AG.CON.FERT.PT.ZS	2009	208.725012469785	2013/06/24
+Fertilizer consumption (% of fertilizer production) - France	FRA	AG.CON.FERT.PT.ZS	2010	186.850606739758	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Georgia	GEO	AG.CON.FERT.PT.ZS	2002	31.8072289156627	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Georgia	GEO	AG.CON.FERT.PT.ZS	2003	14.9851111140007	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Georgia	GEO	AG.CON.FERT.PT.ZS	2004	15.1187882009035	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Georgia	GEO	AG.CON.FERT.PT.ZS	2005	22.6850719636242	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Georgia	GEO	AG.CON.FERT.PT.ZS	2006	17.2249329296035	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Georgia	GEO	AG.CON.FERT.PT.ZS	2007	14.5195794328716	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Georgia	GEO	AG.CON.FERT.PT.ZS	2008	12.8668205277585	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Georgia	GEO	AG.CON.FERT.PT.ZS	2009	14.4449805158656	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Georgia	GEO	AG.CON.FERT.PT.ZS	2010	11.6419229262356	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Germany	DEU	AG.CON.FERT.PT.ZS	2002	57.4420265408602	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Germany	DEU	AG.CON.FERT.PT.ZS	2003	55.0259186519845	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Germany	DEU	AG.CON.FERT.PT.ZS	2004	57.5230389528317	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Germany	DEU	AG.CON.FERT.PT.ZS	2005	52.8730291049702	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Germany	DEU	AG.CON.FERT.PT.ZS	2006	50.3413295486386	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Germany	DEU	AG.CON.FERT.PT.ZS	2007	59.3228405129574	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Germany	DEU	AG.CON.FERT.PT.ZS	2008	55.6740653501973	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Germany	DEU	AG.CON.FERT.PT.ZS	2009	68.2929588756944	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Germany	DEU	AG.CON.FERT.PT.ZS	2010	64.7896796646188	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Greece	GRC	AG.CON.FERT.PT.ZS	2002	210.573372783998	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Greece	GRC	AG.CON.FERT.PT.ZS	2003	149.853926264296	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Greece	GRC	AG.CON.FERT.PT.ZS	2004	197.175446278638	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Greece	GRC	AG.CON.FERT.PT.ZS	2005	194.012859323523	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Greece	GRC	AG.CON.FERT.PT.ZS	2006	356.46985898032	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Greece	GRC	AG.CON.FERT.PT.ZS	2007	354.174616282713	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Greece	GRC	AG.CON.FERT.PT.ZS	2008	475.893024710667	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Greece	GRC	AG.CON.FERT.PT.ZS	2009	473.839989071536	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Greece	GRC	AG.CON.FERT.PT.ZS	2010	610.230952380954	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Hungary	HUN	AG.CON.FERT.PT.ZS	2002	188.025729836714	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Hungary	HUN	AG.CON.FERT.PT.ZS	2003	213.832372954832	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Hungary	HUN	AG.CON.FERT.PT.ZS	2004	170.255947682941	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Hungary	HUN	AG.CON.FERT.PT.ZS	2005	125.92273740612	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Hungary	HUN	AG.CON.FERT.PT.ZS	2006	150.993377483444	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Hungary	HUN	AG.CON.FERT.PT.ZS	2007	227.386889598507	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Hungary	HUN	AG.CON.FERT.PT.ZS	2008	227.216414409	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Hungary	HUN	AG.CON.FERT.PT.ZS	2009	158.04523452707	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Hungary	HUN	AG.CON.FERT.PT.ZS	2010	159.234351605992	2013/06/24
+Fertilizer consumption (% of fertilizer production) - India	IND	AG.CON.FERT.PT.ZS	2002	113.401275032345	2013/06/24
+Fertilizer consumption (% of fertilizer production) - India	IND	AG.CON.FERT.PT.ZS	2003	119.961055081536	2013/06/24
+Fertilizer consumption (% of fertilizer production) - India	IND	AG.CON.FERT.PT.ZS	2004	121.48632440882	2013/06/24
+Fertilizer consumption (% of fertilizer production) - India	IND	AG.CON.FERT.PT.ZS	2005	132.896008909816	2013/06/24
+Fertilizer consumption (% of fertilizer production) - India	IND	AG.CON.FERT.PT.ZS	2006	152.551053782092	2013/06/24
+Fertilizer consumption (% of fertilizer production) - India	IND	AG.CON.FERT.PT.ZS	2007	172.230339025303	2013/06/24
+Fertilizer consumption (% of fertilizer production) - India	IND	AG.CON.FERT.PT.ZS	2008	188.224021366357	2013/06/24
+Fertilizer consumption (% of fertilizer production) - India	IND	AG.CON.FERT.PT.ZS	2009	180.965578511864	2013/06/24
+Fertilizer consumption (% of fertilizer production) - India	IND	AG.CON.FERT.PT.ZS	2010	181.227423519019	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Indonesia	IDN	AG.CON.FERT.PT.ZS	2002	111.657852359229	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Indonesia	IDN	AG.CON.FERT.PT.ZS	2003	111.024297158404	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Indonesia	IDN	AG.CON.FERT.PT.ZS	2004	123.185040323133	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Indonesia	IDN	AG.CON.FERT.PT.ZS	2005	102.582993062733	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Indonesia	IDN	AG.CON.FERT.PT.ZS	2006	109.027606174756	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Indonesia	IDN	AG.CON.FERT.PT.ZS	2007	112.192884920902	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Indonesia	IDN	AG.CON.FERT.PT.ZS	2008	117.562956096072	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Indonesia	IDN	AG.CON.FERT.PT.ZS	2009	110.918872970787	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Indonesia	IDN	AG.CON.FERT.PT.ZS	2010	113.4576141827	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Iran, Islamic Rep.	IRN	AG.CON.FERT.PT.ZS	2002	138.228536006238	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Iran, Islamic Rep.	IRN	AG.CON.FERT.PT.ZS	2003	143.33758778949	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Iran, Islamic Rep.	IRN	AG.CON.FERT.PT.ZS	2004	187.104541362199	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Iran, Islamic Rep.	IRN	AG.CON.FERT.PT.ZS	2005	180.047548938169	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Iran, Islamic Rep.	IRN	AG.CON.FERT.PT.ZS	2006	237.47387596464	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Iran, Islamic Rep.	IRN	AG.CON.FERT.PT.ZS	2007	183.095352041536	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Iran, Islamic Rep.	IRN	AG.CON.FERT.PT.ZS	2008	148.387645723748	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Iran, Islamic Rep.	IRN	AG.CON.FERT.PT.ZS	2009	125.361235935668	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Iran, Islamic Rep.	IRN	AG.CON.FERT.PT.ZS	2010	112.332126591148	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Iraq	IRQ	AG.CON.FERT.PT.ZS	2004	111.353525504296	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Iraq	IRQ	AG.CON.FERT.PT.ZS	2005	132.435889589326	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Iraq	IRQ	AG.CON.FERT.PT.ZS	2006	132.454361054767	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Iraq	IRQ	AG.CON.FERT.PT.ZS	2007	144.87379245871	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Iraq	IRQ	AG.CON.FERT.PT.ZS	2008	132.773697096887	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Iraq	IRQ	AG.CON.FERT.PT.ZS	2009	187.358731057924	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Iraq	IRQ	AG.CON.FERT.PT.ZS	2010	141.987577639752	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Ireland	IRL	AG.CON.FERT.PT.ZS	2002	337.831730769231	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Israel	ISR	AG.CON.FERT.PT.ZS	2002	3.85264910168408	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Israel	ISR	AG.CON.FERT.PT.ZS	2003	3.90390688128653	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Israel	ISR	AG.CON.FERT.PT.ZS	2004	3.90413204259651	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Israel	ISR	AG.CON.FERT.PT.ZS	2005	3.35410420722614	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Israel	ISR	AG.CON.FERT.PT.ZS	2006	3.40915883064377	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Israel	ISR	AG.CON.FERT.PT.ZS	2007	3.87444022601758	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Israel	ISR	AG.CON.FERT.PT.ZS	2008	2.89226879992334	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Israel	ISR	AG.CON.FERT.PT.ZS	2009	2.53487320647332	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Israel	ISR	AG.CON.FERT.PT.ZS	2010	2.32676540445403	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Italy	ITA	AG.CON.FERT.PT.ZS	2002	274.970139066633	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Italy	ITA	AG.CON.FERT.PT.ZS	2003	264.941891395731	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Italy	ITA	AG.CON.FERT.PT.ZS	2004	219.446840572504	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Italy	ITA	AG.CON.FERT.PT.ZS	2005	314.270897275787	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Italy	ITA	AG.CON.FERT.PT.ZS	2006	354.007504242826	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Italy	ITA	AG.CON.FERT.PT.ZS	2007	430.564095118457	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Italy	ITA	AG.CON.FERT.PT.ZS	2008	222.458534003048	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Italy	ITA	AG.CON.FERT.PT.ZS	2009	256.268026665139	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Italy	ITA	AG.CON.FERT.PT.ZS	2010	274.405396825397	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Japan	JPN	AG.CON.FERT.PT.ZS	2002	129.160262398284	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Japan	JPN	AG.CON.FERT.PT.ZS	2003	137.267459676556	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Japan	JPN	AG.CON.FERT.PT.ZS	2004	139.131102668838	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Japan	JPN	AG.CON.FERT.PT.ZS	2005	141.341939114224	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Japan	JPN	AG.CON.FERT.PT.ZS	2006	136.296174764459	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Japan	JPN	AG.CON.FERT.PT.ZS	2007	142.12806725462	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Japan	JPN	AG.CON.FERT.PT.ZS	2008	135.680730447225	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Japan	JPN	AG.CON.FERT.PT.ZS	2009	115.820124557106	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Japan	JPN	AG.CON.FERT.PT.ZS	2010	123.556782839219	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Jordan	JOR	AG.CON.FERT.PT.ZS	2002	20.14308167931	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Jordan	JOR	AG.CON.FERT.PT.ZS	2003	10.8254779961546	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Jordan	JOR	AG.CON.FERT.PT.ZS	2004	6.30939107518436	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Jordan	JOR	AG.CON.FERT.PT.ZS	2005	9.55563022109787	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Jordan	JOR	AG.CON.FERT.PT.ZS	2006	8.61362254603936	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Jordan	JOR	AG.CON.FERT.PT.ZS	2007	8.60263204327116	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Jordan	JOR	AG.CON.FERT.PT.ZS	2008	2.99327154706951	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Jordan	JOR	AG.CON.FERT.PT.ZS	2009	6.5484676669523	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Jordan	JOR	AG.CON.FERT.PT.ZS	2010	1.35593220338983	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Kazakhstan	KAZ	AG.CON.FERT.PT.ZS	2002	25.1059322033898	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Kazakhstan	KAZ	AG.CON.FERT.PT.ZS	2003	25.2980430381645	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Kazakhstan	KAZ	AG.CON.FERT.PT.ZS	2004	26.6459069102141	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Kazakhstan	KAZ	AG.CON.FERT.PT.ZS	2005	33.4012820197952	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Kazakhstan	KAZ	AG.CON.FERT.PT.ZS	2006	37.93640612114	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Kazakhstan	KAZ	AG.CON.FERT.PT.ZS	2007	39.8392900624984	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Kazakhstan	KAZ	AG.CON.FERT.PT.ZS	2008	16.8367597138296	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Kazakhstan	KAZ	AG.CON.FERT.PT.ZS	2009	33.9759036144579	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Kazakhstan	KAZ	AG.CON.FERT.PT.ZS	2010	22.7710843373494	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Korea, Rep.	KOR	AG.CON.FERT.PT.ZS	2002	125.950883060644	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Korea, Rep.	KOR	AG.CON.FERT.PT.ZS	2003	266.022808121717	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Korea, Rep.	KOR	AG.CON.FERT.PT.ZS	2004	144.537675279332	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Korea, Rep.	KOR	AG.CON.FERT.PT.ZS	2005	178.543594698268	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Korea, Rep.	KOR	AG.CON.FERT.PT.ZS	2006	134.233355097143	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Korea, Rep.	KOR	AG.CON.FERT.PT.ZS	2007	135.597934444533	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Korea, Rep.	KOR	AG.CON.FERT.PT.ZS	2008	133.980329260899	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Korea, Rep.	KOR	AG.CON.FERT.PT.ZS	2009	80.9000962377621	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Korea, Rep.	KOR	AG.CON.FERT.PT.ZS	2010	61.9614872272159	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Kuwait	KWT	AG.CON.FERT.PT.ZS	2002	8.28828828828831	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Kuwait	KWT	AG.CON.FERT.PT.ZS	2005	12.7764127764128	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Kuwait	KWT	AG.CON.FERT.PT.ZS	2006	5.05050505050506	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Kuwait	KWT	AG.CON.FERT.PT.ZS	2008	3.22245322245322	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Kuwait	KWT	AG.CON.FERT.PT.ZS	2009	0.177704063499585	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Kuwait	KWT	AG.CON.FERT.PT.ZS	2010	1.99143951340392	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Lebanon	LBN	AG.CON.FERT.PT.ZS	2002	52.0000000000001	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Lebanon	LBN	AG.CON.FERT.PT.ZS	2003	20.1150837988827	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Lebanon	LBN	AG.CON.FERT.PT.ZS	2004	23.5073134672015	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Lebanon	LBN	AG.CON.FERT.PT.ZS	2005	27.7875	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Lebanon	LBN	AG.CON.FERT.PT.ZS	2006	27.0066666666667	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Lebanon	LBN	AG.CON.FERT.PT.ZS	2007	28.6386666666667	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Lebanon	LBN	AG.CON.FERT.PT.ZS	2008	24.6536658141518	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Lebanon	LBN	AG.CON.FERT.PT.ZS	2009	26.0084835630965	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Lebanon	LBN	AG.CON.FERT.PT.ZS	2010	39.5735567970205	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Libya	LBY	AG.CON.FERT.PT.ZS	2002	30.9544635966041	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Libya	LBY	AG.CON.FERT.PT.ZS	2003	15.8160737812912	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Libya	LBY	AG.CON.FERT.PT.ZS	2004	23.7056170346672	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Libya	LBY	AG.CON.FERT.PT.ZS	2005	30.5842228586306	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Libya	LBY	AG.CON.FERT.PT.ZS	2006	19.462699122023	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Libya	LBY	AG.CON.FERT.PT.ZS	2007	29.6943717641819	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Libya	LBY	AG.CON.FERT.PT.ZS	2008	17.2324136934855	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Libya	LBY	AG.CON.FERT.PT.ZS	2009	28.1884	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Libya	LBY	AG.CON.FERT.PT.ZS	2010	21.44	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Lithuania	LTU	AG.CON.FERT.PT.ZS	2002	21.2327268878409	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Lithuania	LTU	AG.CON.FERT.PT.ZS	2003	24.161718101643	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Lithuania	LTU	AG.CON.FERT.PT.ZS	2004	29.1814894854958	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Lithuania	LTU	AG.CON.FERT.PT.ZS	2005	17.3781026153201	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Lithuania	LTU	AG.CON.FERT.PT.ZS	2006	18.4175631435732	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Lithuania	LTU	AG.CON.FERT.PT.ZS	2007	13.9103071098023	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Lithuania	LTU	AG.CON.FERT.PT.ZS	2008	14.67636828849	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Lithuania	LTU	AG.CON.FERT.PT.ZS	2009	9.53504326030684	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Lithuania	LTU	AG.CON.FERT.PT.ZS	2010	19.3842931698144	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Malawi	MWI	AG.CON.FERT.PT.ZS	2006	83233.5616438358	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Malawi	MWI	AG.CON.FERT.PT.ZS	2007	96273.8461538464	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Malawi	MWI	AG.CON.FERT.PT.ZS	2008	61195.6043956045	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Malawi	MWI	AG.CON.FERT.PT.ZS	2009	57016.6666666667	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Malaysia	MYS	AG.CON.FERT.PT.ZS	2002	195.801731914126	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Malaysia	MYS	AG.CON.FERT.PT.ZS	2003	233.11992786294	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Malaysia	MYS	AG.CON.FERT.PT.ZS	2004	326.15876549677	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Malaysia	MYS	AG.CON.FERT.PT.ZS	2005	234.998989660863	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Malaysia	MYS	AG.CON.FERT.PT.ZS	2006	247.507596683973	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Malaysia	MYS	AG.CON.FERT.PT.ZS	2007	268.908582366964	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Malaysia	MYS	AG.CON.FERT.PT.ZS	2008	222.705706878371	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Malaysia	MYS	AG.CON.FERT.PT.ZS	2009	126.312574921261	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Malaysia	MYS	AG.CON.FERT.PT.ZS	2010	210.1422	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Mali	MLI	AG.CON.FERT.PT.ZS	2004	289.248411040491	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Mali	MLI	AG.CON.FERT.PT.ZS	2005	348.79800063472	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Mali	MLI	AG.CON.FERT.PT.ZS	2006	384.60496264468	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Mali	MLI	AG.CON.FERT.PT.ZS	2007	135.697033085275	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Mali	MLI	AG.CON.FERT.PT.ZS	2008	264.767987976705	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Mali	MLI	AG.CON.FERT.PT.ZS	2009	176.87164793182	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Mali	MLI	AG.CON.FERT.PT.ZS	2010	492.594906158608	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Mauritius	MUS	AG.CON.FERT.PT.ZS	2002	185.196078431373	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Mauritius	MUS	AG.CON.FERT.PT.ZS	2003	306.454238864985	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Mauritius	MUS	AG.CON.FERT.PT.ZS	2004	1030.76626877166	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Mexico	MEX	AG.CON.FERT.PT.ZS	2002	389.080272073856	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Mexico	MEX	AG.CON.FERT.PT.ZS	2003	514.805395518083	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Mexico	MEX	AG.CON.FERT.PT.ZS	2004	405.438622858057	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Mexico	MEX	AG.CON.FERT.PT.ZS	2005	411.965056140633	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Mexico	MEX	AG.CON.FERT.PT.ZS	2006	529.385080976047	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Mexico	MEX	AG.CON.FERT.PT.ZS	2007	433.62095864731	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Mexico	MEX	AG.CON.FERT.PT.ZS	2008	266.3229240034	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Mexico	MEX	AG.CON.FERT.PT.ZS	2009	260.771455756423	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Mexico	MEX	AG.CON.FERT.PT.ZS	2010	285.493884401322	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Morocco	MAR	AG.CON.FERT.PT.ZS	2002	37.0421408011192	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Morocco	MAR	AG.CON.FERT.PT.ZS	2003	35.1128731474082	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Morocco	MAR	AG.CON.FERT.PT.ZS	2004	28.9934502856483	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Morocco	MAR	AG.CON.FERT.PT.ZS	2005	39.6622340629139	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Morocco	MAR	AG.CON.FERT.PT.ZS	2006	33.3812632868024	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Morocco	MAR	AG.CON.FERT.PT.ZS	2007	32.8596163169195	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Morocco	MAR	AG.CON.FERT.PT.ZS	2008	38.6926634170729	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Morocco	MAR	AG.CON.FERT.PT.ZS	2009	21.7920132013201	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Morocco	MAR	AG.CON.FERT.PT.ZS	2010	13.3016044952948	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Myanmar	MMR	AG.CON.FERT.PT.ZS	2002	207.397058823529	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Myanmar	MMR	AG.CON.FERT.PT.ZS	2003	338.513333333334	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Myanmar	MMR	AG.CON.FERT.PT.ZS	2004	493.41	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Myanmar	MMR	AG.CON.FERT.PT.ZS	2005	142.420426418863	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Myanmar	MMR	AG.CON.FERT.PT.ZS	2006	176.083136513935	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Myanmar	MMR	AG.CON.FERT.PT.ZS	2007	329.612360216541	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Myanmar	MMR	AG.CON.FERT.PT.ZS	2008	166.679638694877	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Myanmar	MMR	AG.CON.FERT.PT.ZS	2009	185.780602548525	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Myanmar	MMR	AG.CON.FERT.PT.ZS	2010	416.04558053588	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Netherlands	NLD	AG.CON.FERT.PT.ZS	2002	24.6955509255126	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Netherlands	NLD	AG.CON.FERT.PT.ZS	2003	25.0439112931963	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Netherlands	NLD	AG.CON.FERT.PT.ZS	2004	23.0083941851792	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Netherlands	NLD	AG.CON.FERT.PT.ZS	2005	21.5775209219214	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Netherlands	NLD	AG.CON.FERT.PT.ZS	2006	22.1193850535075	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Netherlands	NLD	AG.CON.FERT.PT.ZS	2007	19.2938671307056	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Netherlands	NLD	AG.CON.FERT.PT.ZS	2008	17.6879395456508	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Netherlands	NLD	AG.CON.FERT.PT.ZS	2009	16.7089602821378	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Netherlands	NLD	AG.CON.FERT.PT.ZS	2010	18.6031410534307	2013/06/24
+Fertilizer consumption (% of fertilizer production) - New Zealand	NZL	AG.CON.FERT.PT.ZS	2002	218.075267878304	2013/06/24
+Fertilizer consumption (% of fertilizer production) - New Zealand	NZL	AG.CON.FERT.PT.ZS	2003	226.834146750926	2013/06/24
+Fertilizer consumption (% of fertilizer production) - New Zealand	NZL	AG.CON.FERT.PT.ZS	2004	215.020921353738	2013/06/24
+Fertilizer consumption (% of fertilizer production) - New Zealand	NZL	AG.CON.FERT.PT.ZS	2005	377.353721145933	2013/06/24
+Fertilizer consumption (% of fertilizer production) - New Zealand	NZL	AG.CON.FERT.PT.ZS	2006	409.1169121515	2013/06/24
+Fertilizer consumption (% of fertilizer production) - New Zealand	NZL	AG.CON.FERT.PT.ZS	2007	239.347754321116	2013/06/24
+Fertilizer consumption (% of fertilizer production) - New Zealand	NZL	AG.CON.FERT.PT.ZS	2008	278.404590815489	2013/06/24
+Fertilizer consumption (% of fertilizer production) - New Zealand	NZL	AG.CON.FERT.PT.ZS	2009	180.736889002433	2013/06/24
+Fertilizer consumption (% of fertilizer production) - New Zealand	NZL	AG.CON.FERT.PT.ZS	2010	176.1487236404	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Norway	NOR	AG.CON.FERT.PT.ZS	2002	30.1933724762048	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Norway	NOR	AG.CON.FERT.PT.ZS	2003	24.4838981488796	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Norway	NOR	AG.CON.FERT.PT.ZS	2004	23.3435717967567	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Norway	NOR	AG.CON.FERT.PT.ZS	2005	26.0169261298681	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Norway	NOR	AG.CON.FERT.PT.ZS	2006	23.4327834593602	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Norway	NOR	AG.CON.FERT.PT.ZS	2007	23.4200372870203	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Norway	NOR	AG.CON.FERT.PT.ZS	2008	23.8415774399998	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Norway	NOR	AG.CON.FERT.PT.ZS	2009	29.2943246907366	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Norway	NOR	AG.CON.FERT.PT.ZS	2010	22.1214771302224	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Oman	OMN	AG.CON.FERT.PT.ZS	2005	7.98625903186736	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Oman	OMN	AG.CON.FERT.PT.ZS	2006	3.55093864762834	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Oman	OMN	AG.CON.FERT.PT.ZS	2007	1.16349471086842	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Oman	OMN	AG.CON.FERT.PT.ZS	2008	2.41925784034213	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Oman	OMN	AG.CON.FERT.PT.ZS	2009	2.50712494910751	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Oman	OMN	AG.CON.FERT.PT.ZS	2010	0.408825438027255	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Pakistan	PAK	AG.CON.FERT.PT.ZS	2002	132.133738601824	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Pakistan	PAK	AG.CON.FERT.PT.ZS	2003	131.010041887304	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Pakistan	PAK	AG.CON.FERT.PT.ZS	2004	130.734841547212	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Pakistan	PAK	AG.CON.FERT.PT.ZS	2005	134.556521023057	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Pakistan	PAK	AG.CON.FERT.PT.ZS	2006	136.720360538196	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Pakistan	PAK	AG.CON.FERT.PT.ZS	2007	130.67556015757	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Pakistan	PAK	AG.CON.FERT.PT.ZS	2008	115.455171773399	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Pakistan	PAK	AG.CON.FERT.PT.ZS	2009	150.691563707003	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Pakistan	PAK	AG.CON.FERT.PT.ZS	2010	130.106264105625	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Peru	PER	AG.CON.FERT.PT.ZS	2002	50336.7816091955	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Peru	PER	AG.CON.FERT.PT.ZS	2003	53493.8983050848	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Peru	PER	AG.CON.FERT.PT.ZS	2004	71876.2527233117	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Peru	PER	AG.CON.FERT.PT.ZS	2005	75003.233830846	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Peru	PER	AG.CON.FERT.PT.ZS	2006	108617.891373802	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Peru	PER	AG.CON.FERT.PT.ZS	2007	95107.5471698115	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Peru	PER	AG.CON.FERT.PT.ZS	2008	116125.291828794	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Peru	PER	AG.CON.FERT.PT.ZS	2009	99018.2519280208	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Philippines	PHL	AG.CON.FERT.PT.ZS	2002	179.899725278146	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Philippines	PHL	AG.CON.FERT.PT.ZS	2003	266.476738448361	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Philippines	PHL	AG.CON.FERT.PT.ZS	2004	301.039869639265	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Philippines	PHL	AG.CON.FERT.PT.ZS	2005	280.04103876619	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Philippines	PHL	AG.CON.FERT.PT.ZS	2006	281.587381683573	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Philippines	PHL	AG.CON.FERT.PT.ZS	2007	332.58613204941	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Philippines	PHL	AG.CON.FERT.PT.ZS	2008	823.096779425082	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Philippines	PHL	AG.CON.FERT.PT.ZS	2009	1222.72228912414	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Philippines	PHL	AG.CON.FERT.PT.ZS	2010	7103.07578966757	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Poland	POL	AG.CON.FERT.PT.ZS	2002	102.402464649913	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Poland	POL	AG.CON.FERT.PT.ZS	2003	102.420109978021	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Poland	POL	AG.CON.FERT.PT.ZS	2004	72.6361470547436	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Poland	POL	AG.CON.FERT.PT.ZS	2005	84.3382486676437	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Poland	POL	AG.CON.FERT.PT.ZS	2006	85.3336681959208	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Poland	POL	AG.CON.FERT.PT.ZS	2007	86.3530703717054	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Poland	POL	AG.CON.FERT.PT.ZS	2008	84.3699306526612	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Poland	POL	AG.CON.FERT.PT.ZS	2009	99.4999261305387	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Poland	POL	AG.CON.FERT.PT.ZS	2010	100.98429414033	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Portugal	PRT	AG.CON.FERT.PT.ZS	2002	182.376312718786	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Portugal	PRT	AG.CON.FERT.PT.ZS	2003	203.847657718625	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Portugal	PRT	AG.CON.FERT.PT.ZS	2004	178.550317306298	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Portugal	PRT	AG.CON.FERT.PT.ZS	2005	168.602184782955	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Portugal	PRT	AG.CON.FERT.PT.ZS	2006	151.820663324472	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Portugal	PRT	AG.CON.FERT.PT.ZS	2007	208.32123280212	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Portugal	PRT	AG.CON.FERT.PT.ZS	2008	205.917382955377	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Portugal	PRT	AG.CON.FERT.PT.ZS	2009	180.191375667951	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Portugal	PRT	AG.CON.FERT.PT.ZS	2010	136.535097166694	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Qatar	QAT	AG.CON.FERT.PT.ZS	2002	0.0639791260276101	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Qatar	QAT	AG.CON.FERT.PT.ZS	2004	4.79247466988801	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Qatar	QAT	AG.CON.FERT.PT.ZS	2005	0.536326270864837	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Qatar	QAT	AG.CON.FERT.PT.ZS	2007	5.16194331983807	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Qatar	QAT	AG.CON.FERT.PT.ZS	2008	0.261130695913305	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Qatar	QAT	AG.CON.FERT.PT.ZS	2009	2.77721379470372	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Qatar	QAT	AG.CON.FERT.PT.ZS	2010	6.17362415137947	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Romania	ROU	AG.CON.FERT.PT.ZS	2002	37.3193099218193	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Romania	ROU	AG.CON.FERT.PT.ZS	2003	35.0009661835749	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Romania	ROU	AG.CON.FERT.PT.ZS	2004	49.1983982205904	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Romania	ROU	AG.CON.FERT.PT.ZS	2005	38.6383392092989	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Romania	ROU	AG.CON.FERT.PT.ZS	2006	44.3028254215913	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Romania	ROU	AG.CON.FERT.PT.ZS	2007	51.2065846407753	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Romania	ROU	AG.CON.FERT.PT.ZS	2008	42.064446708749	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Romania	ROU	AG.CON.FERT.PT.ZS	2009	68.959619967867	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Romania	ROU	AG.CON.FERT.PT.ZS	2010	60.8625833936994	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Russian Federation	RUS	AG.CON.FERT.PT.ZS	2002	12.3387950741096	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Russian Federation	RUS	AG.CON.FERT.PT.ZS	2003	9.59638511349892	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Russian Federation	RUS	AG.CON.FERT.PT.ZS	2004	8.82947208507408	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Russian Federation	RUS	AG.CON.FERT.PT.ZS	2005	8.63987486463725	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Russian Federation	RUS	AG.CON.FERT.PT.ZS	2006	9.36276687646553	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Russian Federation	RUS	AG.CON.FERT.PT.ZS	2007	10.0237750911089	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Russian Federation	RUS	AG.CON.FERT.PT.ZS	2008	11.9274029261065	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Russian Federation	RUS	AG.CON.FERT.PT.ZS	2009	12.978692890801	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Russian Federation	RUS	AG.CON.FERT.PT.ZS	2010	10.5405390355273	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Saudi Arabia	SAU	AG.CON.FERT.PT.ZS	2002	14.3799683159354	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Saudi Arabia	SAU	AG.CON.FERT.PT.ZS	2003	29.5406287437518	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Saudi Arabia	SAU	AG.CON.FERT.PT.ZS	2004	26.89506773719	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Saudi Arabia	SAU	AG.CON.FERT.PT.ZS	2005	21.8535560402149	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Saudi Arabia	SAU	AG.CON.FERT.PT.ZS	2006	21.600243383024	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Saudi Arabia	SAU	AG.CON.FERT.PT.ZS	2007	20.8307473164776	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Saudi Arabia	SAU	AG.CON.FERT.PT.ZS	2008	14.4943832796276	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Saudi Arabia	SAU	AG.CON.FERT.PT.ZS	2009	8.80503935423846	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Saudi Arabia	SAU	AG.CON.FERT.PT.ZS	2010	16.1096617240734	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Senegal	SEN	AG.CON.FERT.PT.ZS	2002	76.8653846153848	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Senegal	SEN	AG.CON.FERT.PT.ZS	2003	37.6215556780725	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Senegal	SEN	AG.CON.FERT.PT.ZS	2004	56.5821238041309	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Senegal	SEN	AG.CON.FERT.PT.ZS	2005	63.8339266495572	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Senegal	SEN	AG.CON.FERT.PT.ZS	2006	67.5817937867687	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Senegal	SEN	AG.CON.FERT.PT.ZS	2007	21.5018984671636	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Senegal	SEN	AG.CON.FERT.PT.ZS	2008	18.181619924107	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Senegal	SEN	AG.CON.FERT.PT.ZS	2009	601.072555205049	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Senegal	SEN	AG.CON.FERT.PT.ZS	2010	834.228571428573	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Serbia	SRB	AG.CON.FERT.PT.ZS	2006	263.164828928166	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Serbia	SRB	AG.CON.FERT.PT.ZS	2007	256.138329695206	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Serbia	SRB	AG.CON.FERT.PT.ZS	2008	255.440521392701	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Serbia	SRB	AG.CON.FERT.PT.ZS	2009	299.256495979141	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Serbia	SRB	AG.CON.FERT.PT.ZS	2010	201.301609156946	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Slovak Republic	SVK	AG.CON.FERT.PT.ZS	2002	54.8082319925164	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Slovak Republic	SVK	AG.CON.FERT.PT.ZS	2003	50.6833257610178	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Slovak Republic	SVK	AG.CON.FERT.PT.ZS	2004	44.6373037150518	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Slovak Republic	SVK	AG.CON.FERT.PT.ZS	2005	44.8462154585503	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Slovak Republic	SVK	AG.CON.FERT.PT.ZS	2006	57.0993227990971	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Slovak Republic	SVK	AG.CON.FERT.PT.ZS	2007	63.1275833422525	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Slovak Republic	SVK	AG.CON.FERT.PT.ZS	2008	61.8449911791351	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Slovak Republic	SVK	AG.CON.FERT.PT.ZS	2009	59.0152849500772	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Slovak Republic	SVK	AG.CON.FERT.PT.ZS	2010	66.0356756756759	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Slovenia	SVN	AG.CON.FERT.PT.ZS	2002	16333.4939759036	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Slovenia	SVN	AG.CON.FERT.PT.ZS	2003	21640.625	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Slovenia	SVN	AG.CON.FERT.PT.ZS	2004	15435.4523227384	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Slovenia	SVN	AG.CON.FERT.PT.ZS	2005	101756.140350877	2013/06/24
+Fertilizer consumption (% of fertilizer production) - South Africa	ZAF	AG.CON.FERT.PT.ZS	2002	144.970089903181	2013/06/24
+Fertilizer consumption (% of fertilizer production) - South Africa	ZAF	AG.CON.FERT.PT.ZS	2003	111.275773769431	2013/06/24
+Fertilizer consumption (% of fertilizer production) - South Africa	ZAF	AG.CON.FERT.PT.ZS	2004	134.723596728963	2013/06/24
+Fertilizer consumption (% of fertilizer production) - South Africa	ZAF	AG.CON.FERT.PT.ZS	2005	104.814234617039	2013/06/24
+Fertilizer consumption (% of fertilizer production) - South Africa	ZAF	AG.CON.FERT.PT.ZS	2006	264.101882985878	2013/06/24
+Fertilizer consumption (% of fertilizer production) - South Africa	ZAF	AG.CON.FERT.PT.ZS	2007	242.570724581899	2013/06/24
+Fertilizer consumption (% of fertilizer production) - South Africa	ZAF	AG.CON.FERT.PT.ZS	2008	262.368461297582	2013/06/24
+Fertilizer consumption (% of fertilizer production) - South Africa	ZAF	AG.CON.FERT.PT.ZS	2009	168.239131574307	2013/06/24
+Fertilizer consumption (% of fertilizer production) - South Africa	ZAF	AG.CON.FERT.PT.ZS	2010	232.758494319669	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Spain	ESP	AG.CON.FERT.PT.ZS	2002	135.930140533397	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Spain	ESP	AG.CON.FERT.PT.ZS	2003	124.595984970946	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Spain	ESP	AG.CON.FERT.PT.ZS	2004	118.047293021115	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Spain	ESP	AG.CON.FERT.PT.ZS	2005	103.737481066172	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Spain	ESP	AG.CON.FERT.PT.ZS	2006	112.706535360572	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Spain	ESP	AG.CON.FERT.PT.ZS	2007	117.185367443222	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Spain	ESP	AG.CON.FERT.PT.ZS	2008	89.1699567128001	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Spain	ESP	AG.CON.FERT.PT.ZS	2009	106.145003684811	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Spain	ESP	AG.CON.FERT.PT.ZS	2010	112.151030876985	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sri Lanka	LKA	AG.CON.FERT.PT.ZS	2002	2703.37600758654	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sri Lanka	LKA	AG.CON.FERT.PT.ZS	2003	2339.65222348917	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sri Lanka	LKA	AG.CON.FERT.PT.ZS	2004	2406.45612073785	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sri Lanka	LKA	AG.CON.FERT.PT.ZS	2005	2543.2077522188	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sri Lanka	LKA	AG.CON.FERT.PT.ZS	2006	2571.07674203581	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sri Lanka	LKA	AG.CON.FERT.PT.ZS	2007	2836.46283916634	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sri Lanka	LKA	AG.CON.FERT.PT.ZS	2008	4221.35199187452	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sri Lanka	LKA	AG.CON.FERT.PT.ZS	2009	2970.09883888303	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sri Lanka	LKA	AG.CON.FERT.PT.ZS	2010	2769.05	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sweden	SWE	AG.CON.FERT.PT.ZS	2002	307.71001150748	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sweden	SWE	AG.CON.FERT.PT.ZS	2003	322.882891768274	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sweden	SWE	AG.CON.FERT.PT.ZS	2004	312.282219498715	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sweden	SWE	AG.CON.FERT.PT.ZS	2005	306.640422666529	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sweden	SWE	AG.CON.FERT.PT.ZS	2006	255.691964285714	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Sweden	SWE	AG.CON.FERT.PT.ZS	2007	264.445962746833	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Syrian Arab Republic	SYR	AG.CON.FERT.PT.ZS	2002	131.017444286787	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Syrian Arab Republic	SYR	AG.CON.FERT.PT.ZS	2003	146.896866507263	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Syrian Arab Republic	SYR	AG.CON.FERT.PT.ZS	2004	161.074095666417	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Syrian Arab Republic	SYR	AG.CON.FERT.PT.ZS	2005	154.516166686121	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Syrian Arab Republic	SYR	AG.CON.FERT.PT.ZS	2006	156.715464064844	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Syrian Arab Republic	SYR	AG.CON.FERT.PT.ZS	2007	162.682142476839	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Syrian Arab Republic	SYR	AG.CON.FERT.PT.ZS	2008	171.570071663022	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Syrian Arab Republic	SYR	AG.CON.FERT.PT.ZS	2009	153.20582896228	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Syrian Arab Republic	SYR	AG.CON.FERT.PT.ZS	2010	68.2379398536028	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Tajikistan	TJK	AG.CON.FERT.PT.ZS	2004	330.1	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Tajikistan	TJK	AG.CON.FERT.PT.ZS	2005	353.493827160494	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Tajikistan	TJK	AG.CON.FERT.PT.ZS	2006	366.805761206085	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Tajikistan	TJK	AG.CON.FERT.PT.ZS	2007	490.683229813665	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Tajikistan	TJK	AG.CON.FERT.PT.ZS	2008	493.383742911154	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Thailand	THA	AG.CON.FERT.PT.ZS	2002	904.697340425533	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Thailand	THA	AG.CON.FERT.PT.ZS	2003	1413.57379747151	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Thailand	THA	AG.CON.FERT.PT.ZS	2004	1064.62863980853	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Thailand	THA	AG.CON.FERT.PT.ZS	2005	1019.109390241	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Thailand	THA	AG.CON.FERT.PT.ZS	2006	1300.63994169096	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Thailand	THA	AG.CON.FERT.PT.ZS	2007	1386.33868613139	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Thailand	THA	AG.CON.FERT.PT.ZS	2008	1453.89562043796	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Thailand	THA	AG.CON.FERT.PT.ZS	2009	1328.25766423358	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Thailand	THA	AG.CON.FERT.PT.ZS	2010	1827.98686131387	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Trinidad and Tobago	TTO	AG.CON.FERT.PT.ZS	2002	7.69892376132693	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Trinidad and Tobago	TTO	AG.CON.FERT.PT.ZS	2003	1.51800490783541	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Trinidad and Tobago	TTO	AG.CON.FERT.PT.ZS	2004	0.877859407255965	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Trinidad and Tobago	TTO	AG.CON.FERT.PT.ZS	2005	1.167849715952	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Trinidad and Tobago	TTO	AG.CON.FERT.PT.ZS	2006	7.42047349537623	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Trinidad and Tobago	TTO	AG.CON.FERT.PT.ZS	2007	0.517079476578984	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Trinidad and Tobago	TTO	AG.CON.FERT.PT.ZS	2008	7.37077369347093	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Trinidad and Tobago	TTO	AG.CON.FERT.PT.ZS	2009	2.14431883406953	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Trinidad and Tobago	TTO	AG.CON.FERT.PT.ZS	2010	22.3188050179431	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Tunisia	TUN	AG.CON.FERT.PT.ZS	2002	5.62586556732907	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Tunisia	TUN	AG.CON.FERT.PT.ZS	2003	7.81912268254312	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Tunisia	TUN	AG.CON.FERT.PT.ZS	2004	7.91877670501959	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Tunisia	TUN	AG.CON.FERT.PT.ZS	2005	15.1833978257983	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Tunisia	TUN	AG.CON.FERT.PT.ZS	2006	8.41230723668904	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Tunisia	TUN	AG.CON.FERT.PT.ZS	2007	7.12988349832127	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Tunisia	TUN	AG.CON.FERT.PT.ZS	2008	8.98530093755736	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Tunisia	TUN	AG.CON.FERT.PT.ZS	2009	10.6554701184735	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Tunisia	TUN	AG.CON.FERT.PT.ZS	2010	9.38363744831419	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Turkey	TUR	AG.CON.FERT.PT.ZS	2002	181.39640668813	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Turkey	TUR	AG.CON.FERT.PT.ZS	2003	152.160884048222	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Turkey	TUR	AG.CON.FERT.PT.ZS	2004	169.742324074251	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Turkey	TUR	AG.CON.FERT.PT.ZS	2005	166.44875771772	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Turkey	TUR	AG.CON.FERT.PT.ZS	2006	207.986305811259	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Turkey	TUR	AG.CON.FERT.PT.ZS	2007	199.206521989945	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Turkey	TUR	AG.CON.FERT.PT.ZS	2008	160.702136387367	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Turkey	TUR	AG.CON.FERT.PT.ZS	2009	208.538877535838	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Turkey	TUR	AG.CON.FERT.PT.ZS	2010	150.204280178211	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Ukraine	UKR	AG.CON.FERT.PT.ZS	2002	22.8408423340866	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Ukraine	UKR	AG.CON.FERT.PT.ZS	2003	20.8430757142119	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Ukraine	UKR	AG.CON.FERT.PT.ZS	2004	22.4363761354605	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Ukraine	UKR	AG.CON.FERT.PT.ZS	2005	20.9469746032998	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Ukraine	UKR	AG.CON.FERT.PT.ZS	2006	20.7180405419818	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Ukraine	UKR	AG.CON.FERT.PT.ZS	2007	31.7688251304151	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Ukraine	UKR	AG.CON.FERT.PT.ZS	2008	39.9555682312854	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Ukraine	UKR	AG.CON.FERT.PT.ZS	2009	44.6788859089625	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Ukraine	UKR	AG.CON.FERT.PT.ZS	2010	51.3324544339858	2013/06/24
+Fertilizer consumption (% of fertilizer production) - United Arab Emirates	ARE	AG.CON.FERT.PT.ZS	2002	17.7073821732107	2013/06/24
+Fertilizer consumption (% of fertilizer production) - United Arab Emirates	ARE	AG.CON.FERT.PT.ZS	2003	19.9840446749103	2013/06/24
+Fertilizer consumption (% of fertilizer production) - United Arab Emirates	ARE	AG.CON.FERT.PT.ZS	2004	10.7729468599034	2013/06/24
+Fertilizer consumption (% of fertilizer production) - United Arab Emirates	ARE	AG.CON.FERT.PT.ZS	2005	5.61852551984878	2013/06/24
+Fertilizer consumption (% of fertilizer production) - United Arab Emirates	ARE	AG.CON.FERT.PT.ZS	2006	15.5004369160449	2013/06/24
+Fertilizer consumption (% of fertilizer production) - United Arab Emirates	ARE	AG.CON.FERT.PT.ZS	2007	16.5197277999397	2013/06/24
+Fertilizer consumption (% of fertilizer production) - United Arab Emirates	ARE	AG.CON.FERT.PT.ZS	2008	7.5974003405971	2013/06/24
+Fertilizer consumption (% of fertilizer production) - United Arab Emirates	ARE	AG.CON.FERT.PT.ZS	2009	30.8305740801194	2013/06/24
+Fertilizer consumption (% of fertilizer production) - United Arab Emirates	ARE	AG.CON.FERT.PT.ZS	2010	10.6642100989913	2013/06/24
+Fertilizer consumption (% of fertilizer production) - United Kingdom	GBR	AG.CON.FERT.PT.ZS	2002	111.159658360109	2013/06/24
+Fertilizer consumption (% of fertilizer production) - United Kingdom	GBR	AG.CON.FERT.PT.ZS	2003	105.364211723991	2013/06/24
+Fertilizer consumption (% of fertilizer production) - United Kingdom	GBR	AG.CON.FERT.PT.ZS	2004	103.548775065058	2013/06/24
+Fertilizer consumption (% of fertilizer production) - United Kingdom	GBR	AG.CON.FERT.PT.ZS	2005	105.56217429713	2013/06/24
+Fertilizer consumption (% of fertilizer production) - United Kingdom	GBR	AG.CON.FERT.PT.ZS	2006	140.4861237076	2013/06/24
+Fertilizer consumption (% of fertilizer production) - United Kingdom	GBR	AG.CON.FERT.PT.ZS	2007	177.584800762719	2013/06/24
+Fertilizer consumption (% of fertilizer production) - United Kingdom	GBR	AG.CON.FERT.PT.ZS	2008	141.492988739422	2013/06/24
+Fertilizer consumption (% of fertilizer production) - United Kingdom	GBR	AG.CON.FERT.PT.ZS	2009	174.263314149557	2013/06/24
+Fertilizer consumption (% of fertilizer production) - United Kingdom	GBR	AG.CON.FERT.PT.ZS	2010	234.23787455962	2013/06/24
+Fertilizer consumption (% of fertilizer production) - United States	USA	AG.CON.FERT.PT.ZS	2002	94.4745937129878	2013/06/24
+Fertilizer consumption (% of fertilizer production) - United States	USA	AG.CON.FERT.PT.ZS	2003	103.935532588882	2013/06/24
+Fertilizer consumption (% of fertilizer production) - United States	USA	AG.CON.FERT.PT.ZS	2004	99.9511435372832	2013/06/24
+Fertilizer consumption (% of fertilizer production) - United States	USA	AG.CON.FERT.PT.ZS	2005	93.4434101342865	2013/06/24
+Fertilizer consumption (% of fertilizer production) - United States	USA	AG.CON.FERT.PT.ZS	2006	101.384760498971	2013/06/24
+Fertilizer consumption (% of fertilizer production) - United States	USA	AG.CON.FERT.PT.ZS	2007	96.980368945112	2013/06/24
+Fertilizer consumption (% of fertilizer production) - United States	USA	AG.CON.FERT.PT.ZS	2008	94.9636874882349	2013/06/24
+Fertilizer consumption (% of fertilizer production) - United States	USA	AG.CON.FERT.PT.ZS	2009	103.676370572715	2013/06/24
+Fertilizer consumption (% of fertilizer production) - United States	USA	AG.CON.FERT.PT.ZS	2010	105.773075269372	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Uruguay	URY	AG.CON.FERT.PT.ZS	2002	702.316666666668	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Uruguay	URY	AG.CON.FERT.PT.ZS	2003	856.563059033991	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Uruguay	URY	AG.CON.FERT.PT.ZS	2004	1128.74468617154	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Uruguay	URY	AG.CON.FERT.PT.ZS	2005	747.37002941289	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Uruguay	URY	AG.CON.FERT.PT.ZS	2006	927.156192773238	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Uruguay	URY	AG.CON.FERT.PT.ZS	2007	1611.25978090767	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Uruguay	URY	AG.CON.FERT.PT.ZS	2008	2206.71296296297	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Uruguay	URY	AG.CON.FERT.PT.ZS	2009	2290.74444444445	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Uruguay	URY	AG.CON.FERT.PT.ZS	2010	1496.85858585858	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Uzbekistan	UZB	AG.CON.FERT.PT.ZS	2006	76.0153093769936	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Uzbekistan	UZB	AG.CON.FERT.PT.ZS	2007	70.8022654037693	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Uzbekistan	UZB	AG.CON.FERT.PT.ZS	2008	70.1826291079814	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Uzbekistan	UZB	AG.CON.FERT.PT.ZS	2009	77.4639396198287	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Uzbekistan	UZB	AG.CON.FERT.PT.ZS	2010	84.3356190476192	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Venezuela, RB	VEN	AG.CON.FERT.PT.ZS	2002	62.7150304083406	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Venezuela, RB	VEN	AG.CON.FERT.PT.ZS	2003	76.7297696902757	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Venezuela, RB	VEN	AG.CON.FERT.PT.ZS	2004	56.3164632335017	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Venezuela, RB	VEN	AG.CON.FERT.PT.ZS	2005	59.4288322270174	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Venezuela, RB	VEN	AG.CON.FERT.PT.ZS	2006	59.0460138820929	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Venezuela, RB	VEN	AG.CON.FERT.PT.ZS	2007	46.010522820729	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Venezuela, RB	VEN	AG.CON.FERT.PT.ZS	2008	53.7427443436637	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Venezuela, RB	VEN	AG.CON.FERT.PT.ZS	2009	63.9340623566493	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Venezuela, RB	VEN	AG.CON.FERT.PT.ZS	2010	65.4649279809087	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Vietnam	VNM	AG.CON.FERT.PT.ZS	2002	844.066929464062	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Vietnam	VNM	AG.CON.FERT.PT.ZS	2003	820.877835474175	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Vietnam	VNM	AG.CON.FERT.PT.ZS	2004	326.265944482735	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Vietnam	VNM	AG.CON.FERT.PT.ZS	2005	291.608550731916	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Vietnam	VNM	AG.CON.FERT.PT.ZS	2006	339.373953620917	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Vietnam	VNM	AG.CON.FERT.PT.ZS	2007	336.588911590121	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Vietnam	VNM	AG.CON.FERT.PT.ZS	2008	299.088975198324	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Vietnam	VNM	AG.CON.FERT.PT.ZS	2009	397.601711184394	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Vietnam	VNM	AG.CON.FERT.PT.ZS	2010	271.084378862861	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Zimbabwe	ZWE	AG.CON.FERT.PT.ZS	2002	131.162556618017	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Zimbabwe	ZWE	AG.CON.FERT.PT.ZS	2003	176.766368489221	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Zimbabwe	ZWE	AG.CON.FERT.PT.ZS	2004	135.299186813531	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Zimbabwe	ZWE	AG.CON.FERT.PT.ZS	2005	145.104196890307	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Zimbabwe	ZWE	AG.CON.FERT.PT.ZS	2006	210.442741794762	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Zimbabwe	ZWE	AG.CON.FERT.PT.ZS	2007	171.10917721519	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Zimbabwe	ZWE	AG.CON.FERT.PT.ZS	2008	164.707278481013	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Zimbabwe	ZWE	AG.CON.FERT.PT.ZS	2009	185.229430379747	2013/06/24
+Fertilizer consumption (% of fertilizer production) - Zimbabwe	ZWE	AG.CON.FERT.PT.ZS	2010	217.748417721519	2013/06/24
