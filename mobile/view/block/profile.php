@@ -18,23 +18,23 @@
                 <div class="profile_row website"> <span class="th"><?php echo $data['trans']->getTranslate('Website'); ?>:</span><span class="td"><a target="_blank" href="http://www.ifrcindex.com">wwww.ifrcindex.com</a></span> </div>
             </div>
         </div>
-        <div id="profile_header">
-            <div id="profile_user">
-                <div id="profile_photo"><img src="<?php echo TEMPLATE_URL ?>images_post/logo-partners.png" height="10" alt="Petrovietnam Securities Incorporated" /></div>
-                <div id="profile_name_area">
-                    <div id="profile_name">
-                        <h1 id="profile_title"><span class="firstname">PSI</span></h1>
-                        <h4 id="profile_position">Petrovietnam Securities Incorporated</h4>
-                    </div>
-                </div>
-            </div>
-            <div id="profile_data">
-                <div class="profile_row address"> <span class="th"><?php echo $data['trans']->getTranslate('Address'); ?>:</span><span class="td"><?php echo $data['trans']->getTranslate('Address_pvn'); ?></span> </div>
-                <div class="profile_row phone"> <span class="th"><?php echo $data['trans']->getTranslate('Phone'); ?>:</span><span class="td"><?php echo $data['trans']->getTranslate('Phone_pvn'); ?></span> </div>
-                <div class="profile_row email"> <span class="th"><?php echo $data['trans']->getTranslate('Email'); ?>:</span><span class="td">pvnindex@pvn.vn</span> </div>
-                <div class="profile_row website"> <span class="th"><?php echo $data['trans']->getTranslate('Website'); ?>:</span><span class="td"><a target="_blank" href="http://www.pvnindex.vn">www.pvnindex.vn</a></span> </div>
-            </div>
-        </div>
+        <!--        <div id="profile_header">-->
+<!--            <div id="profile_user">-->
+<!--                <div id="profile_photo"><img src="--><?php //echo TEMPLATE_URL ?><!--images_post/logo-partners.png" height="10" alt="Petrovietnam Securities Incorporated" /></div>-->
+<!--                <div id="profile_name_area">-->
+<!--                    <div id="profile_name">-->
+<!--                        <h1 id="profile_title"><span class="firstname">PSI</span></h1>-->
+<!--                        <h4 id="profile_position">Petrovietnam Securities Incorporated</h4>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div id="profile_data">-->
+<!--                <div class="profile_row address"> <span class="th">--><?php //echo $data['trans']->getTranslate('Address'); ?><!--:</span><span class="td">--><?php //echo $data['trans']->getTranslate('Address_pvn'); ?><!--</span> </div>-->
+<!--                <div class="profile_row phone"> <span class="th">--><?php //echo $data['trans']->getTranslate('Phone'); ?><!--:</span><span class="td">--><?php //echo $data['trans']->getTranslate('Phone_pvn'); ?><!--</span> </div>-->
+<!--                <div class="profile_row email"> <span class="th">--><?php //echo $data['trans']->getTranslate('Email'); ?><!--:</span><span class="td">pvnindex@pvn.vn</span> </div>-->
+<!--                <div class="profile_row website"> <span class="th">--><?php //echo $data['trans']->getTranslate('Website'); ?><!--:</span><span class="td"><a target="_blank" href="http://www.pvnindex.vn">www.pvnindex.vn</a></span> </div>-->
+<!--            </div>-->
+<!--        </div>-->
     </div>
     <!--<hr />-->
     <div class="section_header section_body profile_section_body">
