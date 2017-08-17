@@ -356,6 +356,7 @@ margin:10px 10px 10px 10px;
                                <div >
                                    <!--<a style="cursor:pointer" href="<?php /*echo base_url(); */?>report/<?php /* echo $newformat;*/?>/<?php /*echo $membership->idx_code; */?>">-->
                                        <a style="cursor:pointer" href="<?php echo base_url(); ?>report/<?php echo $membership->idx_code; ?>">
+
                                    <img style="text-align: right;" src="<?php echo base_url(); ?>templates/images/more.png"/></a>
                                </div>
                             </td>
