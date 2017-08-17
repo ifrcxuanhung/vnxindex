@@ -42,7 +42,6 @@ class Report_daily extends Welcome {
         
         $getPRTR = remove_emty_array($this->report_daily->getPRTR());
         $this->data->getPRTR = $getPRTR;
-        
         /*$block = new Block;
         $this->data->detail_intro_copn = $block->detail_intro_copn();
         $this->data->idx_home = $block->showIdxHome();

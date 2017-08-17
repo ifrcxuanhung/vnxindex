@@ -62,6 +62,7 @@ class Article extends Welcome {
      * *************************************************************************************************************** */
 
     public function index($cate_id = "", $art_id = "") {
+        
         if ($this->uri->segment(4) === false) {
             Redirect(base_url());
         } else {
@@ -96,7 +97,7 @@ class Article extends Welcome {
             
             $data = $this->marticle->get_article_by_id($art_id);
             $this->data->data = $data;
-
+            
             $list_code = $data['current']['meta_keyword'];
             $list_code = explode(',', $list_code);
             $code = ($list_code[0] != "") ? $list_code[0] : '';
@@ -118,7 +119,6 @@ class Article extends Welcome {
                 $desciptions = cut_str(html_entity_decode(strip_tags($this->data->data['default']['description'])), 200);
             }
             $this->data->cate_id = $cate_id;
-			
             $this->template->write('title', $title);
             $this->template->write('desciption', $desciptions);
 

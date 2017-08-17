@@ -29,6 +29,7 @@ class Report extends Welcome {
 			$arr_month = $this->report->getmonth();
 			$month_curr = $arr_month['month'][0]->yyyymm;
 		}
+
         //$this->router->fetch_method();
         
          $indcur=$this->uri->segment('3');
@@ -41,10 +42,10 @@ class Report extends Welcome {
         $report = remove_emty_array($this->report->getReport($codeid,$this->data->month_rp));
 		
         $this->data->report = $report;
-        
+
         //$getmonth = remove_emty_array($this->report->getmonth());
         //$this->data->getmonth = $getmonth;
-        
+
 
         
         $block = new Block;

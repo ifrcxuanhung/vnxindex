@@ -757,23 +757,28 @@ class Ion_auth_model extends CI_Model {
     
     public function hash_password_from_ifrcdata($identity, $password, $domain)
      {
+         
         $this->load->database();
         $hostname_users = $this->db->hostname_users;
         $username_users = $this->db->username_users;
         $password_users = $this->db->password_users;
         $database_users = $this->db->database_users;
         
-        $cnn = mysql_connect($hostname_users, $username_users, $password_users);
-        mysql_select_db($database_users, $cnn);
-        mysql_query('set names utf8');
+        $cnn = mysqli_connect($hostname_users, $username_users, $password_users);
+        mysqli_select_db($cnn,"world");
+        mysqli_query($cnn,'set names utf8');
         
-        $sql = "select * from users where `email` = '$identity' and `domain` = '$domain' limit 1";
-        $rs = mysql_query($sql, $cnn);
-        mysql_close($cnn);
-        if(mysql_num_rows($rs) == 1)
+       // $sql = "select * from users where `email` = '$identity' and `domain` = '$domain' limit 1";
+         $sql = "select * from user where `email` = '$identity' limit 1";
+        $rs = $this->db->query($sql);
+        mysqli_close($cnn);
+
+        if($rs->num_rows() == 1)
         {
-            $row = mysql_fetch_assoc($rs);
+
+            $row = $rs->row_array();
             $pass = $row['password'];
+            //echo "<pre>";print_r($pass.'----'.$password);exit;
             if($pass == $password)
             {
                 return 1;
@@ -802,12 +807,14 @@ class Ion_auth_model extends CI_Model {
                 ->limit(1)
                 ->get($this->tables['users']);
 
+
         if ($query->num_rows() === 1) {
             $user = $query->row();
 
             //$password = $this->hash_password_db($user->id, $password);
 
             $password = $this->hash_password_from_ifrcdata($identity, $password, $_SERVER['HTTP_HOST']);
+
             if ($password == 1) {
                 $session_data = array(
                     'identity' => $user->{$this->identity_column},
@@ -819,6 +826,7 @@ class Ion_auth_model extends CI_Model {
                 );
 
 
+
                 $this->update_last_login($user->id);
 
                 $this->clear_login_attempts($identity);
@@ -826,12 +834,14 @@ class Ion_auth_model extends CI_Model {
                 $this->session->set_userdata($session_data);
 
                 if ($remember && $this->config->item('remember_users', 'ion_auth')) {
+
                     $this->remember_user($user->id);
                 }
 
                 $this->trigger_events(array('post_login', 'post_login_successful'));
+
                 $this->set_message('login_successful');
-                return TRUE;
+                return true;
             }
         }
     }
@@ -892,6 +902,7 @@ class Ion_auth_model extends CI_Model {
         }
 
         //Hash something anyway, just to take up time
+
         $this->hash_password($password);
 
         $this->increase_login_attempts($identity);

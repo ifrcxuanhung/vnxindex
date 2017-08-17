@@ -63,7 +63,7 @@ float: left;
     <div class="intro_copn">
         <div class="container" style="width: 40%; float: left;">
            <h3><?php trans("QUARTERLY INDEX REVIEW"); ?></h3>
-           <h4 id="total_count"><?php echo $counts['count'];?> primary indexes</h4>
+           <h4 id="total_count"><?php echo $counts['count'];?> indexes</h4>
         </div>
         <div class="container" style="width: 18%; float: right; text-align: right;">
             <div class="box_search_obs">

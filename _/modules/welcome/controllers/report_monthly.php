@@ -3,7 +3,7 @@ require('_/modules/welcome/controllers/block.php');
 class Report_monthly extends Welcome {
 
     /**
-     * Hoï¿½i Phuong
+     * Hoài Phuong
      */
     function __construct() {
         parent::__construct();
@@ -15,7 +15,6 @@ class Report_monthly extends Welcome {
        // $months = $month =='all' ? NULL:$month;
         $report_monthly = remove_emty_array($this->report_monthly->getReport($date));
         $this->data->report_monthly = $report_monthly;
-
         
         $getdate = remove_emty_array($this->report_monthly->getdate_limit5());
         $this->data->getdate = $getdate;

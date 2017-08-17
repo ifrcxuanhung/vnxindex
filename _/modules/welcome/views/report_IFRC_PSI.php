@@ -63,8 +63,8 @@ background: #2f3539 none repeat scroll 0 0;
 <div id="content" role="main" class="observatory-content">
     <div class="decription"> 
     <?php foreach ($highlights['highlights'] as $highlights) { ?>
-       <!--<h4><?php echo $highlights->title; ?></h4>-->
-        <h5><?php echo $highlights->description; ?></h5>
+        <h4><?php echo $highlights->title; ?></h4>
+        <h5><?php echo $highlights->description; ?></h5>  
     <?php } ?>
       
     </div>

@@ -1,4 +1,5 @@
 <?php
+//echo phpinfo();
 /**
  * Simple Newsletter System
  * 
@@ -88,7 +89,7 @@ ob_start();
             <?php if ($show_menu) { ?>
                 <ul>
                     <li><span class="icon-globe"></span><a href="?p=home"><?php echo _l('Dashboard'); ?></a></li>
-                    <li><span class="icon-pencil "></span><a href="?p=create"><?php echo _l('Create Newsletter'); ?></a></li>
+                    <li><span class="icon-pencil"></span><a href="?p=create"><?php echo _l('Create Newsletter'); ?></a></li>
                     <li><span class="icon-time"></span><a href="?p=past"><?php echo _l('Past Newsletters'); ?></a></li>
                     <li><span class="icon-globe"></span><a href="?p=campaign"><?php echo _l('Campaigns'); ?></a></li>			
                     <li><span class="icon-cogs"></span><a href="?p=settings"><?php echo _l('Settings'); ?></a></li>			

@@ -4,7 +4,7 @@ if($perf_data != ""){
 	foreach ($perf_data as $row):
 ?>
     <?php $bgcolor = ($i % 2 == 0) ? '#3f4b4d' : '#202626'; ?>
-    <tr bgcolor="<?php echo $bgcolor; ?>" align="left" style=" font-size:11px;" class="content">
+    <tr bgcolor="<?php echo $bgcolor; ?>" align="left" style=" font-size:11px; height:18px;" class="content">
 		<?php
 		if(strlen($row['SHORTNAME']) > 32){
 			$name = trim(substr($row['SHORTNAME'], 0, 20))."...";

@@ -52,7 +52,7 @@ $active_group = 'default';
 $active_record = TRUE;
 
 //$db['default']['hostname'] = 'local.itvn.fr';
-$db['default']['hostname'] = '27.0.14.51';
+$db['default']['hostname'] = '210.211.109.27';
 $db['default']['username'] = 'vnxindex_user';
 $db['default']['password'] = 'indexvnx';
 $db['default']['database'] = 'vnxindex_data';
@@ -68,6 +68,24 @@ $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
 
+
+$db['database3']['hostname'] = '210.211.109.27';
+$db['database3']['username'] = 'efrcuser_user';
+$db['database3']['password'] = 'RC&comefrcvn&IF';
+$db['database3']['database'] = 'efrcuser_data';
+$db['database3']['dbdriver'] = 'mysqli';
+$db['database3']['dbprefix'] = '';
+$db['database3']['pconnect'] = TRUE;
+$db['database3']['db_debug'] = TRUE;
+$db['database3']['cache_on'] = FALSE;
+$db['database3']['cachedir'] = '';
+$db['database3']['char_set'] = 'utf8';
+$db['database3']['dbcollat'] = 'utf8_general_ci';
+$db['database3']['swap_pre'] = '';
+$db['database3']['autoinit'] = TRUE;
+$db['database3']['stricton'] = FALSE;
+
+
 /*Config DB Send Mail*/
 $db['default']['hostname_db_mail'] = 'localhost';
 $db['default']['username_db_mail'] = 'vnxindex_user';
@@ -77,9 +95,14 @@ $db['default']['name_group_mail'] = 'EMAIL_SUBSCRIBE_NEWSLETTER';
 
 /*Connect DB Manager Pass Backend*/
 $db['default']['hostname_users'] = 'localhost';
-$db['default']['username_users'] = 'ifrcdata';
-$db['default']['password_users'] = 'dataifrc';
-$db['default']['database_users'] = 'ifrcdata_users';
+$db['default']['username_users'] = 'vnxindex_user';
+$db['default']['password_users'] = 'indexvnx';
+$db['default']['database_users'] = 'vnxindex_data';
+
+//$db['default']['hostname_users'] = 'localhost';
+//$db['default']['username_users'] = 'ifrcdata';
+//$db['default']['password_users'] = 'dataifrc';
+//$db['default']['database_users'] = 'ifrcdata_users';
 
 /* End of file database.php */
 /* Location: ./application/config/database.php */

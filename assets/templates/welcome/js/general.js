@@ -250,14 +250,14 @@ var ifrc = (function() {
                 colModel: [{
                         display: ifrc.trans('Name'),
                         name: 'shortname',
-                        width: 180,
+                        width: 400,
                         sortable: false,
                         align: 'left',
                         hide: false
                     }, {
                         display: ifrc.trans('Last'),
                         name: 'close',
-                        width: 80,
+                        width: 100,
                         sortable: false,
                         align: 'right',
                         hide: false
@@ -265,7 +265,7 @@ var ifrc = (function() {
                     {
                         display: ifrc.trans('% Var'),
                         name: 'dvar',
-                        width: 70,
+                        width: 80,
                         sortable: true,
                         align: 'right',
                         hide: false
@@ -273,7 +273,7 @@ var ifrc = (function() {
                     {
                         display: ifrc.trans('% Month'),
                         name: 'varmonth',
-                        width: 70,
+                        width: 80,
                         sortable: true,
                         align: 'right',
                         hide: false
@@ -281,7 +281,7 @@ var ifrc = (function() {
                     {
                         display: ifrc.trans('% Year'),
                         name: 'varyear',
-                        width: 70,
+                        width: 80,
                         sortable: true,
                         align: 'right',
                         hide: false
@@ -289,7 +289,7 @@ var ifrc = (function() {
                     {
                         display: ' ',
                         name: 'action',
-                        width: 40,
+                        width: 58,
                         sortable: true,
                         align: 'center',
                         hide: false

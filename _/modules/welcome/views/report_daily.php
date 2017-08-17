@@ -65,10 +65,10 @@ float: left;
                 <div name="search_obs">
                      <div class="search_element" style="font-size: 12px;">
                      <?php trans('search'); ?>:
-                         <input type="text" placeholder="<?php trans('search'); ?>" class="q_search" style=" padding: 2px 5px;font-size:11px;width:170px; height:15px;" name="q_search" onclick="this.value = ''" value=""/>
+                         <input type="text" placeholder="<?php trans('search'); ?>" class="q_search" style=" padding: 2px 5px;font-size:11px;width:170px; height:15px;" name="q_search" onclick="this.value = ''" value=""/>  
                     </div>
                     <div class="search_element" style="font-size: 12px;">
-                        <?php trans('Date'); ?>:
+                        <?php trans('Date'); ?>: 
                         <select name="selectDate" class="selectDate" style=" padding: 2px 5px; font-size:11px">
                             <!--<option value="0" selected="selected" ><?php trans("ALL"); ?></option>-->
                             <?php foreach ($getdate['date'] as $date) { ?>
@@ -78,7 +78,7 @@ float: left;
                     </div>
 
                     <div class="search_element" style="font-size: 12px;">
-                        <?php trans('Provider'); ?>:
+                        <?php trans('Provider'); ?>: 
                         <select name="selectProvider" class="selectProvider" style=" padding: 2px 5px;font-size:11px">
                             <option value="0" selected="selected" ><?php trans("ALL"); ?></option>
                             <?php foreach ($getprovider['provider'] as $getprovider) { ?>
@@ -86,9 +86,9 @@ float: left;
                             <?php } ?>
                         </select>
                     </div>
-
+                    
                     <div class="search_element" style="font-size: 12px;">
-                        <?php trans('Currency'); ?>:
+                        <?php trans('Currency'); ?>: 
                         <select name="selectCurr" class="selectCurr" style=" padding: 2px 5px; font-size:11px">
                             <!--<option value="0" selected="selected" ><?php trans("VND"); ?></option>-->
                             <?php foreach ($getcurrency['curr'] as $curr) { ?>
@@ -97,7 +97,7 @@ float: left;
                         </select>
                     </div>
                     <div class="search_element" style="font-size: 12px;">
-                        <?php trans('PR/TR'); ?>:
+                        <?php trans('PR/TR'); ?>: 
                         <select name="selectPrtr" class="selectPrtr" >
                            <!-- <option value="0" selected="selected" ><?php trans("ALL"); ?></option>-->
                             <?php foreach ($getPRTR['PRTR'] as $getPRTR) { ?>
@@ -105,8 +105,8 @@ float: left;
                             <?php } ?>
                         </select>
                     </div>
-
-                    <div class="search_element">
+                    
+                    <div class="search_element">     
                         <a onclick="ifrc.searchRpnull()" style="cursor: pointer; display: inline-block" width="66" ><img  src="<?php echo base_url() ?>templates/images/search.png"/></a>
                         <a onclick="ifrc.resetselect1()" style="cursor: pointer; display: inline-block" width="66" ><img  src="<?php echo base_url() ?>templates/images/reset.png"/></a>
                         <!--<a onclick="ifrc.searchRpnull()" style="cursor: pointer; display: inline-block" width="66" ><span class="label label-sm label-danger">Go</span></a>

@@ -290,7 +290,6 @@ class Article_model extends CI_Model{
         }
         $data['current'] = @$data['current'][0];
         $data['default'] = @$data['default'][0];
-
         return $data;
     }
 

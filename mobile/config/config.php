@@ -6,9 +6,9 @@ Class Config
     public $password = "ifrcintranet";
     public $database = "intranet_db";
     
-	public $server2      = "local";
-    public $username2    = "local";
-    public $password2    = "ifrcvn";
+	public $server2      = "27.0.14.51";
+    public $username2    = "vnxindex_user";
+    public $password2    = "indexvnx";
     public $database2    = "vnxindex_data";
 }
 

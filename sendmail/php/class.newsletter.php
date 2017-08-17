@@ -2039,8 +2039,7 @@ class newsletter {
         }
         $sql .= "where $where";
         //echo $sql;
-        if (!$db
-        )
+        if (!$db)
             $db = db_connect();
         query($sql, $db);
     }
@@ -2064,8 +2063,7 @@ class newsletter {
 
         $sql = "select $column from $table $where  $orderby $limit ";
         //echo $sql;
-        if (!$db
-        )
+        if (!$db)
             $db = db_connect();
         return qa($sql, $db);
     }

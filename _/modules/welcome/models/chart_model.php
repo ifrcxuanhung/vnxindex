@@ -153,7 +153,6 @@ class Chart_model extends CI_Model{
     }
 
     function load_chart_compare( $data_chart, $title, $min, $subtitle = 'Daily', $id, $titleyAxis ) {
-		
         $content = '<script type="text/javascript">';
         $content.='var chartingOptions = {
                 chart: {
@@ -222,7 +221,6 @@ class Chart_model extends CI_Model{
                 },
                 subtitle: {},
                 series: [';
-				
         foreach ( $data_chart as $value ) {
             $content .= '
                 {
@@ -338,6 +336,40 @@ class Chart_model extends CI_Model{
         switch (strtolower($market))
         {
             case 'vnxhn':
+                $sql = "select replace(efrc_stkvn_stats.date, '-', '/') date
+                        from efrc_stkvn_stats, (select date_format(str_to_date(date, '%Y/%m/%d'), '%Y-%m-%d') date
+                        from idx_month
+                        where code = 'IFRCHNX') temp
+                        where efrc_stkvn_stats.codeifrc = '{$companyCode}'
+                       
+                        order by efrc_stkvn_stats.date asc
+                        limit 1;";
+                break;
+            case 'vnxhm':
+                $sql = "select replace(efrc_stkvn_stats.date, '-', '/') date
+                        from efrc_stkvn_stats, (select date_format(str_to_date(date, '%Y/%m/%d'), '%Y-%m-%d') date
+                        from idx_month
+                        where code = 'IFRCVNI') temp
+                        where efrc_stkvn_stats.codeifrc = '{$companyCode}'
+                       
+                        order by efrc_stkvn_stats.date asc
+                        limit 1;";
+                break;
+            default:
+                $sql = "select replace(min(date), '-', '/') date
+                        from efrc_stkvn_stats
+                        where codeifrc = '{$companyCode}';";
+                break;
+        }
+        $date = $this->db->query($sql)->result_array();
+        return $date[0]['date'];
+    }
+
+    public function getDateCompareChartCompany_backup($companyCode = '', $market = '')
+    {
+        switch (strtolower($market))
+        {
+            case 'vnxhn':
                 $sql = "select replace(stk_month_chart.date, '-', '/') date
                         from stk_month_chart, (select date_format(str_to_date(date, '%Y/%m/%d'), '%Y-%m-%d') date
                         from idx_month
@@ -367,6 +399,26 @@ class Chart_model extends CI_Model{
         return $date[0]['date'];
     }
     public function getAdjClose($code = '', $date = '')
+    {
+        $sql = "select adjclose, replace(date, '-', '/') date
+                from efrc_stkvn_stats
+                where codeifrc = '{$code}' and period = 'M' 
+                and date >= replace('{$date}', '/', '-')
+                order by date asc;";
+        $rows = $this->db->query($sql)->result_array();
+        $data = array();
+        if (!empty($rows))
+        {
+            foreach ($rows as $key => $item)
+            {
+                $data[$key]['date'] = strtotime(date("Y/m/d", strtotime($item['date']))) * 1000;
+                $data[$key]['value'] = $item['adjclose'] * 1;
+            }
+        }
+        return $data;
+    }
+
+    public function getAdjClose_backup($code = '', $date = '')
     {
         $sql = "select adjclose, replace(date, '-', '/') date
                 from stk_month_chart
@@ -444,6 +496,7 @@ class Chart_model extends CI_Model{
                 and idx_ref.idx_bbs = 'Sector'
                 -- and idx_compo.PROVIDER = 'IFRC'
                 limit 1;";
+       // echo "<pre>";print_r($sql);exit;
         $data = $this->db->query($sql)->result_array();
         return $data[0]['CODE'];
     }

@@ -9,6 +9,7 @@ class Report_model extends CI_Model {
 	}
 	
 	public function getReport($codeid,$month) {
+
 		$lang = $this->session->userdata('curent_language');
         $where = '';
         if ($month != NULL){
@@ -26,6 +27,7 @@ class Report_model extends CI_Model {
 (select                     stk_code,100*mtd as perf,idx_code from rpt_stk_competitor group by stk_code) as tempb on tempa.f1=tempb.stk_code
 and left(tempa.`code`,3)=left(tempb.`idx_code`,3)';*/
 		$sql_composition = 'select (a.stk_mcap/1000000000) as stk_mcap,a.stk_code, a.stk_name, (a.stk_wgt*100) as stk_wgt, (b.var*100) as perf from efrc_ind_composition a left join report_market_last b ON(a.stk_code = b.code) where idx_code ="'.$codeid.'" LIMIT 0,10;';
+        //echo "<pre>";print_r($sql_composition);exit;
         //$sql_count='SELECT COUNT(isin) count FROM idx_compo  WHERE  code = "'.$codeid.'"group by code; ';
         $sql_count='SELECT nb as count FROM mr_idx_figures  WHERE  idx_code = "'.$codeid.'"'.$where.' group by idx_code; ';
         $sql_month='select DISTINCT month as yyyymm, concat(left(month,4),"-",right(month,2)) month from _composition order by month desc';

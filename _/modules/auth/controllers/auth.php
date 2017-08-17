@@ -32,8 +32,10 @@ class Auth extends MY_Controller {
 
             if(!$this->input->post('act_from'))
             {
+
                 //Khi dang nhap vao Backend
                 if ($this->ion_auth->login2($this->input->post('identity'), $this->input->post('password'), $remember)) {
+
                     
                     $response['session'] = $this->session->all_userdata();
                     $response['url'] = $this->session->userdata('url_login');
@@ -50,7 +52,7 @@ class Auth extends MY_Controller {
             }
             else
             {
-				
+
                 //Khi dang nhap tu Fontend
                 if ($this->ion_auth->login($this->input->post('identity'), $this->input->post('password'), $remember)) {
                     //if the login is successful

@@ -38,6 +38,7 @@ class Report_stock extends Welcome {
         $this->data->partner_right = $block->partner_right();
         $this->data->actualites = $block->actualites();
         $this->data->compare_chart3 = $block->compare_chart3("");
+
 		$this->data->stock_code = $code;
 		
 		$month_hung = $this->report->getOneMonth();

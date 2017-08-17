@@ -245,7 +245,7 @@ margin:10px 10px 10px 10px;
 </div>
 <div class="intro_map">      
 <div id="popular_posts-3" class="widget widget_popular_posts">
-        
+
          <?php echo $compare_chart3; ?>
     </div>
 <div class="clear"></div>       
@@ -260,8 +260,8 @@ margin:10px 10px 10px 10px;
 					<thead>
 					<tr>
 					<th align="left" colspan="3"><div style="text-align: left; width: 145px; margin-top: 4px;" class="sundefined"><h3>Performance</h3></div></th>
-					<th align="left" colspan="3"><div style="text-align: right; width: 350px; margin-top: 6px; margin-left: 23px;" class="sundefined"><h4>Performance %</h3></div></th>
-					<th align="left" colspan="3"><div style="text-align: center; width: 310px; margin-top: 6px; margin-left: 23px;" class="sundefined"><h4>Dividend Yield %</h3></div></th>									
+					<th align="left" colspan="3"><div style="text-align: right; width: 350px; margin-top: 6px; margin-left: 23px;" class="sundefined"><h3>Performance %</h3></div></th>
+					<th align="left" colspan="3"><div style="text-align: center; width: 310px; margin-top: 6px; margin-left: 23px;" class="sundefined"><h3>Dividend Yield %</h3></div></th>
 					</tr>
 					<tr>
 					<th align="right" axis="col1"><div style="text-align: right; width: 15px;" class="sundefined"></div></th>
@@ -354,7 +354,8 @@ margin:10px 10px 10px 10px;
 						<td align="right"><div style="text-align: right ;width: 20%; color:  <?php echo $membership->stk_wgt < 0 ? "#ff492a" : "#92dd4b"; ?>;"><?php echo $membership->stk_wgt !=0? number_format($membership->stk_wgt,2):'-'; echo ($membership->stk_wgt == ' Volatility' || $membership->stk_wgt == ' Tracking error') ? '%' : '';?></div></td>
                         <td align="right" style="text-align: right; width: 5%;">
                                <div >
-                                   <a style="cursor:pointer" href="<?php echo base_url(); ?>report/<?php  echo $newformat;?>/<?php echo $membership->idx_code; ?>">
+                                   <!--<a style="cursor:pointer" href="<?php /*echo base_url(); */?>report/<?php /* echo $newformat;*/?>/<?php /*echo $membership->idx_code; */?>">-->
+                                       <a style="cursor:pointer" href="<?php echo base_url(); ?>report/<?php echo $membership->idx_code; ?>">
                                    <img style="text-align: right;" src="<?php echo base_url(); ?>templates/images/more.png"/></a>
                                </div>
                             </td>

@@ -165,7 +165,7 @@ class Ajax extends MY_Controller {
                 $short_name = str_replace(' (VND)', '', $short_name);
                 $entry = array('id' => $vdata['id'],
                     'cell' => array(
-                        'shortname' => cut_str($short_name, 60),
+                        'shortname' => cut_str($short_name, 30),
                         'close' => check_zero($vdata['close']),
                         'varmonth' => check_zero($vdata['varmonth']*100),
                         'varyear' => check_zero($vdata['varyear']*100),
@@ -1588,7 +1588,7 @@ public function getDataGlobalBoxHomeObs2() {
                         'VAR' => number_format($vdata->var*100,2),
                         'YYYYMM' =>$vdata->yyyymm,
                         'idx_mother' =>$vdata->idx_mother,
-                        'action' => '<a href="'. base_url() .'report/' . $vdata->idx_mother . '" style="cursor:pointer"><img src="' . base_url() . 'templates/images/more.png"></a>'
+                        'action' => '<a href="'. base_url() .'report/'.$vdata->yyyymm.'/' . $vdata->idx_mother . '" style="cursor:pointer"><img src="' . base_url() . 'templates/images/more.png"></a>'
                     ),
                 );
                 $log[] = $entry;

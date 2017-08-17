@@ -47,6 +47,7 @@ class Bottomslider_model extends CI_Model {
 			$query = $this->db->get('ifrc_articles');
 			$kq = $query->result_array();
 		}
+		//echo "<pre>";print_r($this->db->last_query());exit;
 		return $kq;
 }
 

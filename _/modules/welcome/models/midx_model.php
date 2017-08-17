@@ -12,6 +12,7 @@ class Midx_model extends CI_Model {
 
     public function __construct() {
         parent::__construct();
+        $this->db3 = $this->load->database('database3', TRUE);
     }
 
     public function getType($provider = NULL, $vnx = false) {
@@ -32,7 +33,7 @@ class Midx_model extends CI_Model {
         }
         $sql = "select DISTINCT TYPE from idx_sample WHERE 1 {$where} AND VNXI = 1 ORDER BY TYPE ASC";
         //	$sql = "select DISTINCT idx_sample.TYPE,if(idx_sample.type='EQUITY','', idx_sample.type) as my_order from idx_sample , obs_home  WHERE 1 {$where} ORDER BY my_order ASC";
-		//echo "<pre>";print_r($sql);exit; 
+
         $types = $this->db->query($sql)->result_array();
         if ($types) {
             foreach ($types as $k => $type) {
@@ -56,7 +57,54 @@ class Midx_model extends CI_Model {
         $this->db->where('key', 'PVN');
         $setting = $this->db->get('setting')->row_array();
 
-		$sql = "select provider from obs_home where provider <> 'IFRCGWC' group by provider";
+		$sql = "select provider from obs_home_vn where provider <> 'IFRCGWC' group by provider";
+        $providers = $this->db3->query($sql)->result_array();
+        array_unshift($providers, array('provider' => 'TOP10_PERFORMANCE'));
+
+        if ($providers) {
+            foreach ($providers as $k => $provider) {
+
+                if ($provider['provider'] == 'TOP10_PERFORMANCE') {
+                    if ($setting['value'] == 1)
+                    {
+                        $sql = "SELECT DISTINCT SUB_TYPE
+                                FROM idx_sample
+                               WHERE provider NOT IN ('IFRCRESEARCH', 'PROVINCIAL')
+                               AND CODE IN (SELECT CODE FROM obs_home_vn) AND type <> 'CURRENCY'
+                               ORDER BY SUB_TYPE ASC";
+                    }
+                    else
+                    {
+                        $sql = "SELECT DISTINCT SUB_TYPE
+                               FROM idx_sample
+                                WHERE  provider NOT IN ('IFRCRESEARCH','PVN', 'IFRCRESEARCH')
+                                AND CODE IN (SELECT CODE FROM obs_home_vn) AND type <> 'CURRENCY'
+                               ORDER BY SUB_TYPE ASC";
+                    }
+
+                    //$sql = "SELECT NULL SUB_TYPE";
+                }else {
+
+                    $sql = "SELECT DISTINCT bbs as SUB_TYPE FROM obs_home_vn
+                            WHERE provider ='$provider[provider]'";
+                }
+
+
+                $result[$k]['provider'] = $provider;
+
+				
+                $result[$k]['sub_type'] = $this->db3->query($sql)->result_array();
+            }
+
+            return $result;
+        }
+    }
+
+    public function getProviderFIX_bk10082017() {
+        $this->db->where('key', 'PVN');
+        $setting = $this->db->get('setting')->row_array();
+
+        $sql = "select provider from obs_home where provider <> 'IFRCGWC' group by provider";
         $providers = $this->db->query($sql)->result_array();
         array_unshift($providers, array('provider' => 'TOP10_PERFORMANCE'));
 
@@ -91,10 +139,10 @@ class Midx_model extends CI_Model {
 
                 $result[$k]['provider'] = $provider;
 
-				
+
                 $result[$k]['sub_type'] = $this->db->query($sql)->result_array();
             }
-           // echo "<pre>";print_r($result);exit;
+            echo "<pre>";print_r($result);exit;
             return $result;
         }
     }
@@ -616,7 +664,7 @@ AND SUBSTR(`CODE` FROM 1 FOR 3) = 'VNX' ";
 //echo "<pre>";print_r($sql);exit;
 //echo "<pre>";print_r($p_currency_type);exit;
         $data = $this->db->query($sql)->result_array();
-
+//echo "<pre>";print_r($sql);exit;
         return $data;
     }
 
@@ -2344,10 +2392,10 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
         $this->db->query('SET @rownum = 0');
         $sql = 'SELECT @rownum:=@rownum+1 as no, a.* from 
                      (SELECT a.id, b.name, b.provider, b.price as type, b.curr, a.date, 
-                        ROUND(a.adjclose,2) as close, ROUND(a.rt,2) as perform, a.codeifrc FROM `efrc_indvn_stats` a, 
+                        ROUND(a.adjclose,2) as close, a.rt as perform, a.codeifrc FROM `efrc_indvn_stats` a, 
                         `idx_sample` b WHERE a.codeifrc = b.code and b.vnxi=1 and b.place="VIETNAM" ' . $whereFilter . ' AND period = "Y" and 
                         YEAR(a.date) = ' . $year . ' ' . $sort . ' ' . $limit . ') a';
-        // echo $sql;exit();
+       // echo "<pre>";print_r($sql);exit;
         return $this->db->query($sql)->result_array();
     }
 

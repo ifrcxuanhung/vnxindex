@@ -25,40 +25,127 @@ Class First_Model {
                 limit 1;";
         return $this->db->selectQuery2($sql);
     }
-	
-	 public function getProviderFIX() {
-        $sql = "SELECT DISTINCT provider FROM idx_sample WHERE (PROVIDER ='IFRC') AND CODE IN (SELECT CODE FROM obs_home) ORDER BY provider";
-        
+
+    public function getProviderFIX() {
+
+        $sql = "select provider from obs_home where provider <> 'IFRCGWC' group by provider";
         $providers = $this->db->selectQuery2($sql);
-		
+
         array_unshift($providers, array('provider' => 'TOP10_PERFORMANCE'));
-		
+
+        if ($providers) {
+            foreach ($providers as $k => $provider) {
+
+                if ($provider['provider'] == 'TOP10_PERFORMANCE') {
+
+                        $sql = "SELECT DISTINCT SUB_TYPE
+                                FROM idx_sample
+                               WHERE provider NOT IN ('IFRCRESEARCH', 'PROVINCIAL')
+                               AND CODE IN (SELECT CODE FROM obs_home) AND type <> 'CURRENCY'
+                               ORDER BY SUB_TYPE ASC";
+
+
+
+                    //$sql = "SELECT NULL SUB_TYPE";
+                }else {
+
+                    $sql = "SELECT DISTINCT bbs as SUB_TYPE FROM obs_home
+                            WHERE provider ='$provider[provider]'";
+
+
+                }
+
+
+                $result[$k]['provider'] = $provider;
+
+
+                $result[$k]['sub_type'] = $this->db->selectQuery2($sql);
+                if ($provider['provider'] == 'TOP10_PERFORMANCE') {
+                    foreach($result[$k]['sub_type'] as $k2=>$sub) {
+
+                        $sql2 = "SELECT upper(`idx_sample`.`SHORTNAME`) as SHORTNAME , `idx_sample`.`CODE`, `obs_home`.`date`, `obs_home`.`id`, `obs_home`.`close`,
+ `obs_home`.`varmonth`, `obs_home`.`varyear`, `obs_home`.`dvar` FROM idx_sample
+,obs_home,idx_ref WHERE `obs_home`.`code`=`idx_sample`.`CODE` and idx_ref.idx_code= `obs_home`.`code` AND `idx_sample`.`TYPE`='EQUITY' AND `idx_sample`.`SUB_TYPE`='$sub[SUB_TYPE]'
+AND `idx_sample`.`code` = COMPO_PARENT AND ( idx_sample.PROVIDER NOT
+ IN ('IFRCRESEARCH', 'PROVINCIAL') ) AND idx_ref.publications=1 AND obs_home.date BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()  
+order by obs_home.varyear desc ;";
+
+                        $result[$k]['sub_type'][$k2]['detail'] = $this->db->selectQuery2($sql2);
+
+
+
+                    }
+
+
+                }else{
+                    foreach($result[$k]['sub_type'] as $k2=>$sub) {
+                        if($sub['SUB_TYPE'] != ''){
+                            $sql2 = "SELECT upper(`idx_sample`.`SHORTNAME`) as SHORTNAME , `idx_sample`.`CODE`, `obs_home`.`date`, `obs_home`.`id`, 
+    `obs_home`.`close`, `obs_home`.`varmonth`, `obs_home`.`varyear`, `obs_home`.`dvar` FROM idx_sample
+    ,obs_home,idx_ref WHERE `obs_home`.`code`=`idx_sample`.`CODE` and idx_ref.idx_code= `obs_home`.`code` 
+    AND `idx_sample`.`TYPE`='EQUITY' AND `idx_sample`.`SUB_TYPE`='$sub[SUB_TYPE]' AND `idx_sample`.`SUB_TYPE`='$sub[SUB_TYPE]' AND `idx_sample`.`code` = COMPO_PARENT AND (  `idx_sample`.`PROVIDER` = '$provider[provider]'  )
+     AND idx_ref.publications=1 AND obs_home.date BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND
+     NOW() ORDER BY idx_ref.ims_order ASC;";
+                            $result[$k]['sub_type'][$k2]['detail'] = $this->db->selectQuery2($sql2);
+                        }else{
+                            $sql2 = "SELECT upper(`idx_sample`.`SHORTNAME`) as SHORTNAME , `idx_sample`.`CODE`, `obs_home`.`date`, `obs_home`.`id`, 
+    `obs_home`.`close`, `obs_home`.`varmonth`, `obs_home`.`varyear`, `obs_home`.`dvar` FROM idx_sample
+    ,obs_home,idx_ref WHERE `obs_home`.`code`=`idx_sample`.`CODE` and idx_ref.idx_code= `obs_home`.`code` 
+    AND `idx_sample`.`TYPE`='EQUITY'  AND `idx_sample`.`code` = COMPO_PARENT AND (  `idx_sample`.`PROVIDER` = '$provider[provider]'  )
+     AND idx_ref.publications=1 AND obs_home.date BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND
+     NOW() ORDER BY idx_ref.ims_order ASC;";
+                            $result[$k]['sub_type'][$k2]['detail'] = $this->db->selectQuery2($sql2);
+                        }
+                        //echo "<pre>";print_r($sql2);
+
+
+
+
+                    }
+
+                }
+
+
+
+            }
+           // echo "<pre>";print_r($result);exit;
+            return $result;
+        }
+    }
+
+    public function getProviderFIX_backup() {
+        $sql = "SELECT DISTINCT provider FROM idx_sample WHERE (PROVIDER ='IFRC') AND CODE IN (SELECT CODE FROM obs_home) ORDER BY provider";
+
+        $providers = $this->db->selectQuery2($sql);
+
+        array_unshift($providers, array('provider' => 'TOP10_PERFORMANCE'));
+
         $sql2 = "SELECT DISTINCT provider FROM idx_sample WHERE (PROVIDER ='IFRCLAB' OR PROVIDER ='IFRCRESEARCH' OR PROVIDER ='PROVINCIAL') AND CODE IN (SELECT CODE FROM obs_home) ORDER BY provider";
-		
+
         $providers2 = $this->db->selectQuery2($sql2);
         foreach($providers2 as $item) {
             $providers[] = $item;
         }
-		$providers[] = array('provider' => 'IFRCCURRENCY');
+        $providers[] = array('provider' => 'IFRCCURRENCY');
         $providers[] = array('provider' => 'OTHERS');
-		
+
         if ($providers) {
             foreach ($providers as $k => $provider) {
                 if ($provider['provider'] == 'TOP10_PERFORMANCE') {
-                   
-                       $sql = "SELECT DISTINCT SUB_TYPE
+
+                    $sql = "SELECT DISTINCT SUB_TYPE
                                FROM idx_sample
                                 WHERE  provider NOT IN ('IFRCRESEARCH','PVN','IFRCRESEARCH')
                                 AND CODE IN (SELECT CODE FROM obs_home) AND type <> 'CURRENCY'
                                ORDER BY SUB_TYPE ASC";
-                                 
-                } 
-				else if($provider['provider'] == 'IFRCCURRENCY'){
-					$sql = "SELECT DISTINCT SUB_TYPE FROM idx_sample
+
+                }
+                else if($provider['provider'] == 'IFRCCURRENCY'){
+                    $sql = "SELECT DISTINCT SUB_TYPE FROM idx_sample
                                 WHERE  provider NOT IN ('IFRCRESEARCH','PVN')
                                 AND CODE IN (SELECT CODE FROM obs_home) AND `TYPE` = 'CURRENCY'
                                ORDER BY SUB_TYPE ASC";
-				}
+                }
                 else if ($provider['provider'] == 'OTHERS'){
                     $sql = "SELECT DISTINCT SUB_TYPE
                                 FROM idx_sample
@@ -73,10 +160,10 @@ Class First_Model {
                             AND CODE IN (SELECT CODE FROM obs_home)
                             ORDER BY SUB_TYPE ASC";
                 }
-                $result[$k]['provider'] = $provider; 
+                $result[$k]['provider'] = $provider;
                 $result[$k]['sub_type'] = $this->db->selectQuery2($sql);
             }
-			
+
             return $result;
         }
     }
@@ -93,6 +180,23 @@ Class First_Model {
                 ORDER BY `idx_sample`.`SUB_TYPE`, idx_ref.ims_order ASC;";
 				
         return $this->db->selectQuery2($sql);
+    }
+
+
+    public function getDataDetailAll($provider)
+    {
+        echo 11111111111111;
+//        $sql = "SELECT REPLACE(`idx_sample`.`SHORTNAME`, ' (VND)', '') SHORTNAME, `idx_sample`.`CODE`, `obs_home`.`date`, `obs_home`.`id`, `obs_home`.`close`, `obs_home`.`varmonth`, `obs_home`.`varyear`, `obs_home`.`dvar`,`idx_sample`.`SUB_TYPE`
+//                FROM idx_sample,obs_home,idx_ref
+//                WHERE `obs_home`.`code`=`idx_sample`.`CODE`
+//                AND idx_ref.idx_code= `obs_home`.`code`
+//                AND `idx_sample`.`TYPE`='EQUITY'
+//                AND `idx_sample`.`code` = COMPO_PARENT
+//                AND (`idx_sample`.`PROVIDER` = $provider)
+//                AND `idx_sample`.`code` NOT LIKE '%PVN05%'
+//                ORDER BY `idx_sample`.`SUB_TYPE`, idx_ref.ims_order ASC;";
+//
+//        return $this->db->selectQuery2($sql);
     }
 
     public function getDataVNX()

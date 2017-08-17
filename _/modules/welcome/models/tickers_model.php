@@ -20,11 +20,12 @@ if (!defined('BASEPATH'))
 /* * ****************************************************************** */
 
 class Tickers_model extends CI_Model{
-    protected $_idx_ref = 'idx_ref';
+    protected $_idx_ref = 'index_idx_ref';
     protected $_idx_specs = 'idx_specs';
 
     public function __construct(){
         parent::__construct();
+        $this->db3 = $this->load->database('database3', TRUE);
     }
 
     public function getTickers() {
@@ -34,8 +35,9 @@ class Tickers_model extends CI_Model{
                 ON {$this->_idx_specs}.idx_code = {$this->_idx_ref}.idx_code
                 WHERE {$this->_idx_specs}.`idx_code` = {$this->_idx_specs}.`idx_mother` and {$this->_idx_ref}.publications=1
                 ORDER BY {$this->_idx_ref}.ims_order";
-        $data = $this->db->query($sql)->result_array();
-		//echo "<pre>";print_r($sql);exit; 
+       // echo "<pre>";print_r($sql);exit;
+        $data = $this->db3->query($sql)->result_array();
+		
         return $data;
     }
     public function getTickers2() {
@@ -43,11 +45,13 @@ class Tickers_model extends CI_Model{
        /* $sql = "select a.date, REPLACE(b.idx_name_sn,' (VND)','') as idx_name_sn, varyear from obs_home as a, idx_ref as b 
                                         where a.code= b.idx_mother and a.code <>'PVN05PRVND' and  a.provider in('IFRC', 'IFRCLAB','PVN') 
                                        and year(a.date)=year(curdate()) group by a.code  order by a.varyear desc limit 10";*/
-		$sql = "select a.date, REPLACE(b.idx_name_sn,' (VND)','') as idx_name_sn, varyear from obs_home as a, idx_ref as b 
+		$sql = "select a.date, REPLACE(b.idx_name_sn,' (VND)','') as idx_name_sn, varyear from obs_home_vn as a, index_idx_ref as b 
                                         where a.code= b.idx_mother and a.code <>'PVN05PRVND' and  a.provider in('IFRC', 'IFRCLAB','PVN') 
                                        group by a.code  order by a.date desc, a.varyear desc limit 10";
-        $data = $this->db->query($sql)->result_array();
-		//echo "<pre>";print_r($sql);exit; 
+        $data = $this->db3->query($sql)->result_array();
+		//echo "<pre>";print_r($data);exit; 
         return $data;
+        
     }
+
 }

@@ -23,6 +23,7 @@ class Home_model extends CI_Model {
 
     public function __construct() {
         parent::__construct();
+        $this->db3 = $this->load->database('database3', TRUE);
     }
 
     public function addNewsLetter($data) {
@@ -63,10 +64,10 @@ class Home_model extends CI_Model {
     }
 
     public function getClose($code) {
-        $this->db->where('codeifrc', $code);
-        $this->db->select(array('adjclose', 'date'));
-        $this->db->order_by('date', 'ASC');
-        $rows = $this->db->get('efrc_indvn_stats')->result_array();
+        $this->db3->where('codeifrc', $code);
+        $this->db3->select(array('adjclose', 'date'));
+        $this->db3->order_by('date', 'ASC');
+        $rows = $this->db3->get('efrc_ind_stats')->result_array();
         //echo $this->db->last_query();
         $data = array();
         if (!empty($rows)) {
@@ -76,6 +77,24 @@ class Home_model extends CI_Model {
                 $data[$key][] = $item['adjclose'] * 1;
             }
         }
+       // echo "<pre>";print_r($this->db->last_query());exit;
+        return $data;
+    }
+    public function getClose_bk10082017($code) {
+        $this->db->where('codeifrc', $code);
+        $this->db->select(array('adjclose', 'date'));
+        $this->db->order_by('date', 'ASC');
+        $rows = $this->db->get('efrc_indvn_stats')->result_array();
+        //echo $this->db->last_query();
+        $data = array();
+        if (!empty($rows)) {
+            foreach ($rows as $key => $item) {
+                $data[$key][] = strtotime("+1 day", strtotime($item['date'])) * 1000;
+                //$data[$key][] = strtotime($item['DATE']) * 1000;
+                $data[$key][] = $item['adjclose'] * 1;
+            }
+        }
+        // echo "<pre>";print_r($this->db->last_query());exit;
         return $data;
     }
     public function getClose_backup($code) {
@@ -95,10 +114,10 @@ class Home_model extends CI_Model {
         return $data;
     }
 	public function getCloseEnd() {
-        $this->db->select('date');
-		$this->db->order_by('date','DESC');
-		$this->db->limit(1);
-        $rows = $this->db->get('efrc_indvn_stats')->row_array();
+        $this->db3->select('date');
+		$this->db3->order_by('date','DESC');
+		$this->db3->limit(1);
+        $rows = $this->db3->get('efrc_ind_stats')->row_array();
         return $rows;
     }
     public function getCloseStock($code) {

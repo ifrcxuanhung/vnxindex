@@ -40,7 +40,7 @@ Cufon.replace('h1, h2, h3, h4');
                         <div style="float:right; margin-right:20px">
                             <label style="float:left; margin-right:10px; line-height:25px"><?= trans('Provider'); ?></label>
                             <select style="float:left" name="providerFilter">
-                                <option value="all"><?= trans('All'); ?></option>
+                                <option value="all"><?= trans('All'); ?></option>                                
                                 <?php
                                 foreach($provider as $itemC){
                                     echo '<option value="'.$itemC['provider'].'">'.$itemC['provider'].'</option>';
@@ -79,7 +79,7 @@ Cufon.replace('h1, h2, h3, h4');
                                 <option value="desc" selected="selected"><?= trans('DESC'); ?></option>
                             </select>
                         </div>
-
+                        
                     </form>
                 </div>
                 <!--**********hết phần search observatoire **********************************************-->

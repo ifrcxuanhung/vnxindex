@@ -1,26 +1,26 @@
 <?php
 define("_DB_NAME","vnxindex_sendmail");
-define("_DB_USER","vnxindex_user");
-define("_DB_PASS","IfRcdEc2013");
-define("_DB_SERVER","localhost");
+define("_DB_USER","local");
+define("_DB_PASS","ifrcvn");
+define("_DB_SERVER","210.211.109.27");
 
 define("_DB_NAME_WEB","vnxindex_data");
 define("_DB_USER_WEB","vnxindex_user");
-define("_DB_PASS_WEB","IfRcdEc2013");
-define("_DB_SERVER_WEB","localhost");
+define("_DB_PASS_WEB","indexvnx");
+define("_DB_SERVER_WEB","210.211.109.27");
 
 define("_TEMPLATE_DIR","templates/");
 define("_NEWSLETTERS_DIR","newsletters/");
 define("_IMAGES_DIR","images/");
 define("_MAIL_SMTP",true); 
 //define("_MAIL_SMTP_HOST","smtp.gmail.com");
-define("_MAIL_SMTP_HOST","auth.smtp.1and1.fr");
-define("_MAIL_SMTP_PORT",587);//Google-465 //1and1-587
-define("_MAIL_SMTP_SECURE","tls");
+define("_MAIL_SMTP_HOST","mail.ifrc.vn");
+define("_MAIL_SMTP_PORT",465);//Google-465 //1and1-587
+define("_MAIL_SMTP_SECURE","ssl");
 define("_MAIL_SMTP_AUTH",true);  
 
-define("_MAIL_SMTP_USER","index@ifrc.fr");
-define("_MAIL_SMTP_PASS","welcome");
+define("_MAIL_SMTP_USER","admin@ifrc.vn");
+define("_MAIL_SMTP_PASS","ifrcvn");
 
 define("_DEBUG_MODE",false);
 define("_DEMO_MODE",false);

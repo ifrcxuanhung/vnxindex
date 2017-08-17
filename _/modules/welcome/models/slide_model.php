@@ -49,7 +49,6 @@ class Slide_model extends CI_Model{
         if ($data['curent']) {
             $data['curent'] = replaceValueNull($data['curent'], $data['default']);
         }
-       //echo "<pre>";print_r($sql);exit;
         return $data;
     }
 }

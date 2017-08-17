@@ -14,9 +14,9 @@ if (is_array($list) && $list['curent']) {
                         <a class="share" href="#">share</a>
                         <div class="share_wrapper" style="display: none;">
                             <div class="share_icons">
-                                <a href="http://facebook.com" target="_blank"><img alt="Facebook" src="http://localhost/vnxindex/assets/templates/welcome/images/icon-facebook.png"></a>
-                                <a href="http://plus.google.com" target="_blank"><img alt="Google Plus" src="http://localhost/vnxindex/assets/templates/welcome/images/icon-googleplus.png"></a>
-                                <a href="http://www.twitter.com" target="_blank"><img alt="Twitter" src="http://localhost/vnxindex/assets/templates/welcome/images/icon-twitter.png"></a>
+                                <a href="http://facebook.com" target="_blank"><img alt="Facebook" src="<?php echo $template_url; ?>images/icon-facebook.png"></a>
+                                <a href="http://plus.google.com" target="_blank"><img alt="Google Plus" src="<?php echo $template_url; ?>images/icon-googleplus.png"></a>
+                                <a href="http://www.twitter.com" target="_blank"><img alt="Twitter" src="<?php echo $template_url; ?>images/icon-twitter.png"></a>
                             </div>
                         </div>
                     </div>

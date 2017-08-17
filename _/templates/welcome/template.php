@@ -330,7 +330,7 @@
                                     <ul>
                                     
                                      <?php
-									//echo "<pre>";print_r($tickers);exit; 
+									//echo "<pre>";print_r($tickers);exit;
                                         if (!empty($tickers)) {
                                             $string = 'Top Ten 2017 Performers - Date : ';
                                             $str = '';
@@ -352,9 +352,9 @@
                                             foreach ($tickers as $ticker) {
                                                 $date = $ticker['date'];
                                                 if ($ticker['idx_var'] > 0)
-                                                    $str .= '<li><a href="#" target="_self" class="up_idx"> ' . $ticker['idx_name'] . ' <b class="cl_idx"> ' . number_format($ticker['idx_last'], 2) . ' </b> <b class="up_cl"> +' . number_format($ticker['idx_var']*100, 2) . '% </b></a></li>';
+                                                    $str .= '<li><a href="#" target="_self" class="up_idx"> ' . $ticker['idx_name'] . ' <b class="cl_idx"> ' . number_format($ticker['idx_last'], 2) . ' </b> <b class="up_cl"> +' . number_format($ticker['idx_var'], 2) . '% </b></a></li>';
                                                 else
-                                                    $str .= '<li><a href="#" target="_self" class="down_ind"> ' . $ticker['idx_name'] . ' <b class="cl_idx"> ' . number_format($ticker['idx_last'], 2) . ' </b> <b class="down_cl"> ' . number_format($ticker['idx_var']*100, 2) . '% </b></a></li>';
+                                                    $str .= '<li><a href="#" target="_self" class="down_ind"> ' . $ticker['idx_name'] . ' <b class="cl_idx"> ' . number_format($ticker['idx_last'], 2) . ' </b> <b class="down_cl"> ' . number_format($ticker['idx_var'], 2) . '% </b></a></li>';
                                             }
                                             echo '<li>' . $string . $date . '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li> ' . $str;
                                         }

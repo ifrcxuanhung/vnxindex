@@ -52,6 +52,7 @@ Class Block_Controller {
 		$data['trans'] = $this->translate_model;
         $getnumberlistindexes=$this->first_model->getnumberlistindexes();
         $data['all'] = $this->first_model->getProviderFIX();
+
 		$data['vnx'] = $this->first_model->getDataVNX();
 		$data['ifrcresearch'] = $this->first_model->getDataIFRCRESEARCH();
 		$data['pvn'] = $this->first_model->getDataPVN();

@@ -2,12 +2,12 @@
 define("_DB_NAME","vnxindex_sendmail");
 define("_DB_USER","local");
 define("_DB_PASS","ifrcvn");
-define("_DB_SERVER","local");
+define("_DB_SERVER","210.211.109.27");
 
 define("_DB_NAME_WEB","vnxindex_data");
-define("_DB_USER_WEB","local");
-define("_DB_PASS_WEB","ifrcvn");
-define("_DB_SERVER_WEB","local");
+define("_DB_USER_WEB","vnxindex_user");
+define("_DB_PASS_WEB","indexvnx");
+define("_DB_SERVER_WEB","210.211.109.27");
 
 /*define("_DB_NAME","upmd_sendmail");
 define("_DB_USER","upmd_user");

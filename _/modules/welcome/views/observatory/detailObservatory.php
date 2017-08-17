@@ -18,14 +18,14 @@
 
         <ul>
 
-            <li><a tabid="0" name="<?php echo $code; ?>" href="#tabs_ob_Daily"><?php trans('Daily'); ?></a></li>
+
 
             <li><a tabid="1" class="detail-ob-monthly" name="<?php echo $code; ?>" href="#tabs_ob_Monthly"><?php trans('Monthly'); ?></a></li>
            <!-- <li><a tabid="6" class="detail-ob-quaterly" name="<?php echo $code; ?>" href="#tabs_ob_Quaterly"><?php trans('Quaterly'); ?></a></li>-->
 
 
             <li><a tabid="2" class="detail-ob-yearly" name="<?php echo $code; ?>" href="#tabs_ob_Yearly"><?php trans('Yearly'); ?></a></li>
-
+            <li><a tabid="0" name="<?php echo $code; ?>" href="#tabs_ob_Daily"><?php trans('Daily'); ?></a></li>
 
             <li><a tabid="3" name="<?php echo $code; ?>" href="#tabs_ob_Constituents"><?php trans('Constituents'); ?></a></li>
 

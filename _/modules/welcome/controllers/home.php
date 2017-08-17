@@ -91,6 +91,7 @@ class Home extends Welcome {
             //echo "<pre>";print_r($providerGlobal);exit;
           
             if ($providerGlobal != NULL) {
+
                 $temp = NULL;
                 foreach ($providerGlobal as $kprovider => $vprovider) {
                     $temp[$kprovider]['type'] = $vprovider['provider']['provider'];

@@ -107,6 +107,7 @@ Class Chart_Model {
 
     public function getDateCompareChartCompany($companyCode = '', $market = '')
     {
+
         switch (strtolower($market))
         {
             case 'vnxhn':

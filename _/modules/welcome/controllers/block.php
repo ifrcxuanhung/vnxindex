@@ -186,6 +186,7 @@ class Block extends MY_Controller {
     }
     public function compare_chart3($code = '') {
         $this->load->model('home_model', 'mhome');
+
         if ($this->input->is_ajax_request()) {
             $response = $this->mhome->getClose($code);
             $this->output->set_output(json_encode($response));
@@ -201,6 +202,7 @@ class Block extends MY_Controller {
         $data->icode = $code;
         $data->hnx = $this->mhome->getClose('IFRCHNX');
         $data->vni = $this->mhome->getClose('IFRCVNI');
+        //echo "<pre>";print_r($data->hnx);exit;
         $data->sample = $this->mhome->getSampleCode($where);
         return $this->load->view('block/compare_chart_company', $data, true);
     }
@@ -380,11 +382,15 @@ class Block extends MY_Controller {
         $dataCode = array();
         $market = $this->chart_model->getMarketCompany($ticker);
 
+
         if (isset($market))
         {
+
             $date = $this->chart_model->getDateCompareChartCompany($ticker, $market);
+
             /* company chart */
             $dataCode[$ticker] = $this->chart_model->getAdjClose($ticker, $date);
+
             $dataName = $this->chart_model->getDetailCompany($ticker);
             $response['name'][$ticker] = $dataName[0]['stk_name'];
 
@@ -401,17 +407,22 @@ class Block extends MY_Controller {
                     break;
             }
             /* index sector chart */
+
             $indexSector = $this->chart_model->getIndexSectorCompany($ticker);
             $dataCode[$indexSector] = $this->chart_model->getClose($indexSector, $date);
+
             $response['name'][$indexSector] = $this->chart_model->getIndexName($indexSector);
 
             $response['data'] = $dataCode;
+
         }
         else
         {
             $response['name'] = '';
             $response['data'] = array();
         }
+
+
         echo json_encode($response);
     }
 

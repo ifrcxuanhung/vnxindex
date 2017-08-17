@@ -236,7 +236,8 @@ if (!function_exists('cut_str')) {
         $sql = "select a.article_id, a.category_id, a.image, ad.title, ad.description, ad.long_description from article a, article_description ad 
                 where ad.lang_code = 'fr' and a.article_id = ad.article_id and a.`status` = 1 
                 and a.category_id = (select category_id from category where category.category_code = '$code_category')
-                ORDER BY sort_order"; 
+                ORDER BY sort_order";
+       // echo "<pre>";print_r($sql);exit;
 
         return selectQuery($sql);
     }
