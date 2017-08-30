@@ -1133,12 +1133,12 @@ LEFT JOIN (select ticker,eoy,perf from stk_perf order by eoy desc) as B on A.isi
         }
         $sql = "select * from efrc_indvn_datas WHERE codeifrc='" . $code . "' $and AND !ISNULL(date) ORDER BY date $order $limit";
 		
-        return $this->db->query($sql)->result_array();
+        return $this->db3->query($sql)->result_array();
     }
 
     public function loadDayObDateBegin($code) {
         $sql = "select date from efrc_indvn_datas WHERE codeifrc='" . $code . "' ORDER BY date ASC limit 1";
-        $data = $this->db->query($sql)->row_array();
+        $data = $this->db3->query($sql)->row_array();
         if ($data['date']) {
             return $data['date'];
         }
@@ -1180,7 +1180,7 @@ LEFT JOIN (select ticker,eoy,perf from stk_perf order by eoy desc) as B on A.isi
             $order = 'ASC';
         }
         $sql = "select count(id) as count from efrc_indvn_datas WHERE codeifrc='" . $code . "' $and ORDER BY date $order limit 1";
-        $data = $this->db->query($sql)->row_array();
+        $data = $this->db3->query($sql)->row_array();
         return $data;
     }
 
@@ -1406,7 +1406,7 @@ LEFT JOIN (select ticker,eoy,perf from stk_perf order by eoy desc) as B on A.isi
         }
         $sql = "select close as min2 from efrc_indvn_datas WHERE codeifrc='" . $code . "' $and ORDER BY close ASC limit 1";
 		//echo "<pre>";print_r($sql);exit; 
-        $data = $this->db->query($sql)->row_array();
+        $data = $this->db3->query($sql)->row_array();
         return $data;
     }
 
@@ -1420,7 +1420,7 @@ LEFT JOIN (select ticker,eoy,perf from stk_perf order by eoy desc) as B on A.isi
             $and = " AND date >='" . $date . "'";
         }
         $sql = "select close as max from efrc_indvn_datas WHERE codeifrc='" . $code . "' $and ORDER BY close DESC LIMIT 1";
-        $temp = $this->db->query($sql)->row_array();
+        $temp = $this->db3->query($sql)->row_array();
         return isset($temp['max']) ? $temp['max'] : true;
     }
 
@@ -1436,7 +1436,7 @@ LEFT JOIN (select ticker,eoy,perf from stk_perf order by eoy desc) as B on A.isi
 
     public function getdateIDXday($table, $code, $order) {
         $sql = "select date from $table WHERE codeifrc='" . $code . "' ORDER BY date $order limit 1";
-        $data = $this->db->query($sql)->row_array();
+        $data = $this->db3->query($sql)->row_array();
         return $data;
     }
 
