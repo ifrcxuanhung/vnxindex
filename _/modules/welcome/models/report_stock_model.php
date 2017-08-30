@@ -25,7 +25,8 @@ class Report_stock_model extends CI_Model {
 		
         $sql_performance = 'SELECT * FROM  rpt_stk_per WHERE stk_code ="'.$codeid.'" order by year asc;' ;
 		$data['performance'] = $this->db->query($sql_performance)->result_object();
-        
+        $sql_last_update_performance = 'SELECT * FROM  rpt_stk_per WHERE stk_code ="'.$codeid.'" order by year DESC LIMIT 1;' ;
+        $data['last_update_performance'] = $this->db->query($sql_last_update_performance)->row_object();
         //$sql_membership = 'SELECT id,idx_code,REPLACE(idx_name,"(VND)","") idx_name, date,stk_code,wgt FROM  rpt_stk_membership WHERE stk_code ="'.$codeid.'" order by wgt desc limit 0,10;' ;
 		$this->db->query("drop table if exists efrc_insvn_ref;");
 	  $this->db->query("create table efrc_insvn_ref select *, space(24) as sub_type from efrc_ins_ref where country = 'VIETNAM';");

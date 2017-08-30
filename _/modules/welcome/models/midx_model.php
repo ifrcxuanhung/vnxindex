@@ -353,7 +353,7 @@ class Midx_model extends CI_Model {
         }
         $sql = "select SHORTNAME,CODE from idx_sample where 1=1 AND PLACE = 'Vietnam' {$where} AND VNXI = 1 and code in(select DISTINCT codeifrc from efrc_indvn_stats) ORDER BY ORD DESC,SHORTNAME ASC";
 		//echo "<pre>";print_r($sql);exit; 
-        return $this->db->query($sql)->result_array();
+        return $this->db3->query($sql)->result_array();
     }
     /*     * ************************************************************************
      * lấy ra code và short name cho trang Report - PHUONG- 20150603
@@ -872,7 +872,7 @@ AND SUBSTR(`CODE` FROM 1 FOR 3) = 'VNX' ";
                     ORDER BY ims_order ASC) as b
 				LIMIT {$start}, {$rp};";
         //echo $sql;
-		//echo "<pre>";print_r($sql);exit; 
+		//echo "<pre>";print_r($sql);exit;
         return $this->db->query($sql)->result_array();
     }
 
@@ -1146,7 +1146,7 @@ LEFT JOIN (select ticker,eoy,perf from stk_perf order by eoy desc) as B on A.isi
 
     public function loadMonthObDateBegin($code) {
         $sql = "select date from efrc_indvn_stats WHERE codeifrc='" . $code . "' ORDER BY date ASC limit 1";
-        $data = $this->db->query($sql)->row_array();
+        $data = $this->db3->query($sql)->row_array();
         if ($data['date']) {
             return $data['date'];
         }
@@ -1154,7 +1154,7 @@ LEFT JOIN (select ticker,eoy,perf from stk_perf order by eoy desc) as B on A.isi
 
     public function loadYearObDateBegin($code) {
         $sql = "select date from efrc_indvn_stats WHERE codeifrc='" . $code . "' AND period = 'Y' ORDER BY date ASC limit 1";
-        $data = $this->db->query($sql)->row_array();
+        $data = $this->db3->query($sql)->row_array();
         if ($data['date']) {
             return $data['date'];
         }
@@ -1162,7 +1162,7 @@ LEFT JOIN (select ticker,eoy,perf from stk_perf order by eoy desc) as B on A.isi
 	
 	public function loadQuaterObDateBegin($code) {
         $sql = "select date from efrc_indvn_stats WHERE codeifrc='" . $code . "' AND period = 'Q' ORDER BY date ASC limit 1";
-        $data = $this->db->query($sql)->row_array();
+        $data = $this->db3->query($sql)->row_array();
         if ($data['date']) {
             return $data['date'];
         }
@@ -1203,8 +1203,8 @@ LEFT JOIN (select ticker,eoy,perf from stk_perf order by eoy desc) as B on A.isi
         }
         $sql = "select id,date,adjclose,volat1y,beta1y,rt from efrc_indvn_stats WHERE period = 'M' AND codeifrc='" . $code . "' $and 
         AND !ISNULL(date) ORDER BY date $order $limit";
-		//echo "<pre>";print_r($sql);exit; 
-        $data = $this->db->query($sql)->result_array();
+		//echo "<pre>";print_r($sql);exit;
+        $data = $this->db3->query($sql)->result_array();
 		
         return $data;
     }
@@ -1218,7 +1218,7 @@ LEFT JOIN (select ticker,eoy,perf from stk_perf order by eoy desc) as B on A.isi
         }
         $sql = "select count(id) as count from efrc_indvn_stats WHERE period = 'M' AND codeifrc='" . $code . "' $and 
         ORDER BY date $order limit 1";
-        $data = $this->db->query($sql)->row_array();
+        $data = $this->db3->query($sql)->row_array();
         return $data;
     }
 
@@ -1235,7 +1235,7 @@ LEFT JOIN (select ticker,eoy,perf from stk_perf order by eoy desc) as B on A.isi
             $order = 'ASC';
         }
         $sql = "select * from efrc_indvn_stats WHERE codeifrc='" . $code . "' $and AND period = 'Y' AND !ISNULL(DATE) ORDER BY date $order $limit";
-        return $this->db->query($sql)->result_array();
+        return $this->db3->query($sql)->result_array();
     }
 	
 	public function loadQuaterOb($code, $date = NULL, $datemax = NULL, $limit = '') {
@@ -1247,7 +1247,7 @@ LEFT JOIN (select ticker,eoy,perf from stk_perf order by eoy desc) as B on A.isi
             $order = 'ASC';
         }
         $sql = "select * from efrc_indvn_stats WHERE codeifrc='" . $code . "' $and AND period = 'Q' AND !ISNULL(DATE) ORDER BY date $order $limit";
-        return $this->db->query($sql)->result_array();
+        return $this->db3->query($sql)->result_array();
     }
 
     public function loadYearObCount($code, $date = NULL, $datemax = NULL) {
@@ -1259,7 +1259,7 @@ LEFT JOIN (select ticker,eoy,perf from stk_perf order by eoy desc) as B on A.isi
         }
         $sql = "select count(id) as count from efrc_indvn_stats WHERE codeifrc='" . $code . "' AND period='Y' $and ORDER BY date $order limit 1";
         //echo $sql;
-        $data = $this->db->query($sql)->row_array();
+        $data = $this->db3->query($sql)->row_array();
         return $data;
     }
 	public function loadQuaterObCount($code, $date = NULL, $datemax = NULL) {
@@ -1271,7 +1271,7 @@ LEFT JOIN (select ticker,eoy,perf from stk_perf order by eoy desc) as B on A.isi
         }
         $sql = "select count(id) as count from efrc_indvn_stats WHERE codeifrc='" . $code . "' AND period='Q' $and ORDER BY date $order limit 1";
         //echo $sql;
-        $data = $this->db->query($sql)->row_array();
+        $data = $this->db3->query($sql)->row_array();
         return $data;
     }
 
@@ -1329,7 +1329,7 @@ LEFT JOIN (select ticker,eoy,perf from stk_perf order by eoy desc) as B on A.isi
         }
         $sql = "select adjclose as min2 from efrc_indvn_stats WHERE period = 'M' AND codeifrc='" . $code . "' $and ORDER BY adjclose ASC limit 1";
         //echo $sql.'<br/>';
-        $data = $this->db->query($sql)->row_array();
+        $data = $this->db3->query($sql)->row_array();
         return $data;
     }
 
@@ -1343,7 +1343,7 @@ LEFT JOIN (select ticker,eoy,perf from stk_perf order by eoy desc) as B on A.isi
             $and = " AND date >='" . $date . "'";
         }
         $sql = "select adjclose as max from efrc_indvn_stats WHERE period = 'M' AND codeifrc='" . $code . "' $and ORDER BY adjclose DESC LIMIT 1";
-        $temp = $this->db->query($sql)->row_array();
+        $temp = $this->db3->query($sql)->row_array();
         return isset($temp['max']) ? $temp['max'] : true;
     }
 
@@ -1357,7 +1357,7 @@ LEFT JOIN (select ticker,eoy,perf from stk_perf order by eoy desc) as B on A.isi
             $and = " AND date >='" . $date . "'";
         }
         $sql = "select adjclose as min2 from efrc_indvn_stats WHERE codeifrc='" . $code . "' $and AND period = 'Y' ORDER BY adjclose ASC limit 1";
-        $data = $this->db->query($sql)->row_array();
+        $data = $this->db3->query($sql)->row_array();
         return $data;
     }
 	
@@ -1367,7 +1367,7 @@ LEFT JOIN (select ticker,eoy,perf from stk_perf order by eoy desc) as B on A.isi
             $and = " AND date >='" . $date . "'";
         }
         $sql = "select adjclose as min2 from efrc_indvn_stats WHERE codeifrc='" . $code . "' $and AND period = 'Q' ORDER BY adjclose ASC limit 1";
-        $data = $this->db->query($sql)->row_array();
+        $data = $this->db3->query($sql)->row_array();
         return $data;
     }
 
@@ -1381,7 +1381,7 @@ LEFT JOIN (select ticker,eoy,perf from stk_perf order by eoy desc) as B on A.isi
             $and = " AND date >='" . $date . "'";
         }
         $sql = "select adjclose as max from efrc_indvn_stats WHERE code='" . $code . "' $and AND period = 'Y'  ORDER BY adjclose DESC LIMIT 1";
-        $temp = $this->db->query($sql)->row_array();
+        $temp = $this->db3->query($sql)->row_array();
         return isset($temp['max']) ? $temp['max'] : true;
     }
 	
@@ -1391,7 +1391,7 @@ LEFT JOIN (select ticker,eoy,perf from stk_perf order by eoy desc) as B on A.isi
             $and = " AND date >='" . $date . "'";
         }
         $sql = "select adjclose as max from efrc_indvn_stats WHERE code='" . $code . "' $and AND period = 'Q'  ORDER BY adjclose DESC LIMIT 1";
-        $temp = $this->db->query($sql)->row_array();
+        $temp = $this->db3->query($sql)->row_array();
         return isset($temp['max']) ? $temp['max'] : true;
     }
 
@@ -1430,7 +1430,7 @@ LEFT JOIN (select ticker,eoy,perf from stk_perf order by eoy desc) as B on A.isi
 
     public function getdate($table, $code, $order) {
         $sql = "select date from $table WHERE codeifrc='" . $code . "' ORDER BY date $order limit 1";
-        $data = $this->db->query($sql)->row_array();
+        $data = $this->db3->query($sql)->row_array();
         return $data;
     }
 
@@ -1520,7 +1520,7 @@ LEFT JOIN (select ticker,eoy,perf from stk_perf order by eoy desc) as B on A.isi
     public function getIndex_compare() {
         $sql = "SELECT shortname from idx_sample 
         where VNXI=1 and TYPE='equity' and code in(select DISTINCT codeifrc from efrc_indvn_stats) GROUP BY SHORTNAME";
-        return $this->db->query($sql)->result_array();
+        return $this->db3->query($sql)->result_array();
     }
 
     /*     * *************************************************************************
@@ -1532,7 +1532,7 @@ LEFT JOIN (select ticker,eoy,perf from stk_perf order by eoy desc) as B on A.isi
 (select id, date, perform from efrc_indvn_stats WHERE period = "M" AND codeifrc="' . $code_from . '" AND LENGTH(perform)!=0) a,
 (select id, date, perform from efrc_indvn_stats WHERE period = "M" AND codeifrc="' . $code_to . '" AND LENGTH(perform)!=0) b
 where CONCAT(YEAR(a.date),"/",MONTH(a.date)) = CONCAT(YEAR(b.date),"/",MONTH(b.date)) order by a.date desc';
-        return $this->db->query($sql)->result_array();
+        return $this->db3->query($sql)->result_array();
     }
 
     public function loadMonthCompareChart($code_from, $code_to) {
@@ -1540,7 +1540,7 @@ where CONCAT(YEAR(a.date),"/",MONTH(a.date)) = CONCAT(YEAR(b.date),"/",MONTH(b.d
 (select id, date, close from efrc_indvn_stats WHERE codeifrc="' . $code_from . '" AND LENGTH(perform)!=0) a,
 (select id, date, close from efrc_indvn_stats WHERE codeifrc="' . $code_to . '" AND LENGTH(perform)!=0) b
 where CONCAT(YEAR(a.date),"/",MONTH(a.date)) = CONCAT(YEAR(b.date),"/",MONTH(b.date)) order by a.date asc';
-        return $this->db->query($sql)->result_array();
+        return $this->db3->query($sql)->result_array();
     }
 
     public function loadMonthCompareCount($code_from, $code_to) {
@@ -1548,7 +1548,7 @@ where CONCAT(YEAR(a.date),"/",MONTH(a.date)) = CONCAT(YEAR(b.date),"/",MONTH(b.d
 (select id, date, perform from efrc_indvn_stats WHERE period = "M" AND codeifrc="' . $code_from . '" AND LENGTH(perform)!=0) a,
 (select id, date, perform from efrc_indvn_stats  WHERE period = "M" AND codeifrc="' . $code_to . '" AND LENGTH(perform)!=0) b
 where CONCAT(YEAR(a.date),"/",MONTH(a.date)) = CONCAT(YEAR(b.date),"/",MONTH(b.date)) order by a.date desc';
-        $data = $this->db->query($sql)->row_array();
+        $data = $this->db3->query($sql)->row_array();
         return $data;
     }
 
@@ -1561,7 +1561,7 @@ where CONCAT(YEAR(a.date),"/",MONTH(a.date)) = CONCAT(YEAR(b.date),"/",MONTH(b.d
 (select id, date, perform from efrc_indvn_stats WHERE codeifrc="' . $code_from . '" AND period = "Y" AND LENGTH(perform)!=0) a,
 (select id, date, perform from efrc_indvn_stats WHERE codeifrc="' . $code_to . '" AND period = "Y" AND LENGTH(perform)!=0) b
 where YEAR(a.date) = YEAR(b.date) order by a.date desc';
-        return $this->db->query($sql)->result_array();
+        return $this->db3->query($sql)->result_array();
     }
 	
 	public function loadQuaterCompare($code_from, $code_to) {
@@ -1569,7 +1569,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
 (select id, date, perform from efrc_indvn_stats WHERE codeifrc="' . $code_from . '" AND period = "Q" AND LENGTH(perform)!=0) a,
 (select id, date, perform from efrc_indvn_stats WHERE codeifrc="' . $code_to . '" AND period = "Q" AND LENGTH(perform)!=0) b
 where YEAR(a.date) = YEAR(b.date) order by a.date desc';
-        return $this->db->query($sql)->result_array();
+        return $this->db3->query($sql)->result_array();
     }
 
     public function loadYearCompareChart($code_from, $code_to) {
@@ -1577,7 +1577,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
 (select id, date, adjclose from efrc_indvn_stats WHERE codeifrc="' . $code_from . '" AND period = "Y" AND LENGTH(perform)!=0) a,
 (select id, date, adjclose from efrc_indvn_stats WHERE codeifrc="' . $code_to . '" AND period = "Y" AND LENGTH(perform)!=0) b
 where YEAR(a.date) = YEAR(b.date) order by a.date asc';
-        return $this->db->query($sql)->result_array();
+        return $this->db3->query($sql)->result_array();
     }
 	
 	 public function loadQuaterCompareChart($code_from, $code_to) {
@@ -1585,7 +1585,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date asc';
 (select id, date, adjclose from efrc_indvn_stats WHERE codeifrc="' . $code_from . '" AND period = "Q" AND LENGTH(perform)!=0) a,
 (select id, date, adjclose from efrc_indvn_stats WHERE codeifrc="' . $code_to . '" AND period = "Q" AND LENGTH(perform)!=0) b
 where YEAR(a.date) = YEAR(b.date) order by a.date asc';
-        return $this->db->query($sql)->result_array();
+        return $this->db3->query($sql)->result_array();
     }
 
     public function loadYearCompareCount($code_from, $code_to) {
@@ -1593,7 +1593,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date asc';
 (select id, date, perform from efrc_indvn_stats WHERE codeifrc="' . $code_from . '" AND period = "Y" AND LENGTH(perform)!=0) a,
 (select id, date, perform from efrc_indvn_stats WHERE codeifrc="' . $code_to . '" AND period = "Y" AND LENGTH(perform)!=0) b
 where YEAR(a.date) = YEAR(b.date) order by a.date desc';
-        $data = $this->db->query($sql)->row_array();
+        $data = $this->db3->query($sql)->row_array();
         return $data;
     }
 	
@@ -1602,7 +1602,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
 (select id, date, perform from efrc_indvn_stats WHERE codeifrc="' . $code_from . '" AND period = "Q" AND LENGTH(perform)!=0) a,
 (select id, date, perform from efrc_indvn_stats WHERE codeifrc="' . $code_to . '" AND period = "Q" AND LENGTH(perform)!=0) b
 where YEAR(a.date) = YEAR(b.date) order by a.date desc';
-        $data = $this->db->query($sql)->row_array();
+        $data = $this->db3->query($sql)->row_array();
         return $data;
     }
 
@@ -1624,7 +1624,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
 (SELECT MIN(date) as date FROM efrc_indvn_stats WHERE period = 'M' AND ifrccode = '" . $code_from . "') a,
 (SELECT MIN(date) as date FROM efrc_indvn_stats WHERE period = 'M' AND ifrccode = '" . $code_to . "') b";
 
-        $data = $this->db->query($sql)->row_array();
+        $data = $this->db3->query($sql)->row_array();
         if ($data['date']) {
             return $data['date'];
         }
@@ -1636,7 +1636,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
 (SELECT MIN(date) as date FROM efrc_indvn_stats WHERE period = 'Y' AND codeifrc = '" . $code_from . "') a,
 (SELECT MIN(date) as date FROM efrc_indvn_stats WHERE period = 'Y' AND codeifrc = '" . $code_to . "') b";
 
-        $data = $this->db->query($sql)->row_array();
+        $data = $this->db3->query($sql)->row_array();
         if ($data['date']) {
             return $data['date'];
         }
@@ -1648,7 +1648,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
 (SELECT MIN(date) as date FROM efrc_indvn_stats WHERE period = 'Q' AND codeifrc = '" . $code_from . "') a,
 (SELECT MIN(date) as date FROM efrc_indvn_stats WHERE period = 'Q' AND codeifrc = '" . $code_to . "') b";
 
-        $data = $this->db->query($sql)->row_array();
+        $data = $this->db3->query($sql)->row_array();
         if ($data['date']) {
             return $data['date'];
         }
@@ -1660,7 +1660,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
         $sql = "SELECT if(a.adjclose >= b.adjclose, b.adjclose, a.adjclose) as min FROM 
 (SELECT MIN(adjclose) as adjclose FROM efrc_indvn_stats WHERE period = 'Q' AND codeifrc = '" . $code_from . "' AND date >= '" . $date . "') a,
 (SELECT MIN(adjclose) as adjclose FROM efrc_indvn_stats WHERE period = 'Q' AND codeifrc = '" . $code_to . "' AND date >= '" . $date . "') b";
-        $data = $this->db->query($sql)->row_array();
+        $data = $this->db3->query($sql)->row_array();
         return $data;
     }
 
@@ -1668,7 +1668,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
         $sql = "SELECT if(a.adjclose >= b.adjclose, b.adjclose, a.adjclose) as min FROM 
 (SELECT MAX(adjclose) as adjclose FROM efrc_indvn_stats WHERE period = 'M' AND  codeifrc = '" . $code_from . "' AND date >= '" . $date . "') a,
 (SELECT MAX(adjclose) as adjclose FROM efrc_indvn_stats WHERE period = 'M' AND codeifrc = '" . $code_to . "' AND date >= '" . $date . "') b";
-        $data = $this->db->query($sql)->row_array();
+        $data = $this->db3->query($sql)->row_array();
         return $data;
     }
 
@@ -1676,7 +1676,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
         $sql = "SELECT if(a.adjclose >= b.adjclose, b.adjclose, a.adjclose) as min FROM 
 (SELECT MIN(adjclose) as adjclose FROM efrc_indvn_stats WHERE period = 'Y' AND codeifrc = '" . $code_from . "' AND date >= '" . $date . "') a,
 (SELECT MIN(adjclose) as adjclose FROM efrc_indvn_stats WHERE period = 'Y' AND codeifrc = '" . $code_to . "' AND date >= '" . $date . "') b";
-        $data = $this->db->query($sql)->row_array();
+        $data = $this->db3->query($sql)->row_array();
         return $data;
     }
 	
@@ -1684,7 +1684,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
         $sql = "SELECT if(a.adjclose >= b.adjclose, b.adjclose, a.adjclose) as min FROM 
 (SELECT MIN(adjclose) as adjclose FROM efrc_indvn_stats WHERE period = 'Q' AND codeifrc = '" . $code_from . "' AND date >= '" . $date . "') a,
 (SELECT MIN(adjclose) as adjclose FROM efrc_indvn_stats WHERE period = 'Q' AND codeifrc = '" . $code_to . "' AND date >= '" . $date . "') b";
-        $data = $this->db->query($sql)->row_array();
+        $data = $this->db3->query($sql)->row_array();
         return $data;
     }
 
@@ -1692,7 +1692,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
         $sql = "SELECT if(a.adjclose >= b.adjclose, b.adjclose, a.adjclose) as min FROM 
 (SELECT MAX(adjclose) as adjclose FROM efrc_indvn_stats WHERE period = 'Y' AND codeifrc = '" . $code_from . "' AND date >= '" . $date . "') a,
 (SELECT MAX(adjclose) as adjclose FROM efrc_indvn_stats WHERE period = 'Y' AND codeifrc = '" . $code_to . "' AND date >= '" . $date . "') b";
-        $data = $this->db->query($sql)->row_array();
+        $data = $this->db3->query($sql)->row_array();
         return $data;
     }
 	
@@ -1700,7 +1700,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
         $sql = "SELECT if(a.adjclose >= b.adjclose, b.adjclose, a.adjclose) as min FROM 
 (SELECT MAX(adjclose) as adjclose FROM efrc_indvn_stats WHERE period = 'Q' AND codeifrc = '" . $code_from . "' AND date >= '" . $date . "') a,
 (SELECT MAX(adjclose) as adjclose FROM efrc_indvn_stats WHERE period = 'Q' AND codeifrc = '" . $code_to . "' AND date >= '" . $date . "') b";
-        $data = $this->db->query($sql)->row_array();
+        $data = $this->db3->query($sql)->row_array();
         return $data;
     }
 
@@ -1715,7 +1715,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
         foreach ($arr_data as $data_item) {
             $arr_item = explode(' - ', $data_item);
             $sql = 'select MIN(date) as min, MAX(date) as max from efrc_indvn_stats WHERE period = "M" AND codeifrc="' . $arr_item[0] . '"';
-            $data_sql = $this->db->query($sql)->row_array();
+            $data_sql = $this->db3->query($sql)->row_array();
             if ($data_sql['min'] != '' && $data_sql['max'] != '') {
                 $data_date[] = $data_sql['min'];
                 $data_date[] = $data_sql['max'];
@@ -1737,7 +1737,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
 
             $sql = 'select perform, DATE_FORMAT(date,"%Y/%m") as date from efrc_indvn_stats WHERE period = "M" AND codeifrc="' . $arr_item[0] . '" AND date BETWEEN "' . min($data_date) . '" AND "' . max($data_date) . '"  ORDER BY date desc';
 
-            $data_sql = $this->db->query($sql)->result_array();
+            $data_sql = $this->db3->query($sql)->result_array();
 
             $total_sql = count($data_sql);
 
@@ -1806,7 +1806,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
         foreach ($arr_data as $data_item) {
             $arr_item = explode(' - ', $data_item);
             $sql = 'select MIN(date) as min, MAX(date) as max from efrc_indvn_stats WHERE period = "M" AND codeifrc="' . $arr_item[0] . '"';
-            $data_sql = $this->db->query($sql)->row_array();
+            $data_sql = $this->db3->query($sql)->row_array();
             if ($data_sql['min'] != '' && $data_sql['max'] != '') {
                 $data_date[] = $data_sql['min'];
                 $data_date[] = $data_sql['max'];
@@ -1828,7 +1828,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
 
             $sql = 'select perform, DATE_FORMAT(date,"%Y/%m") as date from efrc_indvn_stats WHERE period = "M" AND codeifrc="' . $arr_item[0] . '" AND date BETWEEN "' . min($data_date) . '" AND "' . max($data_date) . '"  ORDER BY date desc';
 
-            $data_sql = $this->db->query($sql)->result_array();
+            $data_sql = $this->db3->query($sql)->result_array();
 
             $total_sql = count($data_sql);
 
@@ -1866,7 +1866,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
         foreach ($arr_data as $data_item) {
             $arr_item = explode(' - ', $data_item);
             $sql = 'select MIN(date) as min, MAX(date) as max from efrc_indvn_stats WHERE period = "Y" AND codeifrc="' . $arr_item[0] . '"';
-            $data_sql = $this->db->query($sql)->row_array();
+            $data_sql = $this->db3->query($sql)->row_array();
             if ($data_sql['min'] != '' && $data_sql['max'] != '') {
                 $data_date[] = $data_sql['min'];
                 $data_date[] = $data_sql['max'];
@@ -1888,7 +1888,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
 
             $sql = 'select perform, DATE_FORMAT(date,"%Y") as date from efrc_indvn_stats WHERE period = "Y" AND codeifrc="' . $arr_item[0] . '" AND date BETWEEN "' . min($data_date) . '" AND "' . max($data_date) . '"  ORDER BY date desc';
 
-            $data_sql = $this->db->query($sql)->result_array();
+            $data_sql = $this->db3->query($sql)->result_array();
 
             $total_sql = count($data_sql);
 
@@ -1920,7 +1920,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
         foreach ($arr_data as $data_item) {
             $arr_item = explode(' - ', $data_item);
             $sql = 'select MIN(date) as min, MAX(date) as max from efrc_indvn_stats WHERE period = "Q" AND codeifrc="' . $arr_item[0] . '"';
-            $data_sql = $this->db->query($sql)->row_array();
+            $data_sql = $this->db3->query($sql)->row_array();
             if ($data_sql['min'] != '' && $data_sql['max'] != '') {
                 $data_date[] = $data_sql['min'];
                 $data_date[] = $data_sql['max'];
@@ -1942,7 +1942,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
 
             $sql = 'select perform, DATE_FORMAT(date,"%Y") as date from efrc_indvn_stats WHERE period = "Q" AND codeifrc="' . $arr_item[0] . '" AND date BETWEEN "' . min($data_date) . '" AND "' . max($data_date) . '"  ORDER BY date desc';
 
-            $data_sql = $this->db->query($sql)->result_array();
+            $data_sql = $this->db3->query($sql)->result_array();
 
             $total_sql = count($data_sql);
 
@@ -2047,7 +2047,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
         foreach ($arr_data as $data_item) {
             $arr_item = explode(' - ', $data_item);
             $sql = 'select MIN(date) as min, MAX(date) as max from efrc_indvn_stats WHERE period = "Y" AND codeifrc="' . $arr_item[0] . '"';
-            $data_sql = $this->db->query($sql)->row_array();
+            $data_sql = $this->db3->query($sql)->row_array();
             if ($data_sql['min'] != '' && $data_sql['max'] != '') {
                 $data_date[] = $data_sql['min'];
                 $data_date[] = $data_sql['max'];
@@ -2069,7 +2069,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
 
             $sql = 'select perform, DATE_FORMAT(date,"%Y") as date from efrc_indvn_stats WHERE period = "Y" AND codeifrc="' . $arr_item[0] . '" AND date BETWEEN "' . min($data_date) . '" AND "' . max($data_date) . '"  ORDER BY date desc';
 
-            $data_sql = $this->db->query($sql)->result_array();
+            $data_sql = $this->db3->query($sql)->result_array();
 
             $total_sql = count($data_sql);
 
@@ -2101,7 +2101,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
         foreach ($arr_data as $data_item) {
             $arr_item = explode(' - ', $data_item);
             $sql = 'select MIN(date) as min, MAX(date) as max from efrc_indvn_stats WHERE period = "Q" AND codeifrc="' . $arr_item[0] . '"';
-            $data_sql = $this->db->query($sql)->row_array();
+            $data_sql = $this->db3->query($sql)->row_array();
             if ($data_sql['min'] != '' && $data_sql['max'] != '') {
                 $data_date[] = $data_sql['min'];
                 $data_date[] = $data_sql['max'];
@@ -2123,7 +2123,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
 
             $sql = 'select perform, DATE_FORMAT(date,"%Y") as date from efrc_indvn_stats WHERE period = "Q" AND codeifrc="' . $arr_item[0] . '" AND date BETWEEN "' . min($data_date) . '" AND "' . max($data_date) . '"  ORDER BY date desc';
 
-            $data_sql = $this->db->query($sql)->result_array();
+            $data_sql = $this->db3->query($sql)->result_array();
 
             $total_sql = count($data_sql);
 
@@ -2396,7 +2396,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
                         `idx_sample` b WHERE a.codeifrc = b.code and b.vnxi=1 and b.place="VIETNAM" ' . $whereFilter . ' AND period = "Y" and 
                         YEAR(a.date) = ' . $year . ' ' . $sort . ' ' . $limit . ') a';
        // echo "<pre>";print_r($sql);exit;
-        return $this->db->query($sql)->result_array();
+        return $this->db3->query($sql)->result_array();
     }
 
     public function loadAnnualCount($year, $option) {
@@ -2416,13 +2416,13 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
         }
         $sql = 'SELECT count(a.id) as count FROM `efrc_indvn_stats` a, 
         `idx_sample` b WHERE a.codeifrc = b.code and b.vnxi=1 and b.place="VIETNAM" ' . $whereFilter . ' and YEAR(a.date) = ' . $year;
-        $data = $this->db->query($sql)->row_array();
+        $data = $this->db3->query($sql)->row_array();
         return $data;
     }
 
     public function loadAllAnnualCount() {
         $sql = 'select COUNT(DISTINCT code) as count from efrc_indvn_stats';
-        $data = $this->db->query($sql)->row_array();
+        $data = $this->db3->query($sql)->row_array();
         return $data['count'];
     }
 

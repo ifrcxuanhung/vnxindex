@@ -25,7 +25,8 @@ class Report extends Welcome {
         $this->load->Model('report_model', 'report');
        // $codeid =  $this->input->get('codeid');
 //        $month =  $this->input->get('month');
-		if($month=='all'){
+       // echo "<pre>";print_r($month);exit;
+        if($month=='all'){
 			$arr_month = $this->report->getmonth();
 			$month_curr = $arr_month['month'][0]->yyyymm;
 		}
@@ -45,8 +46,6 @@ class Report extends Welcome {
 
         //$getmonth = remove_emty_array($this->report->getmonth());
         //$this->data->getmonth = $getmonth;
-
-
         
         $block = new Block;
         $this->data->detail_intro_copn = $block->detail_intro_copn();

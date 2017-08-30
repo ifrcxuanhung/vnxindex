@@ -1,4 +1,10 @@
+<script type="text/javascript">
+    $(window).load(function() {
+        $(".loader").fadeOut("slow");
+    })
+</script>
 <script>
+
     $(document).ready(function() {
         var href2 = $(location).attr('href');
         href2 = ifrc.explode('#', href2);
@@ -100,8 +106,17 @@
     .composition tr{
         height:  22px!important;
     }
+    .loader {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background: url(<?php echo template_url(); ?>images/page-loader.gif) 50% 50% no-repeat rgb(249,249,249);
+    }
 </style>
-
+<div class="loader"></div>
 <div id="content" role="main" class="observatory-content">
     <?php
     foreach ($report['nameindex'] as $nameindex){
@@ -242,7 +257,7 @@
         <div class="clear"></div>
     </div>
 
-    <div class="performance">
+    <div class="performance" style="position: relative;">
         <?php if($indcur =='INDCUR'){?>
             <div style="display: inline-block;width: 100%;" class="ifrc_index">
                 <div class="flexigrid" style="width: auto;">
@@ -347,16 +362,23 @@
                             ?>
                             </tbody>
                         </table>
+
+
+
                     </div>
+
                 </div>
+
             </div>
+            <div style=" position:absolute;  margin-top:-3px;"> Last update: <span style="color:#FF0; font-size: 11px!important;"><?php echo $report['performance_last_update']->f2;?></span> </div>
+
         <?php }?>
 
 
 
 
         <!--<div class="figures" style="width: 38%;">    -->
-        <div class="facts" style="width: 38%;">
+        <div class="facts" style="width: 38%; position: relative;">
             <h3>Figures</h3>
             <div style="display: inline-block; width: 100%;" class="ifrc_index">
                 <div class="flexigrid" style="width: auto;">
@@ -421,12 +443,13 @@
                     </div>
                 </div>
                 <h6 style="color: #93999d; font-size: 10px!important;">* Bn VND</h6>
+                <div style=" position:absolute; bottom: -4px; right:0px;  margin-top:-3px;"> Last update: <span style="color:#FF0; font-size: 11px!important;"><?php echo $report['figures'][0]->lastupdate;?></span> </div>
             </div>
 
             <div class="clear"></div>
         </div>
 
-        <div class="composition" style="margin-top: 20px!important; width:60%;">
+        <div class="composition" style="margin-top: 20px!important; width:60%; position: relative;">
             <h3>Compositions (Top 10)</h3>
             <div style="display: inline-block; width:100%;" class="ifrc_index">
                 <div class="flexigrid" style="width: auto;">
@@ -480,6 +503,8 @@
                     <?php foreach ($report['count'] as $count){?>
                         <h6 style="color: #93999d; font-size: 11px!important;"><?php trans("Total")?>: <?php echo $count->count; ?> companies</h6>
                     <?php	} ?>
+
+                    <div style=" position:absolute; bottom: 1px; right:0px;  margin-top:-3px;"> Last update: <span style="color:#FF0; font-size: 11px!important;"><?php echo $report['composition_last_update']->date;?></span> </div>
                 </div>
             </div>
             <div class="clear"></div>

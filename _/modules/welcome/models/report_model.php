@@ -9,25 +9,36 @@ class Report_model extends CI_Model {
 	}
 	
 	public function getReport($codeid,$month) {
+	    //echo "<pre>";print_r($month);exit;
 
 		$lang = $this->session->userdata('curent_language');
         $where = '';
+        $where_figures = '';
         if ($month != NULL){
             $where .=" AND month='$month'";
     	}
+
+        $where_figures .=' AND month= (select max(month) FROM _performance
+WHERE idx_code = "'.$codeid.'")';
 		$sql_description = 'SELECT * FROM  _description WHERE code = "'.$codeid.'" AND langcode = "'.$lang['code'].'"';
 		$sql_facts = 'SELECT * FROM  mr_idx_facts WHERE code = "'.$codeid.'" AND lang ="'.$lang['code'].'"';
-		$sql_performance = 'SELECT * FROM  _performance WHERE code = "'.$codeid.'"'.$where;
+		//$sql_performance = 'SELECT * FROM  _performance WHERE code = "'.$codeid.'"'.$where;
+        $sql_performance = 'SELECT * FROM  _performance WHERE code = "'.$codeid.'" AND month=(select max(month) FROM _performance
+WHERE code = "'.$codeid.'")';
+       // echo "<pre>";print_r($sql_performance);exit;
         $sql_performance_cur = 'SELECT * FROM  _performance_cur_idx WHERE code = "'.$codeid.'"'.$where.' order by f2 desc';
+        //echo "<pre>";print_r($sql_performance_cur);exit;
         //$sql_figures = 'SELECT * FROM  _figures WHERE code = "'.$codeid.'"'.$where;
         $sql_figures = 'SELECT idx_code,month,(idx_cap/1000000000) idx_cap ,(idx_div/1000000000) idx_div,(min_cap/1000000000) min_cap, (max_cap/1000000000) max_cap,
-(mean_cap/1000000000) mean_cap,vola,beta,trk_error,div_yld,low_lv,high_lv FROM  mr_idx_figures WHERE  idx_code = "'.$codeid.'"'.$where;
+(mean_cap/1000000000) mean_cap,vola,beta,trk_error,div_yld,low_lv,high_lv, concat(left(month,4),"-",right(month,2)) as lastupdate FROM  mr_idx_figures WHERE  idx_code = "'.$codeid.'"'.$where_figures;
+       // echo "<pre>";print_r($sql_figures);exit;
 		/*$sql_composition = 'select * from(SELECT code,f1,f2,(f3/1000000000) as f3,f4,`order` FROM  _composition WHERE code = "'.$codeid.'"'.$where.' LIMIT 10) as tempa
                             LEFT JOIN
 (select                     stk_code,100*mtd as perf,idx_code from rpt_stk_competitor group by stk_code) as tempb on tempa.f1=tempb.stk_code
 and left(tempa.`code`,3)=left(tempb.`idx_code`,3)';*/
 		$sql_composition = 'select (a.stk_mcap/1000000000) as stk_mcap,a.stk_code, a.stk_name, (a.stk_wgt*100) as stk_wgt, (b.var*100) as perf from efrc_ind_composition a left join report_market_last b ON(a.stk_code = b.code) where idx_code ="'.$codeid.'" LIMIT 0,10;';
-        //echo "<pre>";print_r($sql_composition);exit;
+
+        $sql_composition_last_update = 'select a.date from efrc_ind_composition a left join report_market_last b ON(a.stk_code = b.code) where idx_code ="'.$codeid.'" LIMIT 0,1;';
         //$sql_count='SELECT COUNT(isin) count FROM idx_compo  WHERE  code = "'.$codeid.'"group by code; ';
         $sql_count='SELECT nb as count FROM mr_idx_figures  WHERE  idx_code = "'.$codeid.'"'.$where.' group by idx_code; ';
         $sql_month='select DISTINCT month as yyyymm, concat(left(month,4),"-",right(month,2)) month from _composition order by month desc';
@@ -36,11 +47,15 @@ and left(tempa.`code`,3)=left(tempb.`idx_code`,3)';*/
         $sql_namemonth='select DATE_FORMAT (a.date, "%M %Y") as `month` from (select max(f2) date from _performance where code="'.$codeid.'"'.$where.') as a';
         //$sql_getname="SELECT DISTINCT SHORTNAME, CODE from idx_sample WHERE 1 AND CODE IN (SELECT idx_code FROM idx_ref WHERE idx_code = idx_mother)
 			//	AND PROVIDER in ('HOSE','HNX','PVN','IFRC','IFRCGWC','PROVINCIAL','IFRCLAB','IFRCRESEARCH') AND provider<>'' ORDER BY NAME ASC";
+
+        $sql_performance_last_update = 'SELECT * FROM  _performance WHERE code = "'.$codeid.'" AND month=(select max(month) FROM _performance
+WHERE code = "'.$codeid.'") ORDER BY f2 DESC LIMIT 1';
         
 		$data['description'] = $this->db->query($sql_description)->result_object();
 		$data['facts'] = $this->db->query($sql_facts)->result_object();
 		$data['performance'] = $this->db->query($sql_performance)->result_object();
 		$data['figures'] = $this->db->query($sql_figures)->result_object();
+		//echo "<pre>";print_r($data['figures']);exit;
 		$data['composition'] = $this->db->query($sql_composition)->result_object();
 		//echo "<pre>";print_r($data['composition']);exit; 
         $data['nameindex']=$this->db->query($sql_nameindex)->result_object();
@@ -48,6 +63,8 @@ and left(tempa.`code`,3)=left(tempb.`idx_code`,3)';*/
         $data['count']=$this->db->query($sql_count)->result_object();
         $data['month']=$this->db->query($sql_month)->result_object();
         $data['performance_cur']=$this->db->query($sql_performance_cur)->result_object();
+        $data['performance_last_update']=$this->db->query($sql_performance_last_update)->row_object();
+        $data['composition_last_update']=$this->db->query($sql_composition_last_update)->row_object();
        // $data['getname']=$this->db->query($sql_getname)->result_object();
 		//print_r($sql_performance);
 		return $data;

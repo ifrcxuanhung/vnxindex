@@ -81,10 +81,10 @@ class Home_model extends CI_Model {
         return $data;
     }
     public function getClose_bk10082017($code) {
-        $this->db->where('codeifrc', $code);
-        $this->db->select(array('adjclose', 'date'));
-        $this->db->order_by('date', 'ASC');
-        $rows = $this->db->get('efrc_indvn_stats')->result_array();
+        $this->db3->where('codeifrc', $code);
+        $this->db3->select(array('adjclose', 'date'));
+        $this->db3->order_by('date', 'ASC');
+        $rows = $this->db3->get('efrc_indvn_stats')->result_array();
         //echo $this->db->last_query();
         $data = array();
         if (!empty($rows)) {

@@ -12,9 +12,11 @@ class Midx_model extends CI_Model {
 
     public function __construct() {
         parent::__construct();
+        $this->db3 = $this->load->database('database3', TRUE);
     }
 
     public function getType($provider = NULL, $vnx = false) {
+
         $where = NULL;
         if ($provider != NULL) {
             if ($provider == 'IFRC') {
@@ -31,6 +33,7 @@ class Midx_model extends CI_Model {
         }
         $sql = "select DISTINCT TYPE from idx_sample WHERE 1 {$where} AND VNXI = 1 ORDER BY TYPE ASC";
         //	$sql = "select DISTINCT idx_sample.TYPE,if(idx_sample.type='EQUITY','', idx_sample.type) as my_order from idx_sample , obs_home  WHERE 1 {$where} ORDER BY my_order ASC";
+
         $types = $this->db->query($sql)->result_array();
         if ($types) {
             foreach ($types as $k => $type) {
@@ -45,6 +48,7 @@ class Midx_model extends CI_Model {
                 $result[$k]['type'] = $type;
                 $result[$k]['sub_type'] = $this->db->query($sql)->result_array();
             }
+
             return $result;
         }
     }
@@ -53,40 +57,148 @@ class Midx_model extends CI_Model {
         $this->db->where('key', 'PVN');
         $setting = $this->db->get('setting')->row_array();
 
+		$sql = "select provider from obs_home_vn where provider <> 'IFRCGWC' group by provider";
+        $providers = $this->db3->query($sql)->result_array();
+        array_unshift($providers, array('provider' => 'TOP10_PERFORMANCE'));
+
+        if ($providers) {
+            foreach ($providers as $k => $provider) {
+
+                if ($provider['provider'] == 'TOP10_PERFORMANCE') {
+                    if ($setting['value'] == 1)
+                    {
+                        $sql = "SELECT DISTINCT SUB_TYPE
+                                FROM idx_sample
+                               WHERE provider NOT IN ('IFRCRESEARCH', 'PROVINCIAL')
+                               AND CODE IN (SELECT CODE FROM obs_home_vn) AND type <> 'CURRENCY'
+                               ORDER BY SUB_TYPE ASC";
+                    }
+                    else
+                    {
+                        $sql = "SELECT DISTINCT SUB_TYPE
+                               FROM idx_sample
+                                WHERE  provider NOT IN ('IFRCRESEARCH','PVN', 'IFRCRESEARCH')
+                                AND CODE IN (SELECT CODE FROM obs_home_vn) AND type <> 'CURRENCY'
+                               ORDER BY SUB_TYPE ASC";
+                    }
+
+                    //$sql = "SELECT NULL SUB_TYPE";
+                }else {
+
+                    $sql = "SELECT DISTINCT bbs as SUB_TYPE FROM obs_home_vn
+                            WHERE provider ='$provider[provider]'";
+                }
+
+
+                $result[$k]['provider'] = $provider;
+
+				
+                $result[$k]['sub_type'] = $this->db3->query($sql)->result_array();
+            }
+
+            return $result;
+        }
+    }
+
+    public function getProviderFIX_bk10082017() {
+        $this->db->where('key', 'PVN');
+        $setting = $this->db->get('setting')->row_array();
+
+        $sql = "select provider from obs_home where provider <> 'IFRCGWC' group by provider";
+        $providers = $this->db->query($sql)->result_array();
+        array_unshift($providers, array('provider' => 'TOP10_PERFORMANCE'));
+
+        if ($providers) {
+            foreach ($providers as $k => $provider) {
+
+                if ($provider['provider'] == 'TOP10_PERFORMANCE') {
+                    if ($setting['value'] == 1)
+                    {
+                        $sql = "SELECT DISTINCT SUB_TYPE
+                                FROM idx_sample
+                               WHERE provider NOT IN ('IFRCRESEARCH', 'PROVINCIAL')
+                               AND CODE IN (SELECT CODE FROM obs_home) AND type <> 'CURRENCY'
+                               ORDER BY SUB_TYPE ASC";
+                    }
+                    else
+                    {
+                        $sql = "SELECT DISTINCT SUB_TYPE
+                               FROM idx_sample
+                                WHERE  provider NOT IN ('IFRCRESEARCH','PVN', 'IFRCRESEARCH')
+                                AND CODE IN (SELECT CODE FROM obs_home) AND type <> 'CURRENCY'
+                               ORDER BY SUB_TYPE ASC";
+                    }
+
+                    //$sql = "SELECT NULL SUB_TYPE";
+                }else {
+
+                    $sql = "SELECT DISTINCT bbs as SUB_TYPE FROM obs_home
+                            WHERE provider ='$provider[provider]'";
+                }
+
+
+                $result[$k]['provider'] = $provider;
+
+
+                $result[$k]['sub_type'] = $this->db->query($sql)->result_array();
+            }
+            echo "<pre>";print_r($result);exit;
+            return $result;
+        }
+    }
+
+    public function getProviderFIX_backup() {
+        $this->db->where('key', 'PVN');
+        $setting = $this->db->get('setting')->row_array();
+
         if ($setting['value'] == 1) {
             $sql = "SELECT DISTINCT provider FROM idx_sample WHERE (PROVIDER ='IFRC' or PROVIDER ='PVN') AND CODE IN (SELECT CODE FROM obs_home WHERE CODE<>'PVN05PRVND') ORDER BY provider desc";
         } else {
             $sql = "SELECT DISTINCT provider FROM idx_sample WHERE (PROVIDER ='IFRC' OR PROVIDER ='IFRCRESEARCH') AND CODE IN (SELECT CODE FROM obs_home) ORDER BY provider";
         }
+
         $providers = $this->db->query($sql)->result_array();
+
         array_unshift($providers, array('provider' => 'TOP10_PERFORMANCE'));
+
         $sql2 = "SELECT DISTINCT provider FROM idx_sample WHERE (PROVIDER ='IFRCLAB' OR PROVIDER ='IFRCRESEARCH' OR PROVIDER ='PROVINCIAL') AND CODE IN (SELECT CODE FROM obs_home) ORDER BY provider";
+
         $providers2 = $this->db->query($sql2)->result_array();
         foreach($providers2 as $item) {
             $providers[] = $item;
         }
+        $providers[] = array('provider' => 'IFRCCURRENCY');
         $providers[] = array('provider' => 'OTHERS');
+
+
         if ($providers) {
             foreach ($providers as $k => $provider) {
                 if ($provider['provider'] == 'TOP10_PERFORMANCE') {
                     if ($setting['value'] == 1)
                     {
-                       $sql = "SELECT DISTINCT SUB_TYPE
+                        $sql = "SELECT DISTINCT SUB_TYPE
                                 FROM idx_sample
                                WHERE provider NOT IN ('IFRCRESEARCH', 'PROVINCIAL')
-                               AND CODE IN (SELECT CODE FROM obs_home)
+                               AND CODE IN (SELECT CODE FROM obs_home) AND type <> 'CURRENCY'
                                ORDER BY SUB_TYPE ASC";
-                   }
-                   else
+                    }
+                    else
                     {
-                       $sql = "SELECT DISTINCT SUB_TYPE
+                        $sql = "SELECT DISTINCT SUB_TYPE
                                FROM idx_sample
                                 WHERE  provider NOT IN ('IFRCRESEARCH','PVN', 'IFRCRESEARCH')
-                                AND CODE IN (SELECT CODE FROM obs_home)
+                                AND CODE IN (SELECT CODE FROM obs_home) AND type <> 'CURRENCY'
                                ORDER BY SUB_TYPE ASC";
-                   }
+                    }
                     //$sql = "SELECT NULL SUB_TYPE";                   
-                } 
+                }
+                else if($provider['provider'] == 'IFRCCURRENCY'){
+                    $sql = "SELECT DISTINCT SUB_TYPE FROM idx_sample
+                                WHERE  provider NOT IN ('IFRCRESEARCH','PVN')
+                                AND CODE IN (SELECT CODE FROM obs_home) AND `TYPE` = 'CURRENCY'
+                               ORDER BY SUB_TYPE ASC";
+
+                }
                 else if ($provider['provider'] == 'OTHERS'){
                     $sql = "SELECT DISTINCT SUB_TYPE
                                 FROM idx_sample
@@ -102,8 +214,11 @@ class Midx_model extends CI_Model {
                             ORDER BY SUB_TYPE ASC";
                 }
                 $result[$k]['provider'] = $provider;
+
+
                 $result[$k]['sub_type'] = $this->db->query($sql)->result_array();
             }
+           // echo "<pre>";print_r($result);exit;
             return $result;
         }
     }
@@ -132,7 +247,8 @@ class Midx_model extends CI_Model {
             }
         }
         //$sql = "select count(CODE) as TOTAL from idx_sample WHERE PLACE='vietnam' and (PROVIDER = 'IFRC' or PROVIDER = 'PVN') AND VNXI = 1";
-        $sql = "select count(CODE) as TOTAL from idx_sample WHERE PLACE='vietnam' and PROVIDER in('HNX','HOSE','IFRC','IFRCLAB','IFRCRESEARCH','PROVINCIAL','PVN') AND VNXI = 1";
+       // $sql = "select count(CODE) as TOTAL from idx_sample WHERE PLACE='vietnam' and PROVIDER in('HNX','HOSE','IFRC','IFRCLAB','IFRCRESEARCH','IFRCPROVINCIAL','IFRCCURRENCY','PVN','IFRCGWC') AND VNXI = 1";
+        $sql = "select count(CODE) as TOTAL from obs_home b WHERE b.PROVIDER in('HNX','HOSE','IFRC','IFRCLAB','IFRCRESEARCH','IFRCPROVINCIAL','IFRCCURRENCY','PVN','IFRCGWC')";
         //echo $sql = "select count(CODE) as TOTAL from idx_sample $where";
         $data = $this->db->query($sql)->row_array();
         return $data;
@@ -235,7 +351,48 @@ class Midx_model extends CI_Model {
             $key = implode("%", $arr_key);
             $where .= " and (SHORTNAME LIKE '%{$key}%' OR CODE LIKE '%{$key}%') ";
         }
-        $sql = "select SHORTNAME,CODE from idx_sample where 1=1 AND PLACE = 'Vietnam' {$where} AND VNXI = 1 and code in(select DISTINCT code from idx_month) ORDER BY ORD DESC,SHORTNAME ASC";
+        $sql = "select SHORTNAME,CODE from idx_sample where 1=1 AND PLACE = 'Vietnam' {$where} AND VNXI = 1 and code in(select DISTINCT codeifrc from efrc_indvn_stats) ORDER BY ORD DESC,SHORTNAME ASC";
+		//echo "<pre>";print_r($sql);exit; 
+        return $this->db->query($sql)->result_array();
+    }
+    /*     * ************************************************************************
+     * lấy ra code và short name cho trang Report - PHUONG- 20150603
+     * *********************************************************************** */
+
+    
+    public function getSampleKeyObs1($provider = NULL, $key = null, $type = null) {
+        $where = '';
+        if ($provider != NULL) {
+            if ($provider == 'IFRC') {
+                $where = " and PROVIDER='IFRC'";
+            } else {
+                $where = " and (1 = 1 or ISNULL(PROVIDER))";
+            }
+        }
+        if ($type != NULL) {
+            if ($type == 'VNX') {
+                $where .= " and SUBSTR(`CODE` FROM 1 FOR 3) = 'VNX'";
+            }
+        }
+        if ($key != '') {
+            $arr_key = explode(" ", $key);
+            $key = implode("%", $arr_key);
+            $where .= " and (SHORTNAME LIKE '%{$key}%' OR CODE LIKE '%{$key}%') ";
+        }
+        $sql = "select SHORTNAME,CODE from idx_sample where 1=1 AND PROVIDER IN ('PVN','IFRC','IFRCGWC','PROVINCIAL','IFRCLAB','IFRCRESEARCH') AND PLACE = 'Vietnam' {$where} 
+        AND CODE IN (SELECT idx_code FROM idx_ref WHERE idx_code = idx_mother) AND VNXI = 1 and code in(select DISTINCT codeifrc from efrc_indvn_stats) ORDER BY ORD DESC,SHORTNAME ASC";
+        return $this->db->query($sql)->result_array();
+    }
+/*=====================-=====================================*/  
+   public function getstk_ref($key = null) {
+        $where = '';
+        if ($key != '') {
+            $arr_key = explode(" ", $key);
+            $key = implode("%", $arr_key);
+            $where .= " and (stk_name_sn LIKE '%{$key}%' OR stk_code LIKE '%{$key}%')  ";
+        }
+        $sql = "select stk_code as CODE  ,stk_name_sn as SHORTNAME from stk_ref where 1=1 {$where}  order by SHORTNAME asc";
+        //echo $sql;
         return $this->db->query($sql)->result_array();
     }
 
@@ -397,8 +554,13 @@ AND SUBSTR(`CODE` FROM 1 FOR 3) = 'VNX' ";
 //     * lấy ra data table box ifrc indexes trang home theo place và type
 //     * ************************************************************************ */
 
-    public function getDataTableIFRC($type = NULL, $place = NULL, $curr = NULL, $price = NULL, $provider = NULL, $search = NULL, $subtype = NULL, $page = 1, $rp = 10) {
+    public function getDataTableIFRC($type = NULL, $place = NULL, $curr = NULL, $price = NULL, $provider = NULL, $search = NULL, $subtype = NULL, $page = 1, $rp = 10,$home_maxday) {
+//
+// get setting
 
+        /*if($type == 'P_CURRENCY'){
+        $subtype = '';
+        }*/
         @$start = @$start == 1 ? 0 : ($page - 1) * $rp;
 
         $and = NULL;
@@ -417,7 +579,7 @@ AND SUBSTR(`CODE` FROM 1 FOR 3) = 'VNX' ";
         if ($price != NULL && $price != '0') {
             $and.=" AND `idx_sample`.`PRICE`='" . $price . "' ";
         }
-        $provider='TOP10_PERFORMANCE';
+//$provider='TOP10_PERFORMANCE';
         if ($provider != NULL && $provider != '0') {
             $provider = str_replace('\\', '', $provider);
             $provider = str_replace('PROVIDER', '`idx_sample`.`PROVIDER`', $provider);
@@ -429,9 +591,9 @@ AND SUBSTR(`CODE` FROM 1 FOR 3) = 'VNX' ";
                 } else {
                     $provider = "idx_sample.PROVIDER NOT IN ('IFRCRESEARCH', 'IFRCRESEARCH','PVN')";
                 }
-                $orderBy = "order by obs_home.varyear desc limit $start,$rp";
-            } 
-             else if (strpos($provider, 'OTHERS') == true) {
+                $orderBy = " order by obs_home.varyear desc limit $start,$rp";
+            }
+            else if (strpos($provider, 'OTHERS') == true) {
                 $this->db->where('key', 'PVN');
                 $setting = $this->db->get('setting')->row_array();
                 if ($setting['value'] == 1) {
@@ -441,45 +603,57 @@ AND SUBSTR(`CODE` FROM 1 FOR 3) = 'VNX' ";
                 }
                 $orderBy = "ORDER BY idx_ref.ims_order ASC LIMIT $start,$rp";
             }
-            
+
+            else if(strpos($provider, 'IFRCCURRENCY') == true){
+                $provider = "idx_sample.PROVIDER = 'IFRCCURRENCY'";
+                $orderBy = "ORDER BY idx_ref.ims_order ASC LIMIT $start,$rp";
+            }
+
             else {
                 $orderBy = "ORDER BY idx_ref.ims_order ASC LIMIT $start,$rp";
             }
             $and.=" AND ($provider) ";
         }
         if ($search != NULL) {
-            $and = " AND (`idx_sample`.`SHORTNAME` LIKE '%" . $search . "%' or `idx_sample`.`CODE` LIKE '%" . $search . "%') AND ($provider) ";
+            $and = " AND (`idx_sample`.`SHORTNAME` LIKE '%" . $search . "%' or `idx_sample`.`CODE` LIKE '%" . $search . "%') AND ($provider) AND idx_ref.publications=1 ";
         }
         /*
-          echo $sql = "SELECT `idx_sample`.`SHORTNAME`,
-          `idx_sample`.`CODE`,
-          `obs_home`.`date`,
-          `obs_home`.`id`,
-          `obs_home`.`close`,
-          `obs_home`.`varmonth`,
-          `obs_home`.`varyear`,
-          `obs_home`.`volat`
-          FROM idx_sample,obs_home
-          WHERE `obs_home`.`code`=`idx_sample`.`CODE` and `obs_home`.`close`!='0' and `idx_sample`.`ORD` != '-1' $and
-          ORDER BY `idx_sample`.`ORD` DESC,`idx_sample`.`SHORTNAME` ASC limit $start,$rp";
+        echo $sql = "SELECT `idx_sample`.`SHORTNAME`,
+        `idx_sample`.`CODE`,
+        `obs_home`.`date`,
+        `obs_home`.`id`,
+        `obs_home`.`close`,
+        `obs_home`.`varmonth`,
+        `obs_home`.`varyear`,
+        `obs_home`.`volat`
+        FROM idx_sample,obs_home
+        WHERE `obs_home`.`code`=`idx_sample`.`CODE` and `obs_home`.`close`!='0' and `idx_sample`.`ORD` != '-1' $and
+        ORDER BY `idx_sample`.`ORD` DESC,`idx_sample`.`SHORTNAME` ASC limit $start,$rp";
 
-         */
+        */
 
         /*
-          $sql = "SELECT `idx_sample`.`SHORTNAME`, `idx_sample`.`CODE`, `obs_home`.`date`, `obs_home`.`id`, `obs_home`.`close`, `obs_home`.`varmonth`, `obs_home`.`varyear`, `obs_home`.`volat` ";
-          $sql.= "FROM idx_sample,obs_home ";
-          $sql.= "WHERE `obs_home`.`code`=`idx_sample`.`CODE` ";
-          $sql.= "AND `idx_sample`.`TYPE`='EQUITY' AND `idx_sample`.`code` = COMPO_PARENT ";
-          $sql.= "AND ( {$provider} ) ";
-          if($subtype != "") $sql.= "AND `idx_sample`.sub_type = '$subtype' ";
-          if($search != "") $sql.= "AND (`idx_sample`.`SHORTNAME` LIKE '%" . $search . "%' or `idx_sample`.`CODE` LIKE '%" . $search . "%') ";
-          $sql.= "ORDER BY `idx_sample`.`ORD` DESC,`idx_sample`.`ORD` ASC LIMIT $start,$rp ";
-         */
+        $sql = "SELECT `idx_sample`.`SHORTNAME`, `idx_sample`.`CODE`, `obs_home`.`date`, `obs_home`.`id`, `obs_home`.`close`, `obs_home`.`varmonth`, `obs_home`.`varyear`, `obs_home`.`volat` ";
+        $sql.= "FROM idx_sample,obs_home ";
+        $sql.= "WHERE `obs_home`.`code`=`idx_sample`.`CODE` ";
+        $sql.= "AND `idx_sample`.`TYPE`='EQUITY' AND `idx_sample`.`code` = COMPO_PARENT ";
+        $sql.= "AND ( {$provider} ) ";
+        if($subtype != "") $sql.= "AND `idx_sample`.sub_type = '$subtype' ";
+        if($search != "") $sql.= "AND (`idx_sample`.`SHORTNAME` LIKE '%" . $search . "%' or `idx_sample`.`CODE` LIKE '%" . $search . "%') ";
+        $sql.= "ORDER BY `idx_sample`.`ORD` DESC,`idx_sample`.`ORD` ASC LIMIT $start,$rp ";
+        */
 
-        $sql = "SELECT `idx_sample`.`SHORTNAME`, `idx_sample`.`CODE`, `obs_home`.`date`, `obs_home`.`id`, `obs_home`.`close`, `obs_home`.`varmonth`, `obs_home`.`varyear`, `obs_home`.`dvar` ";
+        if($type == 'IFRCCURRENCY'){
+            $p_currency_type = 'CURRENCY';
+
+        }else{
+            $p_currency_type = 'EQUITY';
+        }
+        $sql = "SELECT upper(`idx_sample`.`SHORTNAME`) as SHORTNAME , `idx_sample`.`CODE`, `obs_home`.`date`, `obs_home`.`id`, `obs_home`.`close`, `obs_home`.`varmonth`, `obs_home`.`varyear`, `obs_home`.`dvar` ";
         $sql.= "FROM idx_sample,obs_home,idx_ref ";
-        $sql.= "WHERE `obs_home`.`code`=`idx_sample`.`CODE` and idx_ref.idx_code= `obs_home`.`code` AND `idx_sample`.`TYPE`='EQUITY' ";
-        $sql.= "AND `idx_sample`.`code` = COMPO_PARENT AND `obs_home`.`code`<>'PVN05PRVND' AND ( {$provider} ) ";
+        $sql.= "WHERE `obs_home`.`code`=`idx_sample`.`CODE` and idx_ref.idx_code= `obs_home`.`code` AND `idx_sample`.`TYPE`='$p_currency_type' ";
+        $sql.= "AND `idx_sample`.`code` = COMPO_PARENT AND ( {$provider} ) AND idx_ref.publications=1 AND obs_home.date BETWEEN DATE_SUB(NOW(), INTERVAL $home_maxday DAY) AND NOW() ";
+//$sql.= "AND `idx_sample`.`code` = COMPO_PARENT AND ( {$provider} ) AND idx_ref.publications=1 AND left(replace(obs_home.date,'-',''),6)=(select max(left(replace(date,'-',''),6)) as yyyymm from obs_home) ";
         if ($subtype != "") {
             $sql.= "AND `idx_sample`.sub_type = '$subtype' ";
         }
@@ -487,16 +661,20 @@ AND SUBSTR(`CODE` FROM 1 FOR 3) = 'VNX' ";
             $sql.= "AND (`idx_sample`.`SHORTNAME` LIKE '%" . $search . "%' or `idx_sample`.`CODE` LIKE '%" . $search . "%') ";
         }
         $sql .= $orderBy;
-
+//echo "<pre>";print_r($sql);exit;
+//echo "<pre>";print_r($p_currency_type);exit;
         $data = $this->db->query($sql)->result_array();
+//echo "<pre>";print_r($sql);exit;
         return $data;
     }
 
-    //    /*     * *************************************************************************
-//     * count data table box ifrc indexes trang home theo place và type
-//     * ************************************************************************ */
+// /* * *************************************************************************
+// * count data table box ifrc indexes trang home theo place và type
+// * ************************************************************************ */
 
-    public function countDataTableIFRC($type = NULL, $place = NULL, $curr = NULL, $price = NULL, $provider = NULL, $search = NULL, $subtype = NULL) {
+    public function countDataTableIFRC($type = NULL, $place = NULL, $curr = NULL, $price = NULL, $provider = NULL, $search = NULL, $subtype = NULL,$home_maxday) {
+// $home_maxday = $this->db->query("select value from setting where `group` = 'setting' AND `key` = 'home_maxdays'")->row_array();
+// $home_maxdays = $home_maxday['value'];
         $checkTOP10 = false;
         $and = NULL;
         if ($type != NULL && $type != '0') {
@@ -514,6 +692,7 @@ AND SUBSTR(`CODE` FROM 1 FOR 3) = 'VNX' ";
         if ($price != NULL && $price != '0') {
             $and.=" AND `idx_sample`.`PRICE`='" . $price . "' ";
         }
+
         if ($provider != NULL && $provider != '0') {
             $provider = str_replace('\\', '', $provider);
             $provider = str_replace('PROVIDER', '`idx_sample`.`PROVIDER`', $provider);
@@ -527,7 +706,7 @@ AND SUBSTR(`CODE` FROM 1 FOR 3) = 'VNX' ";
                 }
                 $orderBy = "order by obs_home.varyear desc limit 20";
                 $checkTOP10 = true;
-            } 
+            }
             else if (strpos($provider, 'OTHERS') == true) {
                 $this->db->where('key', 'PVN');
                 $setting = $this->db->get('setting')->row_array();
@@ -536,12 +715,17 @@ AND SUBSTR(`CODE` FROM 1 FOR 3) = 'VNX' ";
                 } else {
                     $provider = "idx_sample.PROVIDER NOT IN ('IFRC','VNX', 'PVN', 'IFRCLAB','IFRCRESEARCH','PROVINCIAL')";
                 }
-                $orderBy = "ORDER BY idx_ref.ims_order ASC";
+//$orderBy = "ORDER BY idx_ref.ims_order ASC";
                 $checkTOP10 = false;
-            } 
-            
+            }
+
+            else if(strpos($provider, 'IFRCCURRENCY') == true){
+                $provider = "idx_sample.PROVIDER = 'IFRCCURRENCY'";
+//$orderBy = "ORDER BY idx_ref.ims_order ASC";
+            }
+
             else {
-                $orderBy = "ORDER BY idx_ref.ims_order ASC";
+// $orderBy = "ORDER BY idx_ref.ims_order ASC";
             }
             $and.=" AND ($provider) ";
         }
@@ -549,23 +733,30 @@ AND SUBSTR(`CODE` FROM 1 FOR 3) = 'VNX' ";
             $and = " AND (`idx_sample`.`SHORTNAME` LIKE '%" . $search . "%' or `idx_sample`.`CODE` LIKE '%" . $search . "%') AND ($provider) ";
         }
 
+        if($type == 'IFRCCURRENCY'){
+            $p_currency_type = 'CURRENCY';
 
+        }else{
+            $p_currency_type = 'EQUITY';
+        }
         $sql = "SELECT count(`obs_home`.`code`) as count ";
         $sql.= "FROM idx_sample,obs_home,idx_ref ";
-        $sql.= "WHERE `obs_home`.`code`=`idx_sample`.`CODE` and idx_ref.idx_code= `obs_home`.`code` AND `idx_sample`.`TYPE`='EQUITY' ";
-        $sql.= "AND `idx_sample`.`code` = COMPO_PARENT AND `obs_home`.`code`<>'PVN05PRVND' AND ( {$provider} ) ";
+        $sql.= "WHERE `obs_home`.`code`=`idx_sample`.`CODE` and idx_ref.idx_code= `obs_home`.`code` AND `idx_sample`.`TYPE`='$p_currency_type' ";
+        $sql.= "AND `idx_sample`.`code` = COMPO_PARENT AND `obs_home`.`code`<>'PVN05PRVND' AND ( {$provider} ) AND obs_home.date BETWEEN DATE_SUB(NOW(), INTERVAL $home_maxday DAY) AND NOW() ";
+
         if ($subtype != "") {
             $sql.= "AND `idx_sample`.sub_type = '$subtype' ";
         }
         if ($search != "") {
             $sql.= "AND (`idx_sample`.`SHORTNAME` LIKE '%" . $search . "%' or `idx_sample`.`CODE` LIKE '%" . $search . "%') ";
         }
-        $sql.= $orderBy;
-
+//$sql.= $orderBy;
+//echo "<pre>";print_r($sql);exit;
         $data = $this->db->query($sql)->row_array();
         if ($checkTOP10 == true) {
-            $data['count'] = $data['count'] > 20 ? 20 : $data['count'];
+            $data['count'] = $data['count'] > 50 ? 50 : $data['count'];
         }
+
         return $data;
     }
 
@@ -595,7 +786,9 @@ AND SUBSTR(`CODE` FROM 1 FOR 3) = 'VNX' ";
 				from idx_sample
 				WHERE 1
 				{$where} AND VNXI = 1
+				AND PLACE = 'Vietnam'
 				ORDER BY NAME ASC";
+        //echo "<pre>";print_r($sql);exit;
         $place = $this->db->query($sql)->result_array();
         foreach ($place as $vplace) {
             $temp[] = $vplace['SHORTNAME'];
@@ -667,11 +860,19 @@ AND SUBSTR(`CODE` FROM 1 FOR 3) = 'VNX' ";
                 $and = NULL;
             }
         }
-        $sql = "select idx_sample.* from (select * from idx_sample 
-where PLACE='Vietnam' and vnxi=1)as idx_sample INNER JOIN (select * from idx_ref)as b where 1=1 {$and} group by idx_sample.code
-ORDER BY b.ims_order ASC
-				LIMIT {$start}, {$rp};;";
+        $sql = "select *
+                    from (select idx_sample.* from (select * from idx_sample 
+                    where PLACE='Vietnam' and vnxi=1)as idx_sample INNER JOIN (select * from idx_ref ORDER BY ims_order ASC)as b 
+                    where 1=1 and idx_sample.SUB_TYPE ='BlueChips' and idx_sample.code=b.idx_code {$and} group by idx_sample.code ORDER BY ims_order ASC) as a
+                UNION
+                select *
+                    from (select idx_sample.* from (select * from idx_sample 
+                    where PLACE='Vietnam' and vnxi=1)as idx_sample INNER JOIN (select * from idx_ref ORDER BY ims_order ASC)as b 
+                    where 1=1 and idx_sample.SUB_TYPE <>'BlueChips' and idx_sample.code=b.idx_code {$and} group by idx_sample.code
+                    ORDER BY ims_order ASC) as b
+				LIMIT {$start}, {$rp};";
         //echo $sql;
+		//echo "<pre>";print_r($sql);exit;
         return $this->db->query($sql)->result_array();
     }
 
@@ -886,17 +1087,27 @@ ORDER BY b.ims_order ASC
      * lấy ra * ở table getDataTableIdx_compo
      * ************************************************************************ */
 
-    public function getDataTableIdx_compo($code, $limit = NULL) {
+    public function getDataTableIdx_compo_backup($code, $limit = NULL) {
         // $sql = "select * from idx_compo WHERE CODE='" . $code . "' ORDER BY WEIGHT DESC $limit";
         // mysql_query("set @IDXCODE ='" . $code . "'");
         $sql = "SET @IDXCODE ='{$code}';
         SET @IDXMOTHER =  IF((select idx_mother from idx_ref where idx_code=@IDXCODE)Is NULL,@IDXCODE,
 (select idx_mother from idx_ref where idx_code=@IDXCODE))";
+        echo "<pre>";print_r($sql);exit;
+
         $list_query = explode(";", $sql);
         foreach ($list_query as $value) {
             $this->db->query($value);
         }
-        return $this->db->query("select * from idx_compo where code = @IDXMOTHER ORDER BY WEIGHT DESC")->result_array();
+        //return $this->db->query("select * from idx_compo where code = @IDXMOTHER ORDER BY WEIGHT DESC")->result_array();
+        return $this->db->query("select * from (select * from idx_compo where code = @IDXMOTHER) as A
+LEFT JOIN (select ticker,eoy,perf from stk_perf order by eoy desc) as B on A.isin=B.ticker and A.date=B.eoy ORDER BY WEIGHT DESC;")->result_array();
+    }
+
+    public function getDataTableIdx_compo($code, $limit = NULL) {
+
+        //return $this->db->query("select * from idx_compo where code = @IDXMOTHER ORDER BY WEIGHT DESC")->result_array();
+        return $this->db->query("select * from idx_compo_last where code = '$code' ORDER BY WEIGHT DESC;")->result_array();
     }
 
     /*     * *************************************************************************
@@ -917,34 +1128,43 @@ ORDER BY b.ims_order ASC
         $and = NULL;
         $order = 'DESC';
         if ($date != NULL) {
-            $and = " AND DATE BETWEEN '" . $date . "' AND '" . $datemax . "'";
+            $and = " AND date BETWEEN '" . $date . "' AND '" . $datemax . "'";
             $order = 'ASC';
         }
-        $sql = "select id,DATE,CLOSE,HIGH,LOW,PERFORM from idx_day WHERE CODE='" . $code . "' $and AND !ISNULL(DATE) ORDER BY DATE $order $limit";
+        $sql = "select * from efrc_indvn_datas WHERE codeifrc='" . $code . "' $and AND !ISNULL(date) ORDER BY date $order $limit";
+		
         return $this->db->query($sql)->result_array();
     }
 
     public function loadDayObDateBegin($code) {
-        $sql = "select DATE from idx_day WHERE CODE='" . $code . "' ORDER BY DATE ASC limit 1";
+        $sql = "select date from efrc_indvn_datas WHERE codeifrc='" . $code . "' ORDER BY date ASC limit 1";
         $data = $this->db->query($sql)->row_array();
-        if ($data['DATE']) {
-            return $data['DATE'];
+        if ($data['date']) {
+            return $data['date'];
         }
     }
 
     public function loadMonthObDateBegin($code) {
-        $sql = "select DATE from idx_month WHERE CODE='" . $code . "' ORDER BY DATE ASC limit 1";
+        $sql = "select date from efrc_indvn_stats WHERE codeifrc='" . $code . "' ORDER BY date ASC limit 1";
         $data = $this->db->query($sql)->row_array();
-        if ($data['DATE']) {
-            return $data['DATE'];
+        if ($data['date']) {
+            return $data['date'];
         }
     }
 
     public function loadYearObDateBegin($code) {
-        $sql = "select DATE from idx_year WHERE CODE='" . $code . "' ORDER BY DATE ASC limit 1";
+        $sql = "select date from efrc_indvn_stats WHERE codeifrc='" . $code . "' AND period = 'Y' ORDER BY date ASC limit 1";
         $data = $this->db->query($sql)->row_array();
-        if ($data['DATE']) {
-            return $data['DATE'];
+        if ($data['date']) {
+            return $data['date'];
+        }
+    }
+	
+	public function loadQuaterObDateBegin($code) {
+        $sql = "select date from efrc_indvn_stats WHERE codeifrc='" . $code . "' AND period = 'Q' ORDER BY date ASC limit 1";
+        $data = $this->db->query($sql)->row_array();
+        if ($data['date']) {
+            return $data['date'];
         }
     }
 
@@ -956,10 +1176,10 @@ ORDER BY b.ims_order ASC
         $and = NULL;
         $order = 'DESC';
         if ($date != NULL) {
-            $and = " AND DATE BETWEEN '" . $date . "' AND '" . $datemax . "'";
+            $and = " AND date BETWEEN '" . $date . "' AND '" . $datemax . "'";
             $order = 'ASC';
         }
-        $sql = "select count(id) as count from idx_day WHERE CODE='" . $code . "' $and ORDER BY DATE $order limit 1";
+        $sql = "select count(id) as count from efrc_indvn_datas WHERE codeifrc='" . $code . "' $and ORDER BY date $order limit 1";
         $data = $this->db->query($sql)->row_array();
         return $data;
     }
@@ -969,17 +1189,23 @@ ORDER BY b.ims_order ASC
      * ************************************************************************ */
 
     public function loadMonthOb($code, $date = NULL, $datemax = NULL, $fulldate = NULL, $limit = '') {
+		
         $and = NULL;
         $order = 'DESC';
+		//echo "<pre>";print_r($date);exit;
         if ($date != NULL) {
-            $and = " AND CONCAT(YEAR(DATE),'/',MONTH(DATE)) BETWEEN '" . $date . "' AND '" . $datemax . "'";
+           // $and = " AND CONCAT(YEAR(DATE),'-',MONTH(DATE)) BETWEEN '" . $date . "' AND '" . $datemax . "'";
+			$and = " AND date BETWEEN '" . $date . "' AND '" . $datemax . "'";
             if ($fulldate != NULL) {
-                $and .= " AND DATE >= '" . $fulldate . "'";
+                $and .= " AND date >= '" . $fulldate . "'";
             }
             $order = 'ASC';
         }
-        $sql = "select id,DATE,CLOSE,HIGH,LOW,PERFORM from idx_month WHERE CODE='" . $code . "' $and AND !ISNULL(DATE) ORDER BY DATE $order $limit";
+        $sql = "select id,date,adjclose,volat1y,beta1y,rt from efrc_indvn_stats WHERE period = 'M' AND codeifrc='" . $code . "' $and 
+        AND !ISNULL(date) ORDER BY date $order $limit";
+		//echo "<pre>";print_r($sql);exit;
         $data = $this->db->query($sql)->result_array();
+		
         return $data;
     }
 
@@ -987,10 +1213,11 @@ ORDER BY b.ims_order ASC
         $and = NULL;
         $order = 'DESC';
         if ($date != NULL) {
-            $and = " AND DATE BETWEEN '" . $date . "' AND '" . $datemax . "'";
+            $and = " AND date BETWEEN '" . $date . "' AND '" . $datemax . "'";
             $order = 'ASC';
         }
-        $sql = "select count(id) as count from idx_month WHERE CODE='" . $code . "' $and ORDER BY DATE $order limit 1";
+        $sql = "select count(id) as count from efrc_indvn_stats WHERE period = 'M' AND codeifrc='" . $code . "' $and 
+        ORDER BY date $order limit 1";
         $data = $this->db->query($sql)->row_array();
         return $data;
     }
@@ -1004,10 +1231,22 @@ ORDER BY b.ims_order ASC
 
         $order = 'DESC';
         if ($date != NULL) {
-            $and = " AND YEAR(DATE) BETWEEN '" . $date . "' AND '" . $datemax . "'";
+            $and = " AND YEAR(date) BETWEEN '" . $date . "' AND '" . $datemax . "'";
             $order = 'ASC';
         }
-        $sql = "select id,DATE,CLOSE,HIGH,LOW,PERFORM from idx_year WHERE CODE='" . $code . "' $and AND !ISNULL(DATE) ORDER BY DATE $order $limit";
+        $sql = "select * from efrc_indvn_stats WHERE codeifrc='" . $code . "' $and AND period = 'Y' AND !ISNULL(DATE) ORDER BY date $order $limit";
+        return $this->db->query($sql)->result_array();
+    }
+	
+	public function loadQuaterOb($code, $date = NULL, $datemax = NULL, $limit = '') {
+        $and = NULL;
+
+        $order = 'DESC';
+        if ($date != NULL) {
+            $and = " AND YEAR(date) BETWEEN '" . $date . "' AND '" . $datemax . "'";
+            $order = 'ASC';
+        }
+        $sql = "select * from efrc_indvn_stats WHERE codeifrc='" . $code . "' $and AND period = 'Q' AND !ISNULL(DATE) ORDER BY date $order $limit";
         return $this->db->query($sql)->result_array();
     }
 
@@ -1015,10 +1254,22 @@ ORDER BY b.ims_order ASC
         $and = NULL;
         $order = 'DESC';
         if ($date != NULL) {
-            $and = " AND DATE BETWEEN '" . $date . "' AND '" . $datemax . "'";
+            $and = " AND date BETWEEN '" . $date . "' AND '" . $datemax . "'";
             $order = 'ASC';
         }
-        $sql = "select count(id) as count from idx_year WHERE CODE='" . $code . "' $and ORDER BY DATE $order limit 1";
+        $sql = "select count(id) as count from efrc_indvn_stats WHERE codeifrc='" . $code . "' AND period='Y' $and ORDER BY date $order limit 1";
+        //echo $sql;
+        $data = $this->db->query($sql)->row_array();
+        return $data;
+    }
+	public function loadQuaterObCount($code, $date = NULL, $datemax = NULL) {
+        $and = NULL;
+        $order = 'DESC';
+        if ($date != NULL) {
+            $and = " AND date BETWEEN '" . $date . "' AND '" . $datemax . "'";
+            $order = 'ASC';
+        }
+        $sql = "select count(id) as count from efrc_indvn_stats WHERE codeifrc='" . $code . "' AND period='Q' $and ORDER BY date $order limit 1";
         //echo $sql;
         $data = $this->db->query($sql)->row_array();
         return $data;
@@ -1072,10 +1323,11 @@ ORDER BY b.ims_order ASC
 
     public function LoadMinMonth($code, $date = NULL) {
         $and = NULL;
+
         if ($date != NULL) {
-            $and = " AND DATE >='" . $date . "'";
+            $and = " AND date >='" . $date . "'";
         }
-        $sql = "select CLOSE as min2 from idx_month WHERE CODE='" . $code . "' $and ORDER BY CLOSE ASC limit 1";
+        $sql = "select adjclose as min2 from efrc_indvn_stats WHERE period = 'M' AND codeifrc='" . $code . "' $and ORDER BY adjclose ASC limit 1";
         //echo $sql.'<br/>';
         $data = $this->db->query($sql)->row_array();
         return $data;
@@ -1088,9 +1340,9 @@ ORDER BY b.ims_order ASC
     public function LoadMaxMonth($code, $date = NULL) {
         $and = NULL;
         if ($date != NULL) {
-            $and = " AND DATE >='" . $date . "'";
+            $and = " AND date >='" . $date . "'";
         }
-        $sql = "select CLOSE as max from idx_month WHERE CODE='" . $code . "' $and ORDER BY CLOSE DESC LIMIT 1";
+        $sql = "select adjclose as max from efrc_indvn_stats WHERE period = 'M' AND codeifrc='" . $code . "' $and ORDER BY adjclose DESC LIMIT 1";
         $temp = $this->db->query($sql)->row_array();
         return isset($temp['max']) ? $temp['max'] : true;
     }
@@ -1102,9 +1354,19 @@ ORDER BY b.ims_order ASC
     public function LoadMinYear($code, $date = NULL) {
         $and = NULL;
         if ($date != NULL) {
-            $and = " AND DATE >='" . $date . "'";
+            $and = " AND date >='" . $date . "'";
         }
-        $sql = "select CLOSE as min2 from idx_year WHERE CODE='" . $code . "' $and ORDER BY CLOSE ASC limit 1";
+        $sql = "select adjclose as min2 from efrc_indvn_stats WHERE codeifrc='" . $code . "' $and AND period = 'Y' ORDER BY adjclose ASC limit 1";
+        $data = $this->db->query($sql)->row_array();
+        return $data;
+    }
+	
+	public function LoadMinQuater($code, $date = NULL) {
+        $and = NULL;
+        if ($date != NULL) {
+            $and = " AND date >='" . $date . "'";
+        }
+        $sql = "select adjclose as min2 from efrc_indvn_stats WHERE codeifrc='" . $code . "' $and AND period = 'Q' ORDER BY adjclose ASC limit 1";
         $data = $this->db->query($sql)->row_array();
         return $data;
     }
@@ -1116,9 +1378,19 @@ ORDER BY b.ims_order ASC
     public function LoadMaxYear($code, $date = NULL) {
         $and = NULL;
         if ($date != NULL) {
-            $and = " AND DATE >='" . $date . "'";
+            $and = " AND date >='" . $date . "'";
         }
-        $sql = "select CLOSE as max from idx_year WHERE CODE='" . $code . "' $and ORDER BY CLOSE DESC LIMIT 1";
+        $sql = "select adjclose as max from efrc_indvn_stats WHERE code='" . $code . "' $and AND period = 'Y'  ORDER BY adjclose DESC LIMIT 1";
+        $temp = $this->db->query($sql)->row_array();
+        return isset($temp['max']) ? $temp['max'] : true;
+    }
+	
+	 public function LoadMaxQuater($code, $date = NULL) {
+        $and = NULL;
+        if ($date != NULL) {
+            $and = " AND date >='" . $date . "'";
+        }
+        $sql = "select adjclose as max from efrc_indvn_stats WHERE code='" . $code . "' $and AND period = 'Q'  ORDER BY adjclose DESC LIMIT 1";
         $temp = $this->db->query($sql)->row_array();
         return isset($temp['max']) ? $temp['max'] : true;
     }
@@ -1130,9 +1402,10 @@ ORDER BY b.ims_order ASC
     public function LoadMinDay($code, $date = NULL) {
         $and = NULL;
         if ($date != NULL) {
-            $and = " AND DATE >='" . $date . "'";
+            $and = " AND date >='" . $date . "'";
         }
-        $sql = "select CLOSE as min2 from idx_day WHERE CODE='" . $code . "' $and ORDER BY CLOSE ASC limit 1";
+        $sql = "select close as min2 from efrc_indvn_datas WHERE codeifrc='" . $code . "' $and ORDER BY close ASC limit 1";
+		//echo "<pre>";print_r($sql);exit; 
         $data = $this->db->query($sql)->row_array();
         return $data;
     }
@@ -1144,9 +1417,9 @@ ORDER BY b.ims_order ASC
     public function LoadMaxDay($code, $date = NULL) {
         $and = NULL;
         if ($date != NULL) {
-            $and = " AND DATE >='" . $date . "'";
+            $and = " AND date >='" . $date . "'";
         }
-        $sql = "select CLOSE as max from idx_day WHERE CODE='" . $code . "' $and ORDER BY CLOSE DESC LIMIT 1";
+        $sql = "select close as max from efrc_indvn_datas WHERE codeifrc='" . $code . "' $and ORDER BY close DESC LIMIT 1";
         $temp = $this->db->query($sql)->row_array();
         return isset($temp['max']) ? $temp['max'] : true;
     }
@@ -1156,13 +1429,13 @@ ORDER BY b.ims_order ASC
      * ==================================================================================== */
 
     public function getdate($table, $code, $order) {
-        $sql = "select DATE from $table WHERE CODE='" . $code . "' ORDER BY DATE $order limit 1";
+        $sql = "select date from $table WHERE codeifrc='" . $code . "' ORDER BY date $order limit 1";
         $data = $this->db->query($sql)->row_array();
         return $data;
     }
 
     public function getdateIDXday($table, $code, $order) {
-        $sql = "select DATE from $table WHERE CODE='" . $code . "' ORDER BY DATE $order limit 1";
+        $sql = "select date from $table WHERE codeifrc='" . $code . "' ORDER BY date $order limit 1";
         $data = $this->db->query($sql)->row_array();
         return $data;
     }
@@ -1177,7 +1450,7 @@ ORDER BY b.ims_order ASC
         return FALSE;
     }
 
-    /*     * *************************************************************************
+    /****************************************************************************
      * lấy ra data table box ifrc indexes vnx trang home theo place và type
      * ************************************************************************ */
 
@@ -1235,7 +1508,7 @@ ORDER BY b.ims_order ASC
     }
 
     public function getNameSelectHome() {
-        $sql = "SELECT DISTINCT(a.shortname), a.code from idx_sample a, idx_month_chart b where a.code = b.code and a.provider = 'IFRC' and a.place = 'Vietnam'";
+        $sql = "SELECT DISTINCT(a.shortname), a.code from idx_sample a, idx_month b where a.code = b.code and a.provider = 'IFRC' and a.place = 'Vietnam'";
         return $this->db->query($sql)->result_array();
     }
 
@@ -1246,7 +1519,7 @@ ORDER BY b.ims_order ASC
 
     public function getIndex_compare() {
         $sql = "SELECT shortname from idx_sample 
-        where VNXI=1 and TYPE='equity' and code in(select DISTINCT code from idx_month) GROUP BY SHORTNAME";
+        where VNXI=1 and TYPE='equity' and code in(select DISTINCT codeifrc from efrc_indvn_stats) GROUP BY SHORTNAME";
         return $this->db->query($sql)->result_array();
     }
 
@@ -1256,24 +1529,24 @@ ORDER BY b.ims_order ASC
 
     public function loadMonthCompare($code_from, $code_to) {
         $sql = 'SELECT a.id, DATE_FORMAT(a.date,"%Y/%m") as date, a.perform as index_1, b.perform as index_2, (a.perform - b.perform) as total from
-(select id, date, perform from idx_month WHERE CODE="' . $code_from . '" AND LENGTH(perform)!=0) a,
-(select id, date, perform from idx_month WHERE CODE="' . $code_to . '" AND LENGTH(perform)!=0) b
+(select id, date, perform from efrc_indvn_stats WHERE period = "M" AND codeifrc="' . $code_from . '" AND LENGTH(perform)!=0) a,
+(select id, date, perform from efrc_indvn_stats WHERE period = "M" AND codeifrc="' . $code_to . '" AND LENGTH(perform)!=0) b
 where CONCAT(YEAR(a.date),"/",MONTH(a.date)) = CONCAT(YEAR(b.date),"/",MONTH(b.date)) order by a.date desc';
         return $this->db->query($sql)->result_array();
     }
 
     public function loadMonthCompareChart($code_from, $code_to) {
-        $sql = 'SELECT a.id, a.date, a.close as index_1, b.close as index_2, (a.close - b.close) as total from
-(select id, date, close from idx_month WHERE CODE="' . $code_from . '" AND LENGTH(perform)!=0) a,
-(select id, date, close from idx_month WHERE CODE="' . $code_to . '" AND LENGTH(perform)!=0) b
+        $sql = 'SELECT a.id, a.date, a.adjclose as index_1, b.adjclose as index_2, (a.adjclose - b.adjclose) as total from
+(select id, date, close from efrc_indvn_stats WHERE codeifrc="' . $code_from . '" AND LENGTH(perform)!=0) a,
+(select id, date, close from efrc_indvn_stats WHERE codeifrc="' . $code_to . '" AND LENGTH(perform)!=0) b
 where CONCAT(YEAR(a.date),"/",MONTH(a.date)) = CONCAT(YEAR(b.date),"/",MONTH(b.date)) order by a.date asc';
         return $this->db->query($sql)->result_array();
     }
 
     public function loadMonthCompareCount($code_from, $code_to) {
         $sql = 'SELECT count(a.id) as count from
-(select id, date, perform from idx_month WHERE CODE="' . $code_from . '" AND LENGTH(perform)!=0) a,
-(select id, date, perform from idx_month WHERE CODE="' . $code_to . '" AND LENGTH(perform)!=0) b
+(select id, date, perform from efrc_indvn_stats WHERE period = "M" AND codeifrc="' . $code_from . '" AND LENGTH(perform)!=0) a,
+(select id, date, perform from efrc_indvn_stats  WHERE period = "M" AND codeifrc="' . $code_to . '" AND LENGTH(perform)!=0) b
 where CONCAT(YEAR(a.date),"/",MONTH(a.date)) = CONCAT(YEAR(b.date),"/",MONTH(b.date)) order by a.date desc';
         $data = $this->db->query($sql)->row_array();
         return $data;
@@ -1285,24 +1558,49 @@ where CONCAT(YEAR(a.date),"/",MONTH(a.date)) = CONCAT(YEAR(b.date),"/",MONTH(b.d
 
     public function loadYearCompare($code_from, $code_to) {
         $sql = 'SELECT a.id, YEAR(a.date) as date, a.perform as index_1, b.perform as index_2, (a.perform - b.perform) as total from
-(select id, date, perform from idx_year WHERE CODE="' . $code_from . '" AND LENGTH(perform)!=0) a,
-(select id, date, perform from idx_year WHERE CODE="' . $code_to . '" AND LENGTH(perform)!=0) b
+(select id, date, perform from efrc_indvn_stats WHERE codeifrc="' . $code_from . '" AND period = "Y" AND LENGTH(perform)!=0) a,
+(select id, date, perform from efrc_indvn_stats WHERE codeifrc="' . $code_to . '" AND period = "Y" AND LENGTH(perform)!=0) b
+where YEAR(a.date) = YEAR(b.date) order by a.date desc';
+        return $this->db->query($sql)->result_array();
+    }
+	
+	public function loadQuaterCompare($code_from, $code_to) {
+        $sql = 'SELECT a.id, YEAR(a.date) as date, a.perform as index_1, b.perform as index_2, (a.perform - b.perform) as total from
+(select id, date, perform from efrc_indvn_stats WHERE codeifrc="' . $code_from . '" AND period = "Q" AND LENGTH(perform)!=0) a,
+(select id, date, perform from efrc_indvn_stats WHERE codeifrc="' . $code_to . '" AND period = "Q" AND LENGTH(perform)!=0) b
 where YEAR(a.date) = YEAR(b.date) order by a.date desc';
         return $this->db->query($sql)->result_array();
     }
 
     public function loadYearCompareChart($code_from, $code_to) {
-        $sql = 'SELECT a.id, a.date, a.close as index_1, b.close as index_2, (a.close - b.close) as total from
-(select id, date, close from idx_year WHERE CODE="' . $code_from . '" AND LENGTH(perform)!=0) a,
-(select id, date, close from idx_year WHERE CODE="' . $code_to . '" AND LENGTH(perform)!=0) b
+        $sql = 'SELECT a.id, a.date, a.adjclose as index_1, b.adjclose as index_2, (a.adjclose - b.adjclose) as total from
+(select id, date, adjclose from efrc_indvn_stats WHERE codeifrc="' . $code_from . '" AND period = "Y" AND LENGTH(perform)!=0) a,
+(select id, date, adjclose from efrc_indvn_stats WHERE codeifrc="' . $code_to . '" AND period = "Y" AND LENGTH(perform)!=0) b
+where YEAR(a.date) = YEAR(b.date) order by a.date asc';
+        return $this->db->query($sql)->result_array();
+    }
+	
+	 public function loadQuaterCompareChart($code_from, $code_to) {
+        $sql = 'SELECT a.id, a.date, a.adjclose as index_1, b.adjclose as index_2, (a.adjclose - b.adjclose) as total from
+(select id, date, adjclose from efrc_indvn_stats WHERE codeifrc="' . $code_from . '" AND period = "Q" AND LENGTH(perform)!=0) a,
+(select id, date, adjclose from efrc_indvn_stats WHERE codeifrc="' . $code_to . '" AND period = "Q" AND LENGTH(perform)!=0) b
 where YEAR(a.date) = YEAR(b.date) order by a.date asc';
         return $this->db->query($sql)->result_array();
     }
 
     public function loadYearCompareCount($code_from, $code_to) {
         $sql = 'SELECT count(a.id) as count from
-(select id, date, perform from idx_year WHERE CODE="' . $code_from . '" AND LENGTH(perform)!=0) a,
-(select id, date, perform from idx_year WHERE CODE="' . $code_to . '" AND LENGTH(perform)!=0) b
+(select id, date, perform from efrc_indvn_stats WHERE codeifrc="' . $code_from . '" AND period = "Y" AND LENGTH(perform)!=0) a,
+(select id, date, perform from efrc_indvn_stats WHERE codeifrc="' . $code_to . '" AND period = "Y" AND LENGTH(perform)!=0) b
+where YEAR(a.date) = YEAR(b.date) order by a.date desc';
+        $data = $this->db->query($sql)->row_array();
+        return $data;
+    }
+	
+	public function loadQuaterCompareCount($code_from, $code_to) {
+        $sql = 'SELECT count(a.id) as count from
+(select id, date, perform from efrc_indvn_stats WHERE codeifrc="' . $code_from . '" AND period = "Q" AND LENGTH(perform)!=0) a,
+(select id, date, perform from efrc_indvn_stats WHERE codeifrc="' . $code_to . '" AND period = "Q" AND LENGTH(perform)!=0) b
 where YEAR(a.date) = YEAR(b.date) order by a.date desc';
         $data = $this->db->query($sql)->row_array();
         return $data;
@@ -1323,8 +1621,8 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
     public function loadMonthCompareDateBegin($code_from, $code_to) {
 
         $sql = "SELECT if(a.date > b.date, a.date, b.date) as date FROM 
-(SELECT MIN(date) as date FROM idx_month WHERE code = '" . $code_from . "') a,
-(SELECT MIN(date) as date FROM idx_month WHERE code = '" . $code_to . "') b";
+(SELECT MIN(date) as date FROM efrc_indvn_stats WHERE period = 'M' AND ifrccode = '" . $code_from . "') a,
+(SELECT MIN(date) as date FROM efrc_indvn_stats WHERE period = 'M' AND ifrccode = '" . $code_to . "') b";
 
         $data = $this->db->query($sql)->row_array();
         if ($data['date']) {
@@ -1335,43 +1633,73 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
     public function loadYearCompareDateBegin($code_from, $code_to) {
 
         $sql = "SELECT if(a.date > b.date, a.date, b.date) as date FROM 
-(SELECT MIN(date) as date FROM idx_year WHERE code = '" . $code_from . "') a,
-(SELECT MIN(date) as date FROM idx_year WHERE code = '" . $code_to . "') b";
+(SELECT MIN(date) as date FROM efrc_indvn_stats WHERE period = 'Y' AND codeifrc = '" . $code_from . "') a,
+(SELECT MIN(date) as date FROM efrc_indvn_stats WHERE period = 'Y' AND codeifrc = '" . $code_to . "') b";
 
         $data = $this->db->query($sql)->row_array();
         if ($data['date']) {
             return $data['date'];
         }
     }
+	
+	 public function loadQuaterCompareDateBegin($code_from, $code_to) {
+
+        $sql = "SELECT if(a.date > b.date, a.date, b.date) as date FROM 
+(SELECT MIN(date) as date FROM efrc_indvn_stats WHERE period = 'Q' AND codeifrc = '" . $code_from . "') a,
+(SELECT MIN(date) as date FROM efrc_indvn_stats WHERE period = 'Q' AND codeifrc = '" . $code_to . "') b";
+
+        $data = $this->db->query($sql)->row_array();
+        if ($data['date']) {
+            return $data['date'];
+        }
+    }
+	
+	
 
     public function LoadMinMonthCompareChart($code_from, $code_to, $date) {
-        $sql = "SELECT if(a.close >= b.close, b.close, a.close) as min FROM 
-(SELECT MIN(close) as close FROM idx_month WHERE code = '" . $code_from . "' AND date >= '" . $date . "') a,
-(SELECT MIN(close) as close FROM idx_month WHERE code = '" . $code_to . "' AND date >= '" . $date . "') b";
+        $sql = "SELECT if(a.adjclose >= b.adjclose, b.adjclose, a.adjclose) as min FROM 
+(SELECT MIN(adjclose) as adjclose FROM efrc_indvn_stats WHERE period = 'Q' AND codeifrc = '" . $code_from . "' AND date >= '" . $date . "') a,
+(SELECT MIN(adjclose) as adjclose FROM efrc_indvn_stats WHERE period = 'Q' AND codeifrc = '" . $code_to . "' AND date >= '" . $date . "') b";
         $data = $this->db->query($sql)->row_array();
         return $data;
     }
 
     public function LoadMaxMonthCompareChart($code_from, $code_to, $date) {
-        $sql = "SELECT if(a.close >= b.close, b.close, a.close) as min FROM 
-(SELECT MAX(close) as close FROM idx_month WHERE code = '" . $code_from . "' AND date >= '" . $date . "') a,
-(SELECT MAX(close) as close FROM idx_month WHERE code = '" . $code_to . "' AND date >= '" . $date . "') b";
+        $sql = "SELECT if(a.adjclose >= b.adjclose, b.adjclose, a.adjclose) as min FROM 
+(SELECT MAX(adjclose) as adjclose FROM efrc_indvn_stats WHERE period = 'M' AND  codeifrc = '" . $code_from . "' AND date >= '" . $date . "') a,
+(SELECT MAX(adjclose) as adjclose FROM efrc_indvn_stats WHERE period = 'M' AND codeifrc = '" . $code_to . "' AND date >= '" . $date . "') b";
         $data = $this->db->query($sql)->row_array();
         return $data;
     }
 
     public function LoadMinYearCompareChart($code_from, $code_to, $date) {
-        $sql = "SELECT if(a.close >= b.close, b.close, a.close) as min FROM 
-(SELECT MIN(close) as close FROM idx_year WHERE code = '" . $code_from . "' AND date >= '" . $date . "') a,
-(SELECT MIN(close) as close FROM idx_year WHERE code = '" . $code_to . "' AND date >= '" . $date . "') b";
+        $sql = "SELECT if(a.adjclose >= b.adjclose, b.adjclose, a.adjclose) as min FROM 
+(SELECT MIN(adjclose) as adjclose FROM efrc_indvn_stats WHERE period = 'Y' AND codeifrc = '" . $code_from . "' AND date >= '" . $date . "') a,
+(SELECT MIN(adjclose) as adjclose FROM efrc_indvn_stats WHERE period = 'Y' AND codeifrc = '" . $code_to . "' AND date >= '" . $date . "') b";
+        $data = $this->db->query($sql)->row_array();
+        return $data;
+    }
+	
+	public function LoadMinQuaterCompareChart($code_from, $code_to, $date) {
+        $sql = "SELECT if(a.adjclose >= b.adjclose, b.adjclose, a.adjclose) as min FROM 
+(SELECT MIN(adjclose) as adjclose FROM efrc_indvn_stats WHERE period = 'Q' AND codeifrc = '" . $code_from . "' AND date >= '" . $date . "') a,
+(SELECT MIN(adjclose) as adjclose FROM efrc_indvn_stats WHERE period = 'Q' AND codeifrc = '" . $code_to . "' AND date >= '" . $date . "') b";
         $data = $this->db->query($sql)->row_array();
         return $data;
     }
 
     public function LoadMaxYearCompareChart($code_from, $code_to, $date) {
-        $sql = "SELECT if(a.close >= b.close, b.close, a.close) as min FROM 
-(SELECT MAX(close) as close FROM idx_year WHERE code = '" . $code_from . "' AND date >= '" . $date . "') a,
-(SELECT MAX(close) as close FROM idx_year WHERE code = '" . $code_to . "' AND date >= '" . $date . "') b";
+        $sql = "SELECT if(a.adjclose >= b.adjclose, b.adjclose, a.adjclose) as min FROM 
+(SELECT MAX(adjclose) as adjclose FROM efrc_indvn_stats WHERE period = 'Y' AND codeifrc = '" . $code_from . "' AND date >= '" . $date . "') a,
+(SELECT MAX(adjclose) as adjclose FROM efrc_indvn_stats WHERE period = 'Y' AND codeifrc = '" . $code_to . "' AND date >= '" . $date . "') b";
+        $data = $this->db->query($sql)->row_array();
+        return $data;
+    }
+	
+	public function LoadMaxQuaterCompareChart($code_from, $code_to, $date) {
+        $sql = "SELECT if(a.adjclose >= b.adjclose, b.adjclose, a.adjclose) as min FROM 
+(SELECT MAX(adjclose) as adjclose FROM efrc_indvn_stats WHERE period = 'Q' AND codeifrc = '" . $code_from . "' AND date >= '" . $date . "') a,
+(SELECT MAX(adjclose) as adjclose FROM efrc_indvn_stats WHERE period = 'Q' AND codeifrc = '" . $code_to . "' AND date >= '" . $date . "') b";
         $data = $this->db->query($sql)->row_array();
         return $data;
     }
@@ -1386,7 +1714,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
         $data_date = array();
         foreach ($arr_data as $data_item) {
             $arr_item = explode(' - ', $data_item);
-            $sql = 'select MIN(date) as min, MAX(date) as max from idx_month WHERE CODE="' . $arr_item[0] . '"';
+            $sql = 'select MIN(date) as min, MAX(date) as max from efrc_indvn_stats WHERE period = "M" AND codeifrc="' . $arr_item[0] . '"';
             $data_sql = $this->db->query($sql)->row_array();
             if ($data_sql['min'] != '' && $data_sql['max'] != '') {
                 $data_date[] = $data_sql['min'];
@@ -1407,7 +1735,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
             $i_name = $i + 1;
             $arr_item = explode(' - ', $arr_data[$i]);
 
-            $sql = 'select perform, DATE_FORMAT(date,"%Y/%m") as date from idx_month WHERE CODE="' . $arr_item[0] . '" AND date BETWEEN "' . min($data_date) . '" AND "' . max($data_date) . '"  ORDER BY date desc';
+            $sql = 'select perform, DATE_FORMAT(date,"%Y/%m") as date from efrc_indvn_stats WHERE period = "M" AND codeifrc="' . $arr_item[0] . '" AND date BETWEEN "' . min($data_date) . '" AND "' . max($data_date) . '"  ORDER BY date desc';
 
             $data_sql = $this->db->query($sql)->result_array();
 
@@ -1448,7 +1776,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
             $i++;
             $arr_item = explode(' - ', $data_item);
             $sql_select[] = '`' . $i . '`.close as ' . $i . '_close';
-            $sql_sub[] = '(select id, date, close from idx_month WHERE CODE="' . $arr_item[0] . '") `' . $i . '`';
+            $sql_sub[] = '(select id, date, adjclose from efrc_indvn_stats WHERE period = "M" AND codeifrc="' . $arr_item[0] . '") `' . $i . '`';
             $key_chart[] = $i;
         }
 
@@ -1477,7 +1805,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
         $data_date = array();
         foreach ($arr_data as $data_item) {
             $arr_item = explode(' - ', $data_item);
-            $sql = 'select MIN(date) as min, MAX(date) as max from idx_month WHERE CODE="' . $arr_item[0] . '"';
+            $sql = 'select MIN(date) as min, MAX(date) as max from efrc_indvn_stats WHERE period = "M" AND codeifrc="' . $arr_item[0] . '"';
             $data_sql = $this->db->query($sql)->row_array();
             if ($data_sql['min'] != '' && $data_sql['max'] != '') {
                 $data_date[] = $data_sql['min'];
@@ -1498,7 +1826,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
             $i_name = $i + 1;
             $arr_item = explode(' - ', $arr_data[$i]);
 
-            $sql = 'select perform, DATE_FORMAT(date,"%Y/%m") as date from idx_month WHERE CODE="' . $arr_item[0] . '" AND date BETWEEN "' . min($data_date) . '" AND "' . max($data_date) . '"  ORDER BY date desc';
+            $sql = 'select perform, DATE_FORMAT(date,"%Y/%m") as date from efrc_indvn_stats WHERE period = "M" AND codeifrc="' . $arr_item[0] . '" AND date BETWEEN "' . min($data_date) . '" AND "' . max($data_date) . '"  ORDER BY date desc';
 
             $data_sql = $this->db->query($sql)->result_array();
 
@@ -1537,7 +1865,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
         $data_date = array();
         foreach ($arr_data as $data_item) {
             $arr_item = explode(' - ', $data_item);
-            $sql = 'select MIN(date) as min, MAX(date) as max from idx_year WHERE CODE="' . $arr_item[0] . '"';
+            $sql = 'select MIN(date) as min, MAX(date) as max from efrc_indvn_stats WHERE period = "Y" AND codeifrc="' . $arr_item[0] . '"';
             $data_sql = $this->db->query($sql)->row_array();
             if ($data_sql['min'] != '' && $data_sql['max'] != '') {
                 $data_date[] = $data_sql['min'];
@@ -1558,7 +1886,61 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
             $i_name = $i + 1;
             $arr_item = explode(' - ', $arr_data[$i]);
 
-            $sql = 'select perform, DATE_FORMAT(date,"%Y") as date from idx_year WHERE CODE="' . $arr_item[0] . '" AND date BETWEEN "' . min($data_date) . '" AND "' . max($data_date) . '"  ORDER BY date desc';
+            $sql = 'select perform, DATE_FORMAT(date,"%Y") as date from efrc_indvn_stats WHERE period = "Y" AND codeifrc="' . $arr_item[0] . '" AND date BETWEEN "' . min($data_date) . '" AND "' . max($data_date) . '"  ORDER BY date desc';
+
+            $data_sql = $this->db->query($sql)->result_array();
+
+            $total_sql = count($data_sql);
+
+            if ($total_sql != 0) {
+
+                foreach ($data_sql as $key => $value) {
+                    $data_final[$key]['id'] = $key + 1;
+                    if (in_array($value['date'], $arr_date)) {
+                        $data_final[$key][$i_name . "_perform"] = $value['perform'];
+                    } else {
+                        $data_final[$key][$i_name . "_perform"] = 0;
+                    }
+                }
+            } else {
+
+                for ($j = 0; $j < $total_final; $j++) {
+                    $data_final[$j][$i_name . "_perform"] = 0;
+                }
+            }
+        }
+        return $data_final;
+    }
+	
+	
+	public function loadQuaterCompareMulti($data) {
+        $arr_data = explode(',', $data);
+        $total_array = count($arr_data);
+        $data_date = array();
+        foreach ($arr_data as $data_item) {
+            $arr_item = explode(' - ', $data_item);
+            $sql = 'select MIN(date) as min, MAX(date) as max from efrc_indvn_stats WHERE period = "Q" AND codeifrc="' . $arr_item[0] . '"';
+            $data_sql = $this->db->query($sql)->row_array();
+            if ($data_sql['min'] != '' && $data_sql['max'] != '') {
+                $data_date[] = $data_sql['min'];
+                $data_date[] = $data_sql['max'];
+            }
+        }
+        $data_final = $this->getAllYear(min($data_date), max($data_date));
+        $data_final = array_reverse($data_final);
+        $data_final = array_values($data_final);
+        $total_final = count($data_final);
+
+        $arr_date = array();
+        foreach ($data_final as $date) {
+            $arr_date[] = $date['date'];
+        }
+
+        for ($i = 0; $i < $total_array; $i++) {
+            $i_name = $i + 1;
+            $arr_item = explode(' - ', $arr_data[$i]);
+
+            $sql = 'select perform, DATE_FORMAT(date,"%Y") as date from efrc_indvn_stats WHERE period = "Q" AND codeifrc="' . $arr_item[0] . '" AND date BETWEEN "' . min($data_date) . '" AND "' . max($data_date) . '"  ORDER BY date desc';
 
             $data_sql = $this->db->query($sql)->result_array();
 
@@ -1598,7 +1980,44 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
             $i++;
             $arr_item = explode(' - ', $data_item);
             $sql_select[] = '`' . $i . '`.close as ' . $i . '_close';
-            $sql_sub[] = '(select id, date, close from idx_year WHERE CODE="' . $arr_item[0] . '") `' . $i . '`';
+            $sql_sub[] = '(select id, date, adjclose from efrc_indvn_stats WHERE period = "Y" AND codeifrc="' . $arr_item[0] . '") `' . $i . '`';
+            $key_chart[] = $i;
+        }
+
+        $total_key = count($key_chart);
+        foreach ($key_chart as $key => $value) {
+            if ($key == $total_key - 1) {
+                $where = 'YEAR(`' . $value . '`.date) = YEAR(`1`.date)';
+            } else {
+                $value_next = $key_chart[$key + 1];
+                $where = 'YEAR(`' . $value . '`.date) = YEAR(`' . $value_next . '`.date)';
+            }
+            $sql_where[] = $where;
+        }
+
+        $select = implode(',', $sql_select);
+        $query_sub = implode(',', $sql_sub);
+        $where_final = implode(' AND ', $sql_where);
+        $sql = 'SELECT `1`.id, `1`.date, ' . $select . ' from ' . $query_sub . ' WHERE ' . $where_final . ' ORDER BY 
+`1`.date asc';
+        return $this->db->query($sql)->result_array();
+    }
+	
+	public function loadQuaterCompareMultiChart($data) {
+        $arr_data = explode(',', $data);
+        $total_array = count($arr_data);
+
+        $sql_select = array();
+        $sql_sub = array();
+        $sql_where = array();
+        $key_chart = array();
+
+        $i = 0;
+        foreach ($arr_data as $data_item) {
+            $i++;
+            $arr_item = explode(' - ', $data_item);
+            $sql_select[] = '`' . $i . '`.close as ' . $i . '_close';
+            $sql_sub[] = '(select id, date, adjclose from efrc_indvn_stats WHERE period = "Q" AND codeifrc="' . $arr_item[0] . '") `' . $i . '`';
             $key_chart[] = $i;
         }
 
@@ -1627,7 +2046,7 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
         $data_date = array();
         foreach ($arr_data as $data_item) {
             $arr_item = explode(' - ', $data_item);
-            $sql = 'select MIN(date) as min, MAX(date) as max from idx_year WHERE CODE="' . $arr_item[0] . '"';
+            $sql = 'select MIN(date) as min, MAX(date) as max from efrc_indvn_stats WHERE period = "Y" AND codeifrc="' . $arr_item[0] . '"';
             $data_sql = $this->db->query($sql)->row_array();
             if ($data_sql['min'] != '' && $data_sql['max'] != '') {
                 $data_date[] = $data_sql['min'];
@@ -1648,7 +2067,61 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
             $i_name = $i + 1;
             $arr_item = explode(' - ', $arr_data[$i]);
 
-            $sql = 'select perform, DATE_FORMAT(date,"%Y") as date from idx_year WHERE CODE="' . $arr_item[0] . '" AND date BETWEEN "' . min($data_date) . '" AND "' . max($data_date) . '"  ORDER BY date desc';
+            $sql = 'select perform, DATE_FORMAT(date,"%Y") as date from efrc_indvn_stats WHERE period = "Y" AND codeifrc="' . $arr_item[0] . '" AND date BETWEEN "' . min($data_date) . '" AND "' . max($data_date) . '"  ORDER BY date desc';
+
+            $data_sql = $this->db->query($sql)->result_array();
+
+            $total_sql = count($data_sql);
+
+            if ($total_sql != 0) {
+
+                foreach ($data_sql as $key => $value) {
+                    $data_final[$key]['id'] = $key + 1;
+                    if (in_array($value['date'], $arr_date)) {
+                        $data_final[$key][$i_name . "_perform"] = $value['perform'];
+                    } else {
+                        $data_final[$key][$i_name . "_perform"] = 0;
+                    }
+                }
+            } else {
+
+                for ($j = 0; $j < $total_final; $j++) {
+                    $data_final[$j][$i_name . "_perform"] = 0;
+                }
+            }
+        }
+        return count($data_final);
+    }
+	
+	
+	public function loadQuaterCompareMultiCount($data) {
+        $arr_data = explode(',', $data);
+        $total_array = count($arr_data);
+        $data_date = array();
+        foreach ($arr_data as $data_item) {
+            $arr_item = explode(' - ', $data_item);
+            $sql = 'select MIN(date) as min, MAX(date) as max from efrc_indvn_stats WHERE period = "Q" AND codeifrc="' . $arr_item[0] . '"';
+            $data_sql = $this->db->query($sql)->row_array();
+            if ($data_sql['min'] != '' && $data_sql['max'] != '') {
+                $data_date[] = $data_sql['min'];
+                $data_date[] = $data_sql['max'];
+            }
+        }
+        $data_final = $this->getAllYear(min($data_date), max($data_date));
+        $data_final = array_reverse($data_final);
+        $data_final = array_values($data_final);
+        $total_final = count($data_final);
+
+        $arr_date = array();
+        foreach ($data_final as $date) {
+            $arr_date[] = $date['date'];
+        }
+
+        for ($i = 0; $i < $total_array; $i++) {
+            $i_name = $i + 1;
+            $arr_item = explode(' - ', $arr_data[$i]);
+
+            $sql = 'select perform, DATE_FORMAT(date,"%Y") as date from efrc_indvn_stats WHERE period = "Q" AND codeifrc="' . $arr_item[0] . '" AND date BETWEEN "' . min($data_date) . '" AND "' . max($data_date) . '"  ORDER BY date desc';
 
             $data_sql = $this->db->query($sql)->result_array();
 
@@ -1879,6 +2352,26 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
         //$years = array_unique($years);
         return $years;
     }
+	
+	 public function getAllQuater($date1, $date2) {
+        $array_date = explode('/', $date1);
+        $date1 = $array_date[0] . '/' . $array_date[1] . '/1';
+        $time1 = strtotime($date1);
+        $time2 = strtotime($date2);
+        $y = date('Y', $time2);
+
+        $years[] = array('date' => date('Q', $time1));
+        while ($time1 < $time2) {
+            $time1 = strtotime(date('Y-m-d', $time1) . ' +1 year');
+            if (date('Y', $time1) != $y && ($time1 < $time2)) {
+                $years[] = array('date' => date('Y', $time1));
+            }
+        }
+
+        $years[] = array('date' => date('Y', $time2));
+        //$years = array_unique($years);
+        return $years;
+    }
 
     public function loadAnnual($year, $option, $limit) {
         $whereFilter = '';
@@ -1895,14 +2388,14 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
                 $whereFilter .= 'AND b.provider = "' . $option['providerFilter'] . '"';
             }
         }
-        $sort = 'ORDER BY perform ' . $option['sortFilter'];
+        $sort = 'ORDER BY rt ' . $option['sortFilter'];
         $this->db->query('SET @rownum = 0');
         $sql = 'SELECT @rownum:=@rownum+1 as no, a.* from 
-                     (SELECT a.id, b.name, a.provider, b.price as type, b.curr, a.date, 
-                        ROUND(a.close,2) as close, ROUND(a.perform,2) as perform, a.code FROM `obs_year` a, 
-                        `idx_sample` b WHERE a.code = b.code and b.vnxi=1 and b.place="VIETNAM" ' . $whereFilter . ' and 
+                     (SELECT a.id, b.name, b.provider, b.price as type, b.curr, a.date, 
+                        ROUND(a.adjclose,2) as close, a.rt as perform, a.codeifrc FROM `efrc_indvn_stats` a, 
+                        `idx_sample` b WHERE a.codeifrc = b.code and b.vnxi=1 and b.place="VIETNAM" ' . $whereFilter . ' AND period = "Y" and 
                         YEAR(a.date) = ' . $year . ' ' . $sort . ' ' . $limit . ') a';
-        // echo $sql;exit();
+       // echo "<pre>";print_r($sql);exit;
         return $this->db->query($sql)->result_array();
     }
 
@@ -1921,14 +2414,14 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
                 $whereFilter .= 'AND b.provider = "' . $option['providerFilter'] . '"';
             }
         }
-        $sql = 'SELECT count(a.id) as count FROM `obs_year` a, 
-        `idx_sample` b WHERE a.code = b.code and b.vnxi=1 and b.place="VIETNAM" ' . $whereFilter . ' and YEAR(a.date) = ' . $year;
+        $sql = 'SELECT count(a.id) as count FROM `efrc_indvn_stats` a, 
+        `idx_sample` b WHERE a.codeifrc = b.code and b.vnxi=1 and b.place="VIETNAM" ' . $whereFilter . ' and YEAR(a.date) = ' . $year;
         $data = $this->db->query($sql)->row_array();
         return $data;
     }
 
     public function loadAllAnnualCount() {
-        $sql = 'select COUNT(DISTINCT code) as count from obs_year';
+        $sql = 'select COUNT(DISTINCT code) as count from efrc_indvn_stats';
         $data = $this->db->query($sql)->row_array();
         return $data['count'];
     }
@@ -1938,8 +2431,13 @@ where YEAR(a.date) = YEAR(b.date) order by a.date desc';
         $data = $this->db->query($sql)->row_array();
         return $data['count'];
     }
-     public function getCodebyName1($name) {
-        $sql = "select CODE from idx_sample WHERE NAME='" . $name. "' LIMIT 1";
+    public function getCodebyName1($name) {
+        $sql = "select CODE from idx_sample WHERE PROVIDER IN ('PVN','IFRC','IFRCGWC','PROVINCIAL','IFRCLAB','IFRCRESEARCH') AND NAME='" . $name. "' OR SHORTNAME ='". $name."' LIMIT 1";
+        $data = $this->db->query($sql)->row_array();
+        return $data;
+    }
+	 public function getCodebyName1Stock($name) {
+		$sql = "select stk_code as CODE  from stk_ref where 1=1 and stk_name_sn='".$name."'";
         $data = $this->db->query($sql)->row_array();
         return $data;
     }

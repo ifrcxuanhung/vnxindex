@@ -37,7 +37,7 @@ class Report_monthly_model extends CI_Model {
 from efrc_indvn_stats eit, idx_sample isa where eit.codeifrc = isa.`code` and eit.periodid = '201704' and eit.period = 'M'".$where." LIMIT ".$start.", ".$rp.";";
 
        //print_r($sql_list);
-        $data['listindexes'] = $this->db3->query($sql_list)->result_object();
+        $data['listindexes'] = $this->db->query($sql_list)->result_object();
        //echo "<pre>";print_r($sql_list);exit;
 
 		//echo "<pre>";print_r($data);exit;
@@ -76,7 +76,7 @@ from efrc_indvn_stats eit, idx_sample isa where eit.codeifrc = isa.`code` and ei
         $sql_list = "select count(eit.codeifrc) as count
 from efrc_indvn_stats eit, idx_sample isa where eit.codeifrc = isa.`code` and eit.periodid = '201704' and eit.period = 'M'";
        // echo "<pre>";print_r($sql_list);exit .$where.$search;
-        $data= $this->db3->query($sql_list)->result_object();
+        $data= $this->db->query($sql_list)->result_object();
         return $data;
     }
 
@@ -175,12 +175,12 @@ from efrc_indvn_stats eit, idx_sample isa where eit.codeifrc = isa.`code` and ei
         
     public function getdate_limit5() {
         $sql_list = "SELECT max(DISTINCT date) date ,DATE_FORMAT(date, '%Y-%m') as yyyymm  from efrc_indvn_stats where period='M' group by yyyymm order by yyyymm desc LIMIT 5;";
-        $data['date'] = $this->db3->query($sql_list)->result_object();
+        $data['date'] = $this->db->query($sql_list)->result_object();
         return $data;
     }
     public function getdate_limit5_backup() {
         $sql_list = "SELECT max(DISTINCT date) date ,DATE_FORMAT(date, '%Y-%m') as yyyymm  from idx_month where provider='IFRC' group by yyyymm order by yyyymm desc;";
-        $data['date'] = $this->db3->query($sql_list)->result_object();
+        $data['date'] = $this->db->query($sql_list)->result_object();
         return $data;
     }
     public function getprovider_idx_day_backup() {

@@ -31,6 +31,7 @@ class Report_market_day_model extends CI_Model {
             $sql_list="select id,date,code,name,exchange,FORMAT(shares,0) shares,FORMAT(close,0) close,FORMAT(capi/1000000000,0) capi,FORMAT(volume,0) volume,FORMAT(turnover/1000,0) turnover,FORMAT(100*var,2) var,FORMAT(100*mtd,2) mtd,
 FORMAT(100*ytd,2) ytd from report_market_day as a where 1".$where."LIMIT ".$start.", ".$rp;
        //print_r($sql_list);
+        //echo "<pre>";print_r($sql_list);exit;
        
         $data['listindexes'] = $this->db->query($sql_list)->result_object();
 		return $data;
@@ -57,6 +58,7 @@ FORMAT(100*ytd,2) ytd from report_market_day as a where 1".$where."LIMIT ".$star
             $sql_list="select id,date,code,name,exchange,nbdays,FORMAT(100*perf,2) perf,FORMAT(volat,2) volat,FORMAT(beta,2) beta,
 FORMAT(velocity,2) velocity,FORMAT(trading,2) trading,FORMAT(turn,0) turn from report_market_day as a where 1".$where."LIMIT ".$start.", ".$rp;
         //print_r($sql_list);
+        //echo "<pre>";print_r($sql_list);exit;
         $data['listindexes'] = $this->db->query($sql_list)->result_object();
 		return $data;
     }

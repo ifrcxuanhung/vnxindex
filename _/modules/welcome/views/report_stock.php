@@ -284,7 +284,7 @@ margin:10px 10px 10px 10px;
 			<table cellspacing="0" cellpadding="0" border="0" id="" class="autoht" style=" width: 100%;">
 				<tbody>
 					<?php
-					$i = 1; 
+					$i = 1;
 						foreach($report['performance'] as $performance){
 					?>
 						<tr class="<?php if($i % 2 != 0) echo 'erow'?>" id="row7034">
@@ -299,7 +299,7 @@ margin:10px 10px 10px 10px;
 							<td align="right"><div style="text-align: right; width: 150px; color:  <?php echo $performance->di_yi_ind < 0 ? "#ff492a" : "#92dd4b"; ?>;"><?php echo $performance->di_yi_ind != 0 ? number_format(100*($performance->di_yi_ind),2) : '';?></div></td>
 							<td align="right"><div style="text-align: right; width: 150px; color:  <?php echo $performance->di_yi_all < 0 ? "#ff492a" : "#92dd4b"; ?>;"><?php echo $performance->di_yi_all != 0 ? number_format(100*($performance->di_yi_all),2) : '';?></div></td>
 						</tr>
-							<?php 
+							<?php
 							$i++;
 						}
 					?>
@@ -310,14 +310,17 @@ margin:10px 10px 10px 10px;
     <table style="width: 100%;">
         <tr>
             <td style="width: 40%; text-align: left;"><h6 style="color: #93999d; font-size: 11px!important;">** Adjusted close</h6> </td>
-            <td style="width: 60%; text-align: right;"><h6 style="color: #93999d; font-size: 11px!important;">
+            <td style="width: 60%; text-align: right;">
+                <h6 style="color: #93999d; font-size: 11px!important;">
                 *** <?php
 					foreach($report['sector'] as $sector){
 					   echo $sector->idx_name;
 					   }
 				?>
                 
-                 &nbsp; &nbsp; **** VNX All Share index</h6> </td> 
+                 &nbsp; &nbsp; **** VNX All Share index</h6>
+                <div style=" position:absolute; bottom:10px; left:50%; margin-top:-3px;"> Last update: <span style="color:#FF0; font-size: 11px!important;"><?php echo $report['last_update_performance']->date;?></span> </div>
+            </td>
         </tr>
     </table>
       
